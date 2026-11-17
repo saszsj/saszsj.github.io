@@ -43,6 +43,7 @@ function metadata(locale, content) {
   return [
     `<title>${escape(content.title)}</title>`,
     `<meta name="description" content="${escape(content.description)}" />`,
+    ...(locale.path === '/' ? ['<meta name="google-site-verification" content="nXZRqEmrMSZBX22-4TK-kWSMkRQrwVlXJu2nmQXrR9g" />'] : []),
     `<link rel="canonical" href="${canonical}" />`,
     ...alternates.map(({ hreflang, path }) => `<link rel="alternate" hreflang="${hreflang}" href="${origin}${path}" />`),
     '<meta property="og:type" content="website" />',
