@@ -20,6 +20,7 @@
   <meta property="og:description" content="ZSJ accompagna le imprese della diaspora cinese nella trasformazione con l’IA, con un pilota di 30 giorni e un piano per la fase successiva." />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/it/#webpage","url":"https://www.zsj.fr/it/","name":"Trasformazione IA per le imprese della diaspora cinese | ZSJ","description":"ZSJ accompagna le imprese della diaspora cinese nella trasformazione con l’IA, con un pilota di 30 giorni e un piano per la fase successiva.","inLanguage":"it","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/it/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/it/#services","url":"https://www.zsj.fr/it/#services","name":"Consulenza per la trasformazione con l’IA","description":"ZSJ aiuta le imprese della diaspora cinese e i team transfrontalieri a valutare rischi e opportunità dell’IA e a sperimentare un approccio con un pilota di 30 giorni.","provider":{"@id":"https://www.zsj.fr/#organization"}}]}</script>
   <meta name="theme-color" content="#111a1e" />
+  <script defer src="../assets/analytics.js" data-measurement-id="G-Z30LFBCXDH"></script>
   <script>
     if (location.hostname === 'saszsj.github.io') {
       const target = new URL(location.href);
@@ -304,6 +305,13 @@
           <span>Scansiona con WeChat. Sullo stesso telefono, salva l’immagine e selezionala dall’album nello scanner di WeChat.</span>
         </span>
       </span>
+      <details class="analytics-privacy">
+        <summary>Misurazione del pubblico e cookie</summary>
+        <p>Con il tuo consenso, ZSJ usa Google Analytics per misurare le visite, le pagine visualizzate e le fonti di traffico. Google tratta informazioni sul browser e sul dispositivo e usa identificatori dei cookie per distinguere le visite. La scelta e i cookie di misurazione restano su questo dispositivo per un massimo di 180 giorni. Puoi modificare o revocare il consenso qui in qualsiasi momento.</p>
+        <a href="https://policies.google.com/technologies/partner-sites">Come Google utilizza i dati</a>
+      </details>
+      <button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"
+        class="analytics-preferences">Preferenze di misurazione</button>
       <div class="footer-inner">
         <span>© <span id="y"></span> ZSJ</span>
         <span>
@@ -312,6 +320,18 @@
       </div>
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+   >
+    <h2 id="analytics-heading">Consentire la misurazione del pubblico?</h2>
+    <p>Con il tuo consenso, usiamo Google Analytics per misurare le visite e le visualizzazioni delle pagine. Puoi modificare la scelta in fondo al sito.
+      <a href="https://policies.google.com/technologies/partner-sites">Come Google utilizza i dati</a>
+    </p>
+    <div class="analytics-actions">
+      <button id="analytics-accept" type="button">Accetta</button>
+      <button id="analytics-refuse" type="button">Rifiuta</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open

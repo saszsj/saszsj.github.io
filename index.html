@@ -21,6 +21,7 @@
   <meta property="og:description" content="ZSJ 陪伴海外华人企业抓住 AI 转型机会。从经营目标出发，通过 30 天试点验证方向，制定下一步路线图。" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/#webpage","url":"https://www.zsj.fr/","name":"海外华人企业 AI 转型顾问｜ZSJ","description":"ZSJ 陪伴海外华人企业抓住 AI 转型机会。从经营目标出发，通过 30 天试点验证方向，制定下一步路线图。","inLanguage":"zh-Hans","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/#services","url":"https://www.zsj.fr/#services","name":"海外华人企业 AI 转型咨询","description":"ZSJ 为海外华人企业与跨境团队提供 AI 转型咨询，从经营目标出发，评估可行性和风险，陪伴团队完成 30 天试点。","provider":{"@id":"https://www.zsj.fr/#organization"}}]}</script>
   <meta name="theme-color" content="#111a1e" />
+  <script defer src="./assets/analytics.js" data-measurement-id="G-Z30LFBCXDH"></script>
   <script>
     if (location.hostname === 'saszsj.github.io') {
       const target = new URL(location.href);
@@ -305,6 +306,13 @@
           <span>用微信扫一扫。用同一部手机时，可长按保存图片，再从微信扫一扫的相册中选取。</span>
         </span>
       </span>
+      <details class="analytics-privacy">
+        <summary>网站访问统计与 Cookie</summary>
+        <p>ZSJ 在你同意后使用 Google Analytics 统计访问量、浏览页面和流量来源。Google 会处理浏览器和设备信息，并通过 Cookie 标识访问。我们在这台设备上保存你的选择和统计 Cookie，最长 180 天。你可随时在此更改或撤回选择。</p>
+        <a href="https://policies.google.com/technologies/partner-sites">了解 Google 如何处理数据</a>
+      </details>
+      <button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"
+        class="analytics-preferences">访问统计设置</button>
       <div class="footer-inner">
         <span>© <span id="y"></span> ZSJ</span>
         <span>
@@ -313,6 +321,18 @@
       </div>
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+   >
+    <h2 id="analytics-heading">允许访问统计？</h2>
+    <p>经你同意，我们使用 Google Analytics 了解网站访问量和浏览的页面。你可以随时在页脚修改选择。
+      <a href="https://policies.google.com/technologies/partner-sites">了解 Google 如何处理数据</a>
+    </p>
+    <div class="analytics-actions">
+      <button id="analytics-accept" type="button">接受</button>
+      <button id="analytics-refuse" type="button">拒绝</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open

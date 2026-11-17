@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 {{metadata}}
   <meta name="theme-color" content="#111a1e" />
+{{analyticsScript}}
   <script>
     if (location.hostname === 'saszsj.github.io') {
       const target = new URL(location.href);
@@ -424,6 +425,7 @@
           <span>{{wechatHelp}}</span>
         </span>
       </span>
+{{analyticsPrivacy}}
       <div class="footer-inner">
         <span>© <span id="y"></span> ZSJ</span>
         <span>
@@ -435,6 +437,18 @@
       </div>
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+   >
+    <h2 id="analytics-heading">{{analyticsHeading}}</h2>
+    <p>{{analyticsNotice}}
+      <a href="https://policies.google.com/technologies/partner-sites">{{analyticsPolicy}}</a>
+    </p>
+    <div class="analytics-actions">
+      <button id="analytics-accept" type="button">{{analyticsAccept}}</button>
+      <button id="analytics-refuse" type="button">{{analyticsRefuse}}</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open

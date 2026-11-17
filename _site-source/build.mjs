@@ -5,6 +5,7 @@ const root = new URL('../', import.meta.url);
 const template = await readFile(new URL('home.template', import.meta.url), 'utf8');
 const copy = JSON.parse(await readFile(new URL('locales.json', import.meta.url), 'utf8'));
 const check = process.argv.includes('--check');
+const analyticsMeasurementId = 'G-Z30LFBCXDH';
 
 const locales = [
   { id: 'zh-CN', hreflang: 'zh-Hans', path: '/', label: '中文', openGraphLocale: 'zh_CN' },
@@ -69,6 +70,18 @@ function page(locale) {
     metadata: metadata(locale, content),
     languageLinks,
     assetPrefix,
+    analyticsScript: analyticsMeasurementId
+      ? `  <script defer src="${assetPrefix}assets/analytics.js" data-measurement-id="${analyticsMeasurementId}"></script>`
+      : '',
+    analyticsPrivacy: analyticsMeasurementId ? [
+      '<details class="analytics-privacy">',
+      `  <summary>${escape(content.analyticsPrivacyHeading)}</summary>`,
+      `  <p>${escape(content.analyticsPrivacy)}</p>`,
+      `  <a href="https://policies.google.com/technologies/partner-sites">${escape(content.analyticsPolicy)}</a>`,
+      '</details>',
+      '<button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"',
+      `  class="analytics-preferences">${escape(content.analyticsPreferences)}</button>`,
+    ].map((line) => `      ${line}`).join('\n') : '',
   };
 
   return template

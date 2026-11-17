@@ -475,6 +475,62 @@ html[lang="zh-CN"] h2, html[lang="zh-CN"] h3 { letter-spacing: -0.02em; }
 
 .site-footer .zsj-wechat-copy strong { color: var(--ink); }
 
+.analytics-privacy {
+  max-width: 44rem;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+
+.analytics-privacy summary { cursor: pointer; }
+.analytics-privacy p { margin-block: 0.35rem; }
+
+.analytics-preferences {
+  margin-top: 0.55rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#analytics-consent {
+  position: fixed;
+  z-index: 55;
+  inset: auto 1rem 5rem;
+  width: min(28rem, 100% - 2rem);
+  padding: 1.2rem;
+  border: 1px solid #537066;
+  border-radius: 0.7rem;
+  background: var(--dark);
+  color: var(--white);
+  box-shadow: 0 0.5rem 2rem #111a1e45;
+}
+
+#analytics-consent h2 { font-size: 1.2rem; }
+
+#analytics-consent p {
+  margin-block: 0.55rem 0.85rem;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+#analytics-consent :focus-visible { outline-color: var(--mint); }
+
+.analytics-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.analytics-actions button {
+  min-height: 2.5rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #9ab9ad;
+  border-radius: 0.35rem;
+  background: var(--dark-panel);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.analytics-actions button:hover { border-color: var(--mint); }
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
