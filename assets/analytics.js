@@ -25,7 +25,7 @@
   let choice;
   let tagRequested = false;
   let tagReady = false;
-  let viewSent = false;
+  let configured = false;
 
   function readChoice() {
     try {
@@ -68,28 +68,14 @@
     window.dataLayer.push(arguments);
   }
 
-  function sendView() {
-    if (!tagReady || viewSent || choice !== 'accepted') return;
-    viewSent = true;
-    gtag('event', 'page_view', { send_to: measurementId });
-  }
-
-  function enableAnalytics() {
-    window[disabledFlag] = false;
-    if (tagRequested) {
-      sendView();
-      return;
-    }
-
-    tagRequested = true;
-    window.dataLayer = window.dataLayer || [];
-    gtag('consent', 'default', denied);
+  function configureAnalytics() {
+    if (!tagReady || configured || choice !== 'accepted') return;
+    configured = true;
     gtag('consent', 'update', { ...denied, analytics_storage: 'granted' });
-    gtag('js', new Date());
     gtag('config', measurementId, {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      send_page_view: false,
+      send_page_view: true,
       cookie_domain: 'none',
       cookie_path: '/',
       cookie_prefix: cookiePrefix,
@@ -99,6 +85,19 @@
       page_location: `${productionOrigin}${location.pathname}`,
       page_referrer: cleanReferrer(),
     });
+  }
+
+  function enableAnalytics() {
+    window[disabledFlag] = false;
+    if (tagRequested) {
+      configureAnalytics();
+      return;
+    }
+
+    tagRequested = true;
+    window.dataLayer = window.dataLayer || [];
+    gtag('consent', 'default', denied);
+    gtag('js', new Date());
 
     const tag = document.createElement('script');
     tag.async = true;
@@ -106,7 +105,7 @@
     tag.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     tag.addEventListener('load', () => {
       tagReady = true;
-      sendView();
+      configureAnalytics();
     }, { once: true });
     document.head.append(tag);
   }
