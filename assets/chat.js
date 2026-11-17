@@ -349,8 +349,5 @@ copy.addEventListener('click', async () => {
   copyStatus.textContent = translations[locale()][copyStatusKey];
 });
 
-new MutationObserver(applyLocale).observe(document.documentElement, {
-  attributes: true,
-  attributeFilter: ['lang']
-});
 applyLocale();
+launcher.closest('.zsj-chat').hidden = false;
