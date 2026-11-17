@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 {{metadata}}
-  <meta name="theme-color" content="#0b1220" />
-
+  <meta name="theme-color" content="#111a1e" />
   <script>
     if (location.hostname === 'saszsj.github.io') {
       const target = new URL(location.href);
@@ -15,953 +14,424 @@
       location.replace(target.href);
     }
   </script>
-  <link rel="stylesheet" href="/assets/chat.css" />
-  <script type="module" src="/assets/chat.js"></script>
-
-  <!-- Tailwind CDN（快速上线版） -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
-    .grid-bg {
-      background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 0);
-      background-size: 24px 24px;
-      background-position: -12px -12px;
-    }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .btn { transition: transform .06s ease; }
-    .btn:active { transform: translateY(1px); }
-    .lang-btn { border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 6px 8px; font-size: 12px; color: rgba(255,255,255,0.85); }
-    .lang-btn.active { background: #fff; color: #0b1220; border-color: #fff; }
-  </style>
+  <link rel="stylesheet" href="{{assetPrefix}}assets/site.css" />
+  <link rel="stylesheet" href="{{assetPrefix}}assets/chat.css" />
+  <script defer src="{{assetPrefix}}assets/chat.js"></script>
 </head>
-
-<body class="bg-slate-950 text-slate-100">
-  <!-- Top bar -->
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 glass">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-xl bg-white/10 flex items-center justify-center font-bold">ZSJ</div>
-        <div class="leading-tight">
-          <div class="font-semibold">ZSJ</div>
-          <div class="text-xs text-slate-300">
-            <span data-lang-inline="zh-CN">欧洲华侨企业AI转型顾问</span>
-            <span data-lang-inline="fr">Conseiller IA pour entreprises chinoises d’Europe</span>
-            <span data-lang-inline="en">AI Transformation Advisor for Overseas Chinese Businesses in Europe</span>
-            <span data-lang-inline="it">Consulente IA per imprese cinesi in Europa</span>
-          </div>
-        </div>
-      </div>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200">
-        <a href="#scenarios" class="hover:text-white">
-          <span data-lang-inline="zh-CN">场景选择</span>
-          <span data-lang-inline="fr">Scénarios</span>
-          <span data-lang-inline="en">Scenarios</span>
-          <span data-lang-inline="it">Scenari</span>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="site-nav">
+        <a href="#scenarios">
+          <span data-lang-inline="zh-CN">转型机会</span>
+          <span data-lang-inline="fr">L’opportunité</span>
+          <span data-lang-inline="en">The opportunity</span>
+          <span data-lang-inline="it">L’opportunità</span>
         </a>
-        <a href="#services" class="hover:text-white">
-          <span data-lang-inline="zh-CN">服务</span>
-          <span data-lang-inline="fr">Services</span>
-          <span data-lang-inline="en">Services</span>
-          <span data-lang-inline="it">Servizi</span>
+        <a href="#demo">
+          <span data-lang-inline="zh-CN">转型示例</span>
+          <span data-lang-inline="fr">Démonstration</span>
+          <span data-lang-inline="en">Example</span>
+          <span data-lang-inline="it">Esempio</span>
         </a>
-        <a href="#process" class="hover:text-white">
-          <span data-lang-inline="zh-CN">流程</span>
-          <span data-lang-inline="fr">Méthode</span>
-          <span data-lang-inline="en">Process</span>
-          <span data-lang-inline="it">Processo</span>
-        </a>
-        <a href="#about" class="hover:text-white">
-          <span data-lang-inline="zh-CN">关于我</span>
-          <span data-lang-inline="fr">À propos</span>
-          <span data-lang-inline="en">About</span>
-          <span data-lang-inline="it">Chi sono</span>
-        </a>
-        <a href="#faq" class="hover:text-white">
-          <span data-lang-inline="zh-CN">FAQ</span>
-          <span data-lang-inline="fr">FAQ</span>
-          <span data-lang-inline="en">FAQ</span>
-          <span data-lang-inline="it">FAQ</span>
+        <a href="#services">
+          <span data-lang-inline="zh-CN">30 天试点</span>
+          <span data-lang-inline="fr">Pilote 30 jours</span>
+          <span data-lang-inline="en">30-day pilot</span>
+          <span data-lang-inline="it">Pilota di 30 giorni</span>
         </a>
       </nav>
-
-      <div class="flex items-center gap-2">
-        <div class="flex items-center gap-2 flex-wrap">
+      <div class="locale-switch">
 {{languageLinks}}
-        </div>
-        <a href="#chat" data-zsj-chat-open aria-controls="zsj-chat-panel" aria-haspopup="dialog" class="rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn">
-          <span data-lang-inline="zh-CN">直接开聊</span>
-          <span data-lang-inline="fr">Discuter</span>
-          <span data-lang-inline="en">Chat now</span>
-          <span data-lang-inline="it">Chatta ora</span>
-        </a>
       </div>
     </div>
   </header>
 
-  <main>
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 grid-bg opacity-60"></div>
-    <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-[900px] rounded-full bg-gradient-to-r from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20 blur-3xl"></div>
-
-    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="inline-flex items-center gap-2 text-xs text-slate-200 rounded-full border border-white/10 px-3 py-1 glass">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-            <span data-lang-inline="zh-CN">AI时代，每家企业都要转型｜30天交付可用方案</span>
-            <span data-lang-inline="fr">Ère de l’IA : chaque entreprise doit se transformer｜Opérationnel en 30 jours</span>
-            <span data-lang-inline="en">AI era: every business must transform｜Operational in 30 days</span>
-            <span data-lang-inline="it">Era dell’IA: ogni impresa deve trasformarsi｜Operativo in 30 giorni</span>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span data-lang-inline="zh-CN">面向海外华人企业</span>
+            <span data-lang-inline="fr">Pour les entreprises de la diaspora chinoise</span>
+            <span data-lang-inline="en">For overseas Chinese businesses</span>
+            <span data-lang-inline="it">Per le imprese della diaspora cinese</span>
           </p>
-
-          <h1 class="mt-4 text-3xl md:text-5xl font-bold leading-tight">{{h1}}</h1>
-
-          <p class="mt-4 text-slate-300 leading-relaxed">{{intro}}</p>
-
-          <div class="mt-7 flex flex-col sm:flex-row gap-3">
-            <a href="#scenarios" class="rounded-xl bg-white text-slate-950 px-5 py-3 text-sm font-semibold hover:bg-slate-100 btn shadow-soft">
-              <span data-lang-inline="zh-CN">选择你的场景（立即给方案）</span>
-              <span data-lang-inline="fr">Choisir un scénario (solution immédiate)</span>
-              <span data-lang-inline="en">Choose a scenario (get a solution)</span>
-              <span data-lang-inline="it">Scegli uno scenario (soluzione subito)</span>
+          <h1>
+            <span data-lang-inline="zh-CN">现在正是<br class="wide-break" />AI 转型的好时机。</span>
+            <span data-lang-inline="fr">C’est le moment d’engager votre transformation avec l’IA.</span>
+            <span data-lang-inline="en">Now is the time to start your AI transformation.</span>
+            <span data-lang-inline="it">È il momento di avviare la vostra trasformazione con l’IA.</span>
+          </h1>
+          <p class="hero-intro">
+            <span data-lang-inline="zh-CN">AI 正在改变企业经营和发展的方式。ZSJ 从你的经营目标出发，和你一起找到值得先做的事，让团队在实际业务中用起来。</span>
+            <span data-lang-inline="fr">L’IA change la façon de travailler et de développer son entreprise. ZSJ part de vos objectifs, choisit avec vous une première priorité et aide votre équipe à la mettre en pratique.</span>
+            <span data-lang-inline="en">AI is changing how businesses work and grow. ZSJ starts with your goals, helps you choose a first priority, and supports your team as they put it into practice.</span>
+            <span data-lang-inline="it">L’IA sta cambiando il modo in cui le imprese lavorano e crescono. ZSJ parte dai vostri obiettivi, individua con voi una priorità e aiuta il team a metterla in pratica.</span>
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">
+              <span data-lang-inline="zh-CN">聊聊我的项目</span>
+              <span data-lang-inline="fr">Parler de mon projet</span>
+              <span data-lang-inline="en">Discuss my project</span>
+              <span data-lang-inline="it">Parlare del mio progetto</span>
             </a>
-            <a href="#services" class="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white/90 hover:bg-white/5 btn">
-              <span data-lang-inline="zh-CN">看服务与报价</span>
-              <span data-lang-inline="fr">Voir services et tarifs</span>
-              <span data-lang-inline="en">View services & pricing</span>
-              <span data-lang-inline="it">Vedi servizi e prezzi</span>
+            <a class="button button-quiet" href="#demo">
+              <span data-lang-inline="zh-CN">查看转型示例</span>
+              <span data-lang-inline="fr">Voir un exemple</span>
+              <span data-lang-inline="en">See an example</span>
+              <span data-lang-inline="it">Vedere un esempio</span>
             </a>
           </div>
+        </div>
+        <a class="pilot-preview" href="#services">
+          <span class="preview-label">
+            <span data-lang-inline="zh-CN">AI 转型试点</span>
+            <span data-lang-inline="fr">Pilote de transformation IA</span>
+            <span data-lang-inline="en">AI transformation pilot</span>
+            <span data-lang-inline="it">Pilota di trasformazione IA</span>
+          </span>
+          <span class="preview-duration">30
+            <span class="preview-unit">
+              <span data-lang-inline="zh-CN">天</span>
+              <span data-lang-inline="fr">jours</span>
+              <span data-lang-inline="en">days</span>
+              <span data-lang-inline="it">giorni</span>
+            </span>
+          </span>
+          <span class="preview-caption">
+            <span data-lang-inline="zh-CN">选定一个经营重点，和团队验证可行性，再决定如何推进。</span>
+            <span data-lang-inline="fr">Une priorité métier, un essai avec votre équipe et un bilan pour décider de la suite.</span>
+            <span data-lang-inline="en">One business priority, a test with your team, and a review to decide what comes next.</span>
+            <span data-lang-inline="it">Una priorità aziendale, un test con il team e un bilancio per decidere come proseguire.</span>
+          </span>
+          <span class="preview-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="zh-CN">客户更快得到答案</span>
-                <span data-lang-inline="fr">Des réponses plus rapides</span>
-                <span data-lang-inline="en">Faster answers</span>
-                <span data-lang-inline="it">Risposte più rapide</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="zh-CN">常见问题集中整理，回复更快更一致</span>
-                <span data-lang-inline="fr">Questions fréquentes, réponses claires et cohérentes</span>
-                <span data-lang-inline="en">Common questions, clear and consistent replies</span>
-                <span data-lang-inline="it">Domande frequenti, risposte chiare e coerenti</span>
-              </div>
+    <section class="section opportunity" id="scenarios">
+      <div class="wrap split">
+        <h2>
+          <span data-lang-inline="zh-CN">为什么现在值得行动？</span>
+          <span data-lang-inline="fr">Pourquoi agir maintenant&nbsp;?</span>
+          <span data-lang-inline="en">Why act now?</span>
+          <span data-lang-inline="it">Perché agire ora?</span>
+        </h2>
+        <div class="section-copy">
+          <p>
+            <span data-lang-inline="zh-CN">AI 工具越来越容易上手。企业现在就可以从一个经营重点入手，用小范围试点判断哪些做法值得推广。</span>
+            <span data-lang-inline="fr">Les outils d’IA sont plus accessibles. Vous pouvez commencer sur une priorité métier, observer ce qui fonctionne pour votre équipe et décider où investir ensuite.</span>
+            <span data-lang-inline="en">AI tools are easier to get started with. You can test one business priority, see what works for your team, and decide where to invest next.</span>
+            <span data-lang-inline="it">Gli strumenti di IA sono più accessibili. Potete partire da una priorità aziendale, osservare cosa funziona per il team e decidere dove investire in seguito.</span>
+          </p>
+          <p>
+            <span data-lang-inline="zh-CN">海外华人企业熟悉不同语言、文化和市场。现在有机会把这些跨境经验变成团队共享的做法，为下一阶段的增长做准备。</span>
+            <span data-lang-inline="fr">Travailler entre plusieurs langues, cultures et marchés vous donne déjà une expérience précieuse. L’IA offre l’occasion de mieux la partager au sein de votre équipe et de préparer votre prochaine étape de croissance.</span>
+            <span data-lang-inline="en">Working across languages, cultures and markets gives you valuable experience. AI creates an opportunity to share that know-how across your team and prepare for your next stage of growth.</span>
+            <span data-lang-inline="it">Lavorare tra lingue, culture e mercati diversi vi dà un’esperienza preziosa. L’IA offre l’opportunità di condividerla meglio nel team e di preparare la prossima fase di crescita.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo" id="demo">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">
+            <span data-lang-inline="zh-CN">转型示例 · 模拟案例</span>
+            <span data-lang-inline="fr">Démonstration · exemple fictif</span>
+            <span data-lang-inline="en">Demonstration · fictional example</span>
+            <span data-lang-inline="it">Dimostrazione · esempio fittizio</span>
+          </p>
+          <h2>
+            <span data-lang-inline="zh-CN">从「想用 AI」到知道下一步怎么走</span>
+            <span data-lang-inline="fr">De l’envie d’utiliser l’IA à un plan d’action</span>
+            <span data-lang-inline="en">From interest in AI to a plan of action</span>
+            <span data-lang-inline="it">Dall’interesse per l’IA a un piano d’azione</span>
+          </h2>
+          <p>
+            <span data-lang-inline="zh-CN">一家面向多个市场经营的华人企业正在扩张。负责人希望借助 AI 支持增长，首先要弄清楚从哪里开始。</span>
+            <span data-lang-inline="fr">Une entreprise de la diaspora chinoise se développe sur plusieurs marchés. Sa direction veut s’appuyer sur l’IA pour accompagner cette croissance et cherche par où commencer.</span>
+            <span data-lang-inline="en">An overseas Chinese business is expanding across several markets. Its leadership wants to use AI to support growth and needs to decide where to begin.</span>
+            <span data-lang-inline="it">Un’impresa della diaspora cinese si espande in più mercati. La direzione vuole usare l’IA per sostenere la crescita e deve capire da dove iniziare.</span>
+          </p>
+        </div>
+        <ol class="demo-steps">
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">找到切入点</span>
+              <span data-lang-inline="fr">Choisir une priorité</span>
+              <span data-lang-inline="en">Choose a priority</span>
+              <span data-lang-inline="it">Scegliere una priorità</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">各地团队选定一个目标：让新市场的同事更快掌握成熟市场积累的经营经验。他们约定记录上手所需的时间和遇到的难点。</span>
+              <span data-lang-inline="fr">Les équipes choisissent un objectif : aider les collègues d’un nouveau marché à s’approprier plus vite les pratiques du groupe. Elles suivent le temps d’adaptation et les difficultés rencontrées.</span>
+              <span data-lang-inline="en">The teams choose one goal: help colleagues in a new market pick up proven practices faster. They track how long that takes and where people get stuck.</span>
+              <span data-lang-inline="it">I team scelgono un obiettivo: aiutare i colleghi di un nuovo mercato ad adottare prima le pratiche del gruppo. Registrano il tempo di adattamento e le difficoltà.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">在实际工作中验证</span>
+              <span data-lang-inline="fr">Tester sur le terrain</span>
+              <span data-lang-inline="en">Test in real work</span>
+              <span data-lang-inline="it">Sperimentare sul campo</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">新市场的一支小团队试用 AI，看看它是否能帮助大家掌握这些做法。有经验的同事一起判断哪些做法适合在当地采用。</span>
+              <span data-lang-inline="fr">Sur le nouveau marché, un petit groupe teste si l’IA l’aide à adopter ces pratiques. Des collègues expérimentés valident celles qui peuvent être reprises localement.</span>
+              <span data-lang-inline="en">In the new market, a small team tests whether AI helps them adopt those practices. Experienced colleagues check which ones can be used locally.</span>
+              <span data-lang-inline="it">Nel nuovo mercato, un piccolo team verifica se l’IA aiuta ad adottare quelle pratiche. I colleghi più esperti valutano quali si possono riprendere a livello locale.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">决定下一步投入</span>
+              <span data-lang-inline="fr">Décider de la suite</span>
+              <span data-lang-inline="en">Decide what comes next</span>
+              <span data-lang-inline="it">Decidere come proseguire</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">负责人根据试点结果和团队反馈，决定是继续优化、推广到其他团队，还是换一个方向。</span>
+              <span data-lang-inline="fr">La direction s’appuie sur les résultats observés et les retours de l’équipe pour décider d’ajuster l’approche, de l’étendre ou de changer de priorité.</span>
+              <span data-lang-inline="en">Leadership uses the observed results and team feedback to decide whether to adapt the approach, expand it, or shift priorities.</span>
+              <span data-lang-inline="it">La direzione usa i risultati osservati e i riscontri del team per decidere se adattare l’approccio, estenderlo o cambiare priorità.</span>
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section pilot" id="services">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>
+            <span data-lang-inline="zh-CN">30 天 AI 转型试点</span>
+            <span data-lang-inline="fr">Un pilote de transformation IA en 30 jours</span>
+            <span data-lang-inline="en">A 30-day AI transformation pilot</span>
+            <span data-lang-inline="it">Un pilota di trasformazione IA in 30 giorni</span>
+          </h2>
+          <p>
+            <span data-lang-inline="zh-CN">围绕一个经营重点验证一种做法。我们会先评估可行性和风险，与你确认范围后启动试点。</span>
+            <span data-lang-inline="fr">Testez une approche sur une priorité de votre entreprise. Avant de lancer le pilote, nous évaluons la faisabilité et les risques, puis validons ensemble son périmètre.</span>
+            <span data-lang-inline="en">Test an approach around one business priority. Before the pilot starts, we assess feasibility and risks and agree on its scope.</span>
+            <span data-lang-inline="it">Verificate un approccio su una priorità aziendale. Prima di avviare il pilota, valutiamo fattibilità e rischi, poi concordiamo il perimetro.</span>
+          </p>
+        </div>
+        <ol class="pilot-steps" id="process">
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">明确起点与目标</span>
+              <span data-lang-inline="fr">Établir le point de départ</span>
+              <span data-lang-inline="en">Establish the starting point</span>
+              <span data-lang-inline="it">Stabilire il punto di partenza</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">与团队梳理现有做法，明确试点目标和衡量标准。</span>
+              <span data-lang-inline="fr">Nous examinons les pratiques actuelles avec votre équipe et précisons l’objectif et les critères de réussite.</span>
+              <span data-lang-inline="en">We review current practices with your team and confirm the goal and success criteria.</span>
+              <span data-lang-inline="it">Esaminiamo le pratiche attuali con il team e precisiamo l’obiettivo e i criteri di successo.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">带团队试用</span>
+              <span data-lang-inline="fr">Expérimenter avec l’équipe</span>
+              <span data-lang-inline="en">Test with your team</span>
+              <span data-lang-inline="it">Sperimentare con il team</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">在约定场景中试用，帮助团队掌握做法，并记录反馈。</span>
+              <span data-lang-inline="fr">Nous essayons l’approche dans le cadre convenu, accompagnons sa prise en main et recueillons les retours.</span>
+              <span data-lang-inline="en">We try the approach in the agreed setting, help your team get started, and gather feedback.</span>
+              <span data-lang-inline="it">Proviamo l’approccio nel contesto concordato, aiutiamo il team a usarlo e raccogliamo i riscontri.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span data-lang-inline="zh-CN">复盘并制定路线图</span>
+              <span data-lang-inline="fr">Faire le bilan et préparer la suite</span>
+              <span data-lang-inline="en">Review and plan the next steps</span>
+              <span data-lang-inline="it">Valutare e pianificare i prossimi passi</span>
+            </h3>
+            <p>
+              <span data-lang-inline="zh-CN">对照目标评估试点结果，交付复盘和下一阶段的行动路线图。</span>
+              <span data-lang-inline="fr">Nous évaluons les résultats au regard de l’objectif et vous remettons un bilan et une feuille de route pour la suite.</span>
+              <span data-lang-inline="en">We evaluate the results against the goal and deliver a review and a roadmap for the next stage.</span>
+              <span data-lang-inline="it">Valutiamo i risultati rispetto all’obiettivo e consegniamo un bilancio e un piano per la fase successiva.</span>
+            </p>
+          </li>
+        </ol>
+        <a class="button button-primary" href="#contact">
+          <span data-lang-inline="zh-CN">聊聊我的项目</span>
+          <span data-lang-inline="fr">Parler de mon projet</span>
+          <span data-lang-inline="en">Discuss my project</span>
+          <span data-lang-inline="it">Parlare del mio progetto</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap split">
+        <h2>
+          <span data-lang-inline="zh-CN">ZSJ 如何陪伴你转型</span>
+          <span data-lang-inline="fr">Comment ZSJ vous accompagne</span>
+          <span data-lang-inline="en">How ZSJ supports your transformation</span>
+          <span data-lang-inline="it">Come ZSJ vi accompagna</span>
+        </h2>
+        <div class="section-copy">
+          <p>
+            <span data-lang-inline="zh-CN">ZSJ 服务海外华人企业与跨境团队，把企业的经营目标、团队的实际情况和 AI 的可能性放在一起考虑。</span>
+            <span data-lang-inline="fr">ZSJ accompagne les entreprises de la diaspora chinoise et les équipes qui travaillent entre plusieurs marchés. Nous partons de vos objectifs et de la réalité de votre équipe pour choisir comment l’IA peut vous aider.</span>
+            <span data-lang-inline="en">ZSJ works with overseas Chinese businesses and teams operating across markets. We start with your goals and how your team works to decide how AI can help.</span>
+            <span data-lang-inline="it">ZSJ accompagna le imprese della diaspora cinese e i team attivi su più mercati. Partiamo dai vostri obiettivi e dal modo in cui lavora il team per capire come può aiutarvi l’IA.</span>
+          </p>
+          <dl class="support-options">
+            <div>
+              <dt>
+                <span data-lang-inline="zh-CN">90 分钟转型诊断</span>
+                <span data-lang-inline="fr">Diagnostic de 90 minutes</span>
+                <span data-lang-inline="en">90-minute diagnostic</span>
+                <span data-lang-inline="it">Diagnosi di 90 minuti</span>
+              </dt>
+              <dd>
+                <span data-lang-inline="zh-CN">明确优先事项，整理成一页行动路线图。</span>
+                <span data-lang-inline="fr">Identifier vos priorités et repartir avec une feuille de route d’une page.</span>
+                <span data-lang-inline="en">Identify your priorities and leave with a one-page roadmap.</span>
+                <span data-lang-inline="it">Individuare le priorità e ottenere un piano d’azione di una pagina.</span>
+              </dd>
             </div>
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="zh-CN">团队更省心</span>
-                <span data-lang-inline="fr">Une équipe plus sereine</span>
-                <span data-lang-inline="en">A lighter team</span>
-                <span data-lang-inline="it">Un team più leggero</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="zh-CN">流程清楚、交付稳定、减少反复沟通</span>
-                <span data-lang-inline="fr">Processus clairs, livraison stable, moins d’allers‑retours</span>
-                <span data-lang-inline="en">Clear processes, stable delivery, fewer back‑and‑forths</span>
-                <span data-lang-inline="it">Processi chiari, consegne stabili, meno ping‑pong</span>
-              </div>
+            <div>
+              <dt>
+                <span data-lang-inline="zh-CN">年度转型陪跑</span>
+                <span data-lang-inline="fr">Accompagnement annuel</span>
+                <span data-lang-inline="en">Annual support</span>
+                <span data-lang-inline="it">Accompagnamento annuale</span>
+              </dt>
+              <dd>
+                <span data-lang-inline="zh-CN">定期复盘成果，根据业务变化调整并推进路线图。</span>
+                <span data-lang-inline="fr">Faire régulièrement le point et faire évoluer la feuille de route avec votre entreprise.</span>
+                <span data-lang-inline="en">Review progress regularly and adapt the roadmap as your business evolves.</span>
+                <span data-lang-inline="it">Verificare regolarmente i progressi e adattare il piano all’evoluzione dell’impresa.</span>
+              </dd>
             </div>
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="zh-CN">线索不流失</span>
-                <span data-lang-inline="fr">Aucun prospect perdu</span>
-                <span data-lang-inline="en">No leads lost</span>
-                <span data-lang-inline="it">Nessun contatto perso</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="zh-CN">咨询有记录、跟进有节奏、复购有触点</span>
-                <span data-lang-inline="fr">Demandes tracées, suivi régulier, occasions de rachat</span>
-                <span data-lang-inline="en">Tracked inquiries, steady follow‑ups, repeat‑buy touchpoints</span>
-                <span data-lang-inline="it">Richieste tracciate, follow‑up costante, occasioni di riacquisto</span>
-              </div>
-            </div>
-          </div>
+          </dl>
         </div>
+      </div>
+    </section>
 
-        <!-- Right card -->
-        <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-          <div class="text-sm text-slate-200">
-            <span data-lang-inline="zh-CN">你最可能遇到的情况</span>
-            <span data-lang-inline="fr">Situations que vous rencontrez souvent</span>
-            <span data-lang-inline="en">Common situations you face</span>
-            <span data-lang-inline="it">Situazioni più frequenti</span>
-          </div>
-          <ul class="mt-3 space-y-3 text-sm text-slate-300">
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="zh-CN">客户问题多，但回复慢、标准不一</span>
-              <span data-lang-inline="fr">Beaucoup de questions clients, réponses lentes et inégales</span>
-              <span data-lang-inline="en">Many customer questions, slow and inconsistent replies</span>
-              <span data-lang-inline="it">Molte domande clienti, risposte lente e incoerenti</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="zh-CN">资料分散，换人就断档</span>
-              <span data-lang-inline="fr">Informations dispersées, rupture lors d’un changement de personne</span>
-              <span data-lang-inline="en">Scattered info, handover breaks when people change</span>
-              <span data-lang-inline="it">Informazioni disperse, passaggi di consegne fragili</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="zh-CN">跟进靠人记，容易遗漏</span>
-              <span data-lang-inline="fr">Suivi de mémoire, risques d’oubli</span>
-              <span data-lang-inline="en">Follow‑ups rely on memory, easy to miss</span>
-              <span data-lang-inline="it">Follow‑up a memoria, facile dimenticare</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="zh-CN">想转型，但不知道从哪一步开始</span>
-              <span data-lang-inline="fr">Envie de se transformer, sans savoir par où commencer</span>
-              <span data-lang-inline="en">You want to transform, but don’t know where to start</span>
-              <span data-lang-inline="it">Vuoi trasformarti, ma non sai da dove iniziare</span>
-            </li>
-          </ul>
-
-          <div class="mt-6 rounded-2xl border border-white/10 p-4 bg-white/5">
-            <div class="text-white font-semibold">
-              <span data-lang-inline="zh-CN">我给你的承诺</span>
-              <span data-lang-inline="fr">Mon engagement</span>
-              <span data-lang-inline="en">My promise</span>
-              <span data-lang-inline="it">La mia promessa</span>
+    <section class="section contact" id="contact">
+      <div class="wrap contact-layout" id="chat">
+        <div>
+          <h2>
+            <span data-lang-inline="zh-CN">聊聊我的项目</span>
+            <span data-lang-inline="fr">Parler de mon projet</span>
+            <span data-lang-inline="en">Discuss my project</span>
+            <span data-lang-inline="it">Parlare del mio progetto</span>
+          </h2>
+          <p class="contact-status">{{projectIntro}}</p>
+        </div>
+        <form class="contact-prep" id="zsj-project-form" aria-labelledby="zsj-project-title">
+          <h3 id="zsj-project-title">{{projectHeading}}</h3>
+          <div class="project-fields">
+            <div class="project-field">
+              <label for="zsj-project-business">{{projectBusiness}}</label>
+              <input id="zsj-project-business" name="business" type="text" required maxlength="200" />
             </div>
-            <div class="text-slate-300 mt-1 text-sm leading-relaxed">
-              <span data-lang-inline="zh-CN">不讲概念，先把能用的系统交到你手上：<br/>
-              <span class="text-white">客户有人接、问题有人答、跟进有人管</span>，团队可以自己维护。</span>
-              <span data-lang-inline="fr">Pas de jargon : un système utilisable, tout de suite. <br/>
-              <span class="text-white">Clients pris en charge, questions traitées, suivi organisé</span> — et votre équipe peut le gérer.</span>
-              <span data-lang-inline="en">No jargon—just a usable system. <br/>
-              <span class="text-white">Customers answered, questions resolved, follow‑ups managed</span> — and your team can run it.</span>
-              <span data-lang-inline="it">Niente tecnicismi: un sistema subito utilizzabile. <br/>
-              <span class="text-white">Clienti seguiti, domande risolte, follow‑up gestiti</span> — e il team lo mantiene.</span>
+            <div class="project-field">
+              <label for="zsj-project-goal">{{projectGoal}}</label>
+              <input id="zsj-project-goal" name="goal" type="text" required maxlength="250" />
+            </div>
+            <div class="project-field">
+              <label for="zsj-project-question">{{projectQuestion}}</label>
+              <textarea id="zsj-project-question" name="question" rows="3" required maxlength="400"></textarea>
             </div>
           </div>
+          <p class="project-privacy" id="zsj-project-privacy">{{projectPrivacy}}</p>
+          <button type="submit" class="button button-primary" aria-describedby="zsj-project-privacy" disabled>{{projectSubmit}}</button>
+          <p class="project-status" id="zsj-project-status" role="status"></p>
+        </form>
+      </div>
+    </section>
 
-          <div class="mt-6 text-xs text-slate-400">
-            <span data-lang-inline="zh-CN">选择下方的场景，聊天窗口会填好一段可编辑的需求模板。</span>
-            <span data-lang-inline="fr">Choisissez un scénario pour ouvrir le chat avec un message à compléter.</span>
-            <span data-lang-inline="en">Choose a scenario to open the chat with an editable message.</span>
-            <span data-lang-inline="it">Scegli uno scenario per aprire la chat con un messaggio da completare.</span>
-          </div>
+    <section class="section faq" id="faq" tabindex="-1" aria-labelledby="faq-title">
+      <div class="wrap split">
+        <h2 id="faq-title">
+          <span data-lang-inline="zh-CN">常见问题</span>
+          <span data-lang-inline="fr">Questions fréquentes</span>
+          <span data-lang-inline="en">Frequently asked questions</span>
+          <span data-lang-inline="it">Domande frequenti</span>
+        </h2>
+        <div>
+          <details>
+            <summary>
+              <span data-lang-inline="zh-CN">如果还不确定从哪里开始呢？</span>
+              <span data-lang-inline="fr">Et si je ne sais pas encore par où commencer&nbsp;?</span>
+              <span data-lang-inline="en">What if I don’t know where to start yet?</span>
+              <span data-lang-inline="it">E se non sapessi ancora da dove iniziare?</span>
+            </summary>
+            <p>
+              <span data-lang-inline="zh-CN">先讨论经营目标和团队现状。90 分钟转型诊断可以帮助你排出优先顺序，并整理成一页路线图。</span>
+              <span data-lang-inline="fr">Commençons par vos objectifs et la façon dont travaille votre équipe. Le diagnostic de 90 minutes débouche sur une feuille de route d’une page avec vos priorités.</span>
+              <span data-lang-inline="en">Start with your goals and how your team works. The 90-minute diagnostic produces a one-page roadmap with your priorities.</span>
+              <span data-lang-inline="it">Iniziamo dai vostri obiettivi e dal modo in cui lavora il team. La diagnosi di 90 minuti produce un piano d’azione di una pagina con le vostre priorità.</span>
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-lang-inline="zh-CN">30 天试点结束后能拿到什么？</span>
+              <span data-lang-inline="fr">Que reçoit-on à la fin du pilote&nbsp;?</span>
+              <span data-lang-inline="en">What do we receive at the end of the pilot?</span>
+              <span data-lang-inline="it">Cosa riceviamo al termine del pilota?</span>
+            </summary>
+            <p>
+              <span data-lang-inline="zh-CN">你会收到试点复盘、团队使用建议和下一步路线图。具体交付内容在试点开始前共同确认。</span>
+              <span data-lang-inline="fr">Vous recevez un bilan, des recommandations pour votre équipe et une feuille de route. Nous convenons des livrables précis au démarrage.</span>
+              <span data-lang-inline="en">You receive a pilot review, guidance for your team, and a roadmap. We agree on the exact deliverables before the pilot begins.</span>
+              <span data-lang-inline="it">Ricevete un bilancio, raccomandazioni per il team e un piano d’azione. Concordiamo i risultati da consegnare prima dell’avvio.</span>
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-lang-inline="zh-CN">如何考虑数据和运营风险？</span>
+              <span data-lang-inline="fr">Comment évaluez-vous les risques liés au projet&nbsp;?</span>
+              <span data-lang-inline="en">How do you assess project risks?</span>
+              <span data-lang-inline="it">Come valutate i rischi del progetto?</span>
+            </summary>
+            <p>
+              <span data-lang-inline="zh-CN">试点前会评估需要用到的数据、团队参与方式和潜在风险，并约定哪些环节需要人工复核。</span>
+              <span data-lang-inline="fr">Avant le pilote, nous examinons les données nécessaires, le rôle de l’équipe et les risques. Nous précisons les étapes qui demandent une validation humaine.</span>
+              <span data-lang-inline="en">Before the pilot, we review the data needed, the team’s role, and potential risks. We agree on the steps that need human review.</span>
+              <span data-lang-inline="it">Prima del pilota valutiamo i dati necessari, il ruolo del team e i rischi. Definiamo i passaggi che richiedono una verifica umana.</span>
+            </p>
+          </details>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Scenario Selector (核心销售模块) -->
-  <section id="scenarios" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">
-      <span data-lang-inline="zh-CN">选择你的目标（点一下就开始）</span>
-      <span data-lang-inline="fr">Choisissez votre objectif (un clic pour commencer)</span>
-      <span data-lang-inline="en">Choose your goal (one click to start)</span>
-      <span data-lang-inline="it">Scegli il tuo obiettivo (un clic per iniziare)</span>
-    </h2>
-    <p class="mt-2 text-slate-300">
-      <span data-lang-inline="zh-CN">选择与你目标最接近的场景，补充需求后发送。</span>
-      <span data-lang-inline="fr">Choisissez le scénario qui correspond à votre objectif, puis complétez le message avant de l’envoyer.</span>
-      <span data-lang-inline="en">Pick the scenario that matches your goal, then edit the message before sending it.</span>
-      <span data-lang-inline="it">Scegli lo scenario più adatto al tuo obiettivo e completa il messaggio prima di inviarlo.</span>
-    </p>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-5">
-      <!-- Card -->
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">客户增长与获客</span>
-          <span data-lang-inline="fr">Croissance et acquisition</span>
-          <span data-lang-inline="en">Customer growth & acquisition</span>
-          <span data-lang-inline="it">Crescita e acquisizione</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">让咨询更快变成成交，减少线索流失。</span>
-          <span data-lang-inline="fr">Transformer plus vite les demandes en ventes, sans perdre de prospects.</span>
-          <span data-lang-inline="en">Turn inquiries into sales faster, without losing leads.</span>
-          <span data-lang-inline="it">Trasforma le richieste in vendite più rapidamente, senza perdere contatti.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 7×24 接待与初步答疑</span>
-            <span data-lang-inline="fr">• Accueil 7j/7 et premières réponses</span>
-            <span data-lang-inline="en">• 24/7 reception and first answers</span>
-            <span data-lang-inline="it">• Accoglienza 24/7 e prime risposte</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 线索分级与分配更清晰</span>
-            <span data-lang-inline="fr">• Qualification et répartition plus claires</span>
-            <span data-lang-inline="en">• Clear lead qualification and routing</span>
-            <span data-lang-inline="it">• Qualificazione e assegnazione più chiare</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 统一口径，多语言更专业</span>
-            <span data-lang-inline="fr">• Discours cohérent, multilingue et pro</span>
-            <span data-lang-inline="en">• Consistent messaging, multilingual and professional</span>
-            <span data-lang-inline="it">• Messaggi coerenti, multilingue e professionali</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="growth" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">管理提效与减负</span>
-          <span data-lang-inline="fr">Efficacité et simplification</span>
-          <span data-lang-inline="en">Efficiency & simplification</span>
-          <span data-lang-inline="it">Efficienza e semplicità</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">让团队少开会、多落地，交付更稳定。</span>
-          <span data-lang-inline="fr">Moins de réunions, plus d’exécution, livraison plus stable.</span>
-          <span data-lang-inline="en">Fewer meetings, more delivery, more stable results.</span>
-          <span data-lang-inline="it">Meno riunioni, più risultati, consegne più stabili.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 经验沉淀，新人更快上手</span>
-            <span data-lang-inline="fr">• Savoir-faire centralisé, intégration rapide</span>
-            <span data-lang-inline="en">• Centralized know‑how, faster onboarding</span>
-            <span data-lang-inline="it">• Know‑how centralizzato, onboarding rapido</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 重要事项自动提醒，不再遗漏</span>
-            <span data-lang-inline="fr">• Rappels automatiques, moins d’oublis</span>
-            <span data-lang-inline="en">• Automatic reminders, fewer misses</span>
-            <span data-lang-inline="it">• Promemoria automatici, meno dimenticanze</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 交付标准统一，质量更稳定</span>
-            <span data-lang-inline="fr">• Standards unifiés, qualité stable</span>
-            <span data-lang-inline="en">• Unified standards, stable quality</span>
-            <span data-lang-inline="it">• Standard unificati, qualità stabile</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="efficiency" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">客户服务升级</span>
-          <span data-lang-inline="fr">Service client renforcé</span>
-          <span data-lang-inline="en">Customer service upgrade</span>
-          <span data-lang-inline="it">Servizio clienti potenziato</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">提高满意度、降低人力成本、支持多语言。</span>
-          <span data-lang-inline="fr">Améliorer la satisfaction, réduire les coûts, multilingue.</span>
-          <span data-lang-inline="en">Increase satisfaction, reduce costs, multilingual.</span>
-          <span data-lang-inline="it">Più soddisfazione, meno costi, multilingue.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 7×24 回复，客户等待更少</span>
-            <span data-lang-inline="fr">• Réponse 7j/7, moins d’attente</span>
-            <span data-lang-inline="en">• 24/7 replies, less waiting</span>
-            <span data-lang-inline="it">• Risposte 24/7, meno attese</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 问题分类清楚，责任明确</span>
-            <span data-lang-inline="fr">• Catégories claires, responsabilités nettes</span>
-            <span data-lang-inline="en">• Clear categories, clear ownership</span>
-            <span data-lang-inline="it">• Categorie chiare, responsabilità definite</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 复杂问题随时可转人工</span>
-            <span data-lang-inline="fr">• Escalade humaine pour cas complexes</span>
-            <span data-lang-inline="en">• Human handover for complex issues</span>
-            <span data-lang-inline="it">• Passaggio a operatore per casi complessi</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="service" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">资料清晰化与可传承</span>
-          <span data-lang-inline="fr">Informations claires et transmissibles</span>
-          <span data-lang-inline="en">Clear, reusable knowledge</span>
-          <span data-lang-inline="it">Conoscenza chiara e trasferibile</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">把资料整理成“随时可用”的答案库，新人也能快速上手。</span>
-          <span data-lang-inline="fr">Transformer les infos en une base de réponses utilisable, même pour les nouveaux.</span>
-          <span data-lang-inline="en">Turn info into a ready‑to‑use answer base, so new staff ramp up fast.</span>
-          <span data-lang-inline="it">Trasforma le info in una base di risposte pronta all’uso, onboarding rapido.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 关键信息集中管理</span>
-            <span data-lang-inline="fr">• Infos clés centralisées</span>
-            <span data-lang-inline="en">• Centralized key information</span>
-            <span data-lang-inline="it">• Informazioni chiave centralizzate</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 对内对外口径一致</span>
-            <span data-lang-inline="fr">• Messages internes/externes cohérents</span>
-            <span data-lang-inline="en">• Consistent internal and external messaging</span>
-            <span data-lang-inline="it">• Messaggi interni/esterni coerenti</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 更新有规则，越用越好</span>
-            <span data-lang-inline="fr">• Mise à jour simple, amélioration continue</span>
-            <span data-lang-inline="en">• Simple updates, improves over time</span>
-            <span data-lang-inline="it">• Aggiornamenti semplici, migliora nel tempo</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="knowledge" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">客户与项目运营</span>
-          <span data-lang-inline="fr">Opérations clients & projets</span>
-          <span data-lang-inline="en">Customer & project operations</span>
-          <span data-lang-inline="it">Operatività clienti e progetti</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">把跟进、交付与回访变成稳定流程。</span>
-          <span data-lang-inline="fr">Transformer le suivi, la livraison et le feedback en processus stables.</span>
-          <span data-lang-inline="en">Turn follow‑ups, delivery, and feedback into stable processes.</span>
-          <span data-lang-inline="it">Rendere stabili follow‑up, consegna e feedback.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 关键节点自动提醒，不再错过</span>
-            <span data-lang-inline="fr">• Rappels aux étapes clés, plus d’oublis</span>
-            <span data-lang-inline="en">• Automatic reminders for key steps</span>
-            <span data-lang-inline="it">• Promemoria automatici per i passaggi chiave</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 客户回访更有节奏</span>
-            <span data-lang-inline="fr">• Suivi client régulier</span>
-            <span data-lang-inline="en">• Steady customer follow‑ups</span>
-            <span data-lang-inline="it">• Follow‑up clienti costante</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 复购与转介绍更可控</span>
-            <span data-lang-inline="fr">• Rachat et recommandation mieux pilotés</span>
-            <span data-lang-inline="en">• Repeat and referrals under control</span>
-            <span data-lang-inline="it">• Riacquisti e referral più controllati</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="operations" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="zh-CN">跨境沟通与多语言表达</span>
-          <span data-lang-inline="fr">Communication transfrontalière</span>
-          <span data-lang-inline="en">Cross‑border communication</span>
-          <span data-lang-inline="it">Comunicazione internazionale</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">同一套信息，多语言表达更专业。</span>
-          <span data-lang-inline="fr">Une même information, un rendu multilingue professionnel.</span>
-          <span data-lang-inline="en">One message, professional multilingual output.</span>
-          <span data-lang-inline="it">Un messaggio, resa multilingue professionale.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="zh-CN">• 介绍/提案/邮件更快生成</span>
-            <span data-lang-inline="fr">• Présentations/propositions/emails plus rapides</span>
-            <span data-lang-inline="en">• Faster briefs, proposals, and emails</span>
-            <span data-lang-inline="it">• Presentazioni, proposte, email più rapide</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 口径统一，团队对外更专业</span>
-            <span data-lang-inline="fr">• Message cohérent, image plus professionnelle</span>
-            <span data-lang-inline="en">• Consistent messaging, more professional image</span>
-            <span data-lang-inline="it">• Messaggi coerenti, immagine più professionale</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 审校清晰，减少返工</span>
-            <span data-lang-inline="fr">• Validation claire, moins de retours</span>
-            <span data-lang-inline="en">• Clear review flow, less rework</span>
-            <span data-lang-inline="it">• Revisione chiara, meno rifacimenti</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="multilang" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">选择这个场景并开聊</span>
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-          <span data-lang-inline="en">Choose this scenario</span>
-          <span data-lang-inline="it">Scegli questo scenario</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-6 text-xs text-slate-400">
-      <span data-lang-inline="zh-CN">小技巧：如果不确定选哪个，先点“客户增长与获客”。我会帮你判断最合适的路径。</span>
-      <span data-lang-inline="fr">Astuce : si vous hésitez, choisissez « Croissance et acquisition ». Je vous orienterai.</span>
-      <span data-lang-inline="en">Tip: if unsure, choose “Customer growth & acquisition”. I’ll guide you.</span>
-      <span data-lang-inline="it">Suggerimento: se non sei sicuro, scegli “Crescita e acquisizione”. Ti guiderò.</span>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">{{serviceHeading}}</h2>
-    <p class="mt-2 text-slate-300">
-      <span data-lang-inline="zh-CN">从“转型诊断”到“可用系统”到“长期增长”，按你的阶段选择。</span>
-      <span data-lang-inline="fr">Du diagnostic à un système opérationnel, puis à la croissance durable.</span>
-      <span data-lang-inline="en">From diagnosis to an operational system, then long‑term growth.</span>
-      <span data-lang-inline="it">Dal diagnostic all’operatività, poi alla crescita continua.</span>
-    </p>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-5">
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <h3 class="text-white font-semibold">{{diagnosticHeading}}</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">适合：想转型但不确定路径 / 担心踩坑</span>
-          <span data-lang-inline="fr">Idéal si vous hésitez ou craignez les erreurs</span>
-          <span data-lang-inline="en">Best if you’re unsure of the right path</span>
-          <span data-lang-inline="it">Ideale se non sei sicuro del percorso</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="zh-CN">• 梳理现状：客户问题、流程、团队</span>
-            <span data-lang-inline="fr">• État des lieux : clients, processus, équipe</span>
-            <span data-lang-inline="en">• Review: customers, process, team</span>
-            <span data-lang-inline="it">• Analisi: clienti, processi, team</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 找到最先该改的一步</span>
-            <span data-lang-inline="fr">• Priorité d’action la plus rentable</span>
-            <span data-lang-inline="en">• Identify the best first step</span>
-            <span data-lang-inline="it">• Definire il primo passo migliore</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 30天可落地方案</span>
-            <span data-lang-inline="fr">• Plan opérationnel en 30 jours</span>
-            <span data-lang-inline="en">• 30‑day operational plan</span>
-            <span data-lang-inline="it">• Piano operativo in 30 giorni</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="zh-CN">交付：一页路线图 + 优先级清单</span>
-          <span data-lang-inline="fr">Livrable : une feuille de route d’une page</span>
-          <span data-lang-inline="en">Deliverable: one‑page roadmap</span>
-          <span data-lang-inline="it">Consegna: roadmap di una pagina</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="diagnosis" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">咨询转型诊断</span>
-          <span data-lang-inline="fr">Se renseigner sur le diagnostic</span>
-          <span data-lang-inline="en">Ask about the diagnostic session</span>
-          <span data-lang-inline="it">Chiedi informazioni sulla diagnosi</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft ring-1 ring-white/15">
-        <h3 class="text-white font-semibold">{{implementationHeading}}</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">适合：要“立刻能用”的企业/团队</span>
-          <span data-lang-inline="fr">Pour une solution utilisable immédiatement</span>
-          <span data-lang-inline="en">For teams that need it usable now</span>
-          <span data-lang-inline="it">Per chi vuole un sistema subito utilizzabile</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="zh-CN">• 客户问题更快有答案</span>
-            <span data-lang-inline="fr">• Réponses clients plus rapides</span>
-            <span data-lang-inline="en">• Faster answers for customers</span>
-            <span data-lang-inline="it">• Risposte clienti più rapide</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 咨询分流与跟进更清晰</span>
-            <span data-lang-inline="fr">• Suivi et répartition plus clairs</span>
-            <span data-lang-inline="en">• Clear routing and follow‑ups</span>
-            <span data-lang-inline="it">• Instradamento e follow‑up chiari</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 关键流程自动提醒与记录</span>
-            <span data-lang-inline="fr">• Rappels et suivi des étapes clés</span>
-            <span data-lang-inline="en">• Key steps tracked and reminded</span>
-            <span data-lang-inline="it">• Passaggi chiave tracciati e ricordati</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 团队可接手维护</span>
-            <span data-lang-inline="fr">• Votre équipe peut le gérer</span>
-            <span data-lang-inline="en">• Your team can maintain it</span>
-            <span data-lang-inline="it">• Il team può gestirlo</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="zh-CN">交付：可运营的客户接待与跟进系统</span>
-          <span data-lang-inline="fr">Livrable : un système de service client opérationnel</span>
-          <span data-lang-inline="en">Deliverable: an operational customer service system</span>
-          <span data-lang-inline="it">Consegna: sistema operativo di servizio clienti</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="implementation" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">我想落地</span>
-          <span data-lang-inline="fr">Je veux déployer</span>
-          <span data-lang-inline="en">I want to implement</span>
-          <span data-lang-inline="it">Voglio implementare</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <h3 class="text-white font-semibold">{{annualHeading}}</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">适合：要持续增长、要复购、要规模化</span>
-          <span data-lang-inline="fr">Pour une croissance durable et des réachats</span>
-          <span data-lang-inline="en">For sustained growth and repeat business</span>
-          <span data-lang-inline="it">Per crescita continua e riacquisti</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="zh-CN">• 每月迭代：话术、流程与体验</span>
-            <span data-lang-inline="fr">• Itérations mensuelles : messages, process, expérience</span>
-            <span data-lang-inline="en">• Monthly iterations: messaging, process, experience</span>
-            <span data-lang-inline="it">• Iterazioni mensili: messaggi, processi, esperienza</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 数据复盘：来源、转化、复购</span>
-            <span data-lang-inline="fr">• Analyse : sources, conversion, réachat</span>
-            <span data-lang-inline="en">• Reviews: sources, conversion, repeat</span>
-            <span data-lang-inline="it">• Analisi: fonti, conversione, riacquisto</span>
-          </li>
-          <li>
-            <span data-lang-inline="zh-CN">• 增长打法：内容与触点优化</span>
-            <span data-lang-inline="fr">• Croissance : contenus et points de contact</span>
-            <span data-lang-inline="en">• Growth: content and touchpoints</span>
-            <span data-lang-inline="it">• Crescita: contenuti e touchpoint</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="zh-CN">交付：长期增长陪跑</span>
-          <span data-lang-inline="fr">Livrable : accompagnement long terme</span>
-          <span data-lang-inline="en">Deliverable: long‑term growth support</span>
-          <span data-lang-inline="it">Consegna: supporto continuativo</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="advisor" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="zh-CN">咨询年度合作</span>
-          <span data-lang-inline="fr">Parler d’un accompagnement</span>
-          <span data-lang-inline="en">Discuss annual support</span>
-          <span data-lang-inline="it">Parliamo di affiancamento</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-6 text-xs text-slate-400">
-      <span data-lang-inline="zh-CN">注：价格与周期取决于你现有业务体量、团队人数与多语言需求。先聊再定。</span>
-      <span data-lang-inline="fr">Note : le prix dépend de la taille de l’activité, de l’équipe et des langues.</span>
-      <span data-lang-inline="en">Note: pricing depends on business size, team size, and languages.</span>
-      <span data-lang-inline="it">Nota: il prezzo dipende da volume, team e lingue.</span>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">
-      <span data-lang-inline="zh-CN">转型落地流程（4步）</span>
-      <span data-lang-inline="fr">Processus en 4 étapes</span>
-      <span data-lang-inline="en">4‑step process</span>
-      <span data-lang-inline="it">Processo in 4 fasi</span>
-    </h2>
-    <div class="mt-8 grid md:grid-cols-4 gap-4">
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="zh-CN">1）盘点现状</span>
-          <span data-lang-inline="fr">1) État des lieux</span>
-          <span data-lang-inline="en">1) Diagnose</span>
-          <span data-lang-inline="it">1) Analisi</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">客户问题、流程、团队角色</span>
-          <span data-lang-inline="fr">Questions clients, processus, rôles</span>
-          <span data-lang-inline="en">Customer questions, process, roles</span>
-          <span data-lang-inline="it">Domande clienti, processi, ruoli</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="zh-CN">2）梳理与简化</span>
-          <span data-lang-inline="fr">2) Clarifier</span>
-          <span data-lang-inline="en">2) Simplify</span>
-          <span data-lang-inline="it">2) Semplificare</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">统一话术与流程，减少反复沟通</span>
-          <span data-lang-inline="fr">Messages et processus unifiés</span>
-          <span data-lang-inline="en">Unified messages and steps</span>
-          <span data-lang-inline="it">Messaggi e passaggi unificati</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="zh-CN">3）客户接待</span>
-          <span data-lang-inline="fr">3) Accueil client</span>
-          <span data-lang-inline="en">3) Customer handling</span>
-          <span data-lang-inline="it">3) Gestione clienti</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">让咨询可追踪、可跟进</span>
-          <span data-lang-inline="fr">Demandes tracées et suivies</span>
-          <span data-lang-inline="en">Tracked inquiries and follow‑ups</span>
-          <span data-lang-inline="it">Richieste tracciate e seguite</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="zh-CN">4）稳态运行</span>
-          <span data-lang-inline="fr">4) Stabiliser</span>
-          <span data-lang-inline="en">4) Stabilize</span>
-          <span data-lang-inline="it">4) Stabilizzare</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">关键节点自动提醒与复盘</span>
-          <span data-lang-inline="fr">Rappels et revues des étapes clés</span>
-          <span data-lang-inline="en">Automated reminders and reviews</span>
-          <span data-lang-inline="it">Promemoria e revisioni automatiche</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="mx-auto max-w-6xl px-4 py-14">
-    <div class="rounded-3xl border border-white/10 p-8 glass shadow-soft">
-      <h2 class="text-2xl md:text-3xl font-bold">
-        <span data-lang-inline="zh-CN">关于我</span>
-        <span data-lang-inline="fr">À propos</span>
-        <span data-lang-inline="en">About</span>
-        <span data-lang-inline="it">Chi sono</span>
-      </h2>
-      <p class="mt-3 text-slate-300 leading-relaxed">
-        <span data-lang-inline="zh-CN">我擅长把华侨企业的跨境业务与团队协作，变成清晰可执行的流程：既懂客户沟通与销售转化，也重视落地与交接，让团队接得住、用得起来、持续迭代。</span>
-        <span data-lang-inline="fr">Je transforme la complexité des entreprises chinoises en Europe en processus simples : relation client, conversion, et surtout mise en œuvre claire pour que l’équipe s’en serve vraiment.</span>
-        <span data-lang-inline="en">I turn complex cross‑border operations into clear, usable processes: customer communication, conversion, and practical handover so your team can run it.</span>
-        <span data-lang-inline="it">Rendo le attività transfrontaliere più semplici e operative: comunicazione cliente, conversione e consegna pratica per il team.</span>
-      </p>
-      <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="zh-CN">风格</span>
-            <span data-lang-inline="fr">Style</span>
-            <span data-lang-inline="en">Style</span>
-            <span data-lang-inline="it">Stile</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="zh-CN">不讲术语，先交付结果</span>
-            <span data-lang-inline="fr">Pas de jargon, priorité aux résultats</span>
-            <span data-lang-inline="en">No jargon, results first</span>
-            <span data-lang-inline="it">Niente gergo, risultati prima</span>
-          </div>
-        </div>
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="zh-CN">对象</span>
-            <span data-lang-inline="fr">Clients</span>
-            <span data-lang-inline="en">Clients</span>
-            <span data-lang-inline="it">Clienti</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="zh-CN">欧洲华侨企业/跨境团队</span>
-            <span data-lang-inline="fr">Entreprises chinoises en Europe</span>
-            <span data-lang-inline="en">Overseas Chinese businesses in Europe</span>
-            <span data-lang-inline="it">Imprese cinesi in Europa</span>
-          </div>
-        </div>
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="zh-CN">核心能力</span>
-            <span data-lang-inline="fr">Atouts</span>
-            <span data-lang-inline="en">Strengths</span>
-            <span data-lang-inline="it">Punti di forza</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="zh-CN">客户体验 + 流程落地 + 增长复盘</span>
-            <span data-lang-inline="fr">Expérience client + exécution + croissance</span>
-            <span data-lang-inline="en">Customer experience + execution + growth</span>
-            <span data-lang-inline="it">Esperienza cliente + esecuzione + crescita</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chat anchor -->
-  <section id="chat" class="mx-auto max-w-6xl px-4 pb-14">
-    <div class="rounded-3xl border border-white/10 p-8 glass shadow-soft">
-      <h2 class="text-2xl md:text-3xl font-bold">
-        <span data-lang-inline="zh-CN">现在就开始（最快方式）</span>
-        <span data-lang-inline="fr">Commencer maintenant (le plus simple)</span>
-        <span data-lang-inline="en">Start now (fastest way)</span>
-        <span data-lang-inline="it">Inizia ora (modo più veloce)</span>
-      </h2>
-      <p class="mt-3 text-slate-300">
-        <span data-lang-inline="zh-CN">用三句话介绍你的业务和目标。ZSJ 的 AI 助手可以帮你梳理<span class="text-white font-semibold">从哪里开始、30 天内可以做什么</span>。</span>
-        <span data-lang-inline="fr">Présentez votre activité et vos objectifs en trois phrases. L’assistant IA de ZSJ peut vous aider à déterminer <span class="text-white font-semibold">par où commencer et ce qui est réalisable en 30 jours</span>.</span>
-        <span data-lang-inline="en">Describe your business and goals in three sentences. ZSJ’s AI assistant can help you explore <span class="text-white font-semibold">where to start and what’s achievable in 30 days</span>.</span>
-        <span data-lang-inline="it">Descrivi la tua attività e i tuoi obiettivi in tre frasi. L’assistente IA di ZSJ può aiutarti a capire <span class="text-white font-semibold">da dove iniziare e cosa è possibile fare in 30 giorni</span>.</span>
-      </p>
-      <div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-slate-200">
-        <div class="font-semibold text-white">
-          <span data-lang-inline="zh-CN">咨询模板</span>
-          <span data-lang-inline="fr">Modèle de message</span>
-          <span data-lang-inline="en">Message template</span>
-          <span data-lang-inline="it">Modello di messaggio</span>
-        </div>
-        <div class="mt-2 text-slate-300 leading-relaxed" id="zsj-intake-template">
-          <span data-lang-inline="zh-CN">1）我的企业类型：行业/主要业务（简单说）<br/>
-          2）当前最影响增长的问题：获客/服务/交付/协作（选1-2个）<br/>
-          3）团队人数 + 希望1个月达成的结果：</span>
-          <span data-lang-inline="fr">1) Type d’entreprise / activité principale<br/>
-          2) Problème principal : acquisition / service / livraison / collaboration<br/>
-          3) Taille de l’équipe + résultat attendu en 30 jours :</span>
-          <span data-lang-inline="en">1) Business type / main activity<br/>
-          2) Biggest blocker: acquisition / service / delivery / collaboration<br/>
-          3) Team size + outcome you want in 30 days:</span>
-          <span data-lang-inline="it">1) Tipo di impresa / attività principale<br/>
-          2) Blocco principale: acquisizione / servizio / consegna / collaborazione<br/>
-          3) Dimensione team + obiettivo in 30 giorni:</span>
-        </div>
-        <button type="button" id="zsj-copy-template" class="mt-3 rounded-lg border border-white/20 px-3 py-1.5 hover:bg-white/10">
-          <span data-lang-inline="zh-CN">复制模板</span>
-          <span data-lang-inline="fr">Copier le modèle</span>
-          <span data-lang-inline="en">Copy template</span>
-          <span data-lang-inline="it">Copia il modello</span>
-        </button>
-        <span id="zsj-copy-status" class="ml-2 text-slate-300" role="status"></span>
-      </div>
-      <p class="mt-4 text-xs text-slate-400">
-        <span data-lang-inline="zh-CN">请用概括或脱敏示例说明需求，避免在聊天中发送敏感资料。</span>
-        <span data-lang-inline="fr">Décrivez votre besoin en termes généraux ou avec des exemples anonymisés.</span>
-        <span data-lang-inline="en">Describe your needs in general terms or with anonymized examples.</span>
-        <span data-lang-inline="it">Descrivi le tue esigenze in termini generali o con esempi anonimizzati.</span>
-      </p>
-      <button class="mt-5 rounded-xl bg-white text-slate-950 px-5 py-3 text-sm font-semibold hover:bg-slate-100 btn"
-        type="button" data-zsj-chat-open aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-        <span data-lang-inline="zh-CN">打开聊天窗口</span>
-        <span data-lang-inline="fr">Ouvrir le chat</span>
-        <span data-lang-inline="en">Open chat</span>
-        <span data-lang-inline="it">Apri chat</span>
-      </button>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="mx-auto max-w-6xl px-4 pb-16">
-    <h2 class="text-2xl md:text-3xl font-bold" tabindex="-1">
-      <span data-lang-inline="zh-CN">FAQ</span>
-      <span data-lang-inline="fr">FAQ</span>
-      <span data-lang-inline="en">FAQ</span>
-      <span data-lang-inline="it">FAQ</span>
-    </h2>
-    <div class="mt-6 grid md:grid-cols-2 gap-4">
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="zh-CN">你到底交付什么？</span>
-          <span data-lang-inline="fr">Que livrez‑vous exactement ?</span>
-          <span data-lang-inline="en">What exactly do you deliver?</span>
-          <span data-lang-inline="it">Cosa consegni esattamente?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">我交付的是“可用系统”：客户接待与跟进流程、统一话术与资料、团队交接文档。</span>
-          <span data-lang-inline="fr">Un système opérationnel : accueil client, suivi, messages cohérents, documentation d’équipe.</span>
-          <span data-lang-inline="en">An operational system: customer handling, follow‑ups, consistent messaging, and team docs.</span>
-          <span data-lang-inline="it">Un sistema operativo: gestione clienti, follow‑up, messaggi coerenti, documentazione.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="zh-CN">需要我团队懂技术吗？</span>
-          <span data-lang-inline="fr">Faut‑il une équipe technique ?</span>
-          <span data-lang-inline="en">Does my team need to be technical?</span>
-          <span data-lang-inline="it">Serve un team tecnico?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">不需要。你只要提供业务信息；我会把流程写成简单说明，并做一次交接培训。</span>
-          <span data-lang-inline="fr">Non. Vous fournissez les infos métier, je rends l’usage simple et formé.</span>
-          <span data-lang-inline="en">No. You provide business info, I make it simple and train your team.</span>
-          <span data-lang-inline="it">No. Fornisci le info business, io semplifico e formo il team.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="zh-CN">资料隐私怎么处理？</span>
-          <span data-lang-inline="fr">Et la confidentialité ?</span>
-          <span data-lang-inline="en">How about privacy?</span>
-          <span data-lang-inline="it">E la privacy?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">默认最小化采集与分级权限；敏感资料可用“字段清单+样例”方式描述。</span>
-          <span data-lang-inline="fr">Collecte minimale, accès par niveaux ; données sensibles via liste de champs.</span>
-          <span data-lang-inline="en">Minimal collection, tiered access; sensitive data via field lists.</span>
-          <span data-lang-inline="it">Raccolta minima, accessi a livelli; dati sensibili via lista campi.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="zh-CN">你适合谁？不适合谁？</span>
-          <span data-lang-inline="fr">Pour qui est‑ce adapté ?</span>
-          <span data-lang-inline="en">Who is this for?</span>
-          <span data-lang-inline="it">Per chi è adatto?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="zh-CN">适合：想转型落地、重视客户体验、愿意优化流程的企业。<br/>
-          不适合：只想做展示、不愿整理资料或不愿改变流程的团队。</span>
-          <span data-lang-inline="fr">Adapté aux entreprises prêtes à améliorer l’expérience client et leurs processus. Pas pour un simple “showroom IA”.</span>
-          <span data-lang-inline="en">For companies ready to improve customer experience and processes, not just a demo.</span>
-          <span data-lang-inline="it">Per aziende pronte a migliorare esperienza cliente e processi, non solo una demo.</span>
-        </p>
-      </details>
-{{extraFaq}}
-    </div>
-  </section>
-
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer id="wechat" class="border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 pt-10 pb-24 md:pb-10 text-sm text-slate-400">
+  <footer class="site-footer" id="wechat">
+    <div class="wrap">
       <span class="zsj-wechat-contact">
-        <a class="zsj-wechat-image" href="/assets/wechat-qr.png" target="_blank" rel="noopener">
-          <img src="/assets/wechat-qr.png" width="740" height="740" loading="lazy" decoding="async" alt="{{wechatEnlarge}}" />
+        <a class="zsj-wechat-image" href="{{assetPrefix}}assets/wechat-qr.png" target="_blank" rel="noopener">
+          <img src="{{assetPrefix}}assets/wechat-qr.png" width="740" height="740" loading="lazy" decoding="async" alt="{{wechatEnlarge}}" />
         </a>
         <span class="zsj-wechat-copy">
           <strong>{{wechatLabel}}</strong>
           <span>{{wechatHelp}}</span>
         </span>
       </span>
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>© <span id="y"></span> ZSJ. All rights reserved.</div>
-        <div class="text-xs">
+      <div class="footer-inner">
+        <span>© <span id="y"></span> ZSJ</span>
+        <span>
           <span data-lang-inline="zh-CN">聊天消息由 OpenAI 处理以生成回复。</span>
           <span data-lang-inline="fr">OpenAI traite les messages du chat pour générer les réponses.</span>
           <span data-lang-inline="en">OpenAI processes chat messages to generate replies.</span>
           <span data-lang-inline="it">OpenAI elabora i messaggi della chat per generare le risposte.</span>
-        </div>
+        </span>
       </div>
     </div>
   </footer>
@@ -999,6 +469,11 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    if (location.protocol === 'file:') {
+      for (const link of document.querySelectorAll('.locale-switch a')) {
+        link.setAttribute('href', link.getAttribute('href') + 'index.html');
+      }
+    }
   </script>
 </body>
 </html>

@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
-  <title>Conseil IA pour entreprises chinoises en Europe | ZSJ</title>
-  <meta name="description" content="ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus." />
+  <title>Transformation IA des entreprises de la diaspora chinoise | ZSJ</title>
+  <meta name="description" content="ZSJ accompagne la transformation IA des entreprises de la diaspora chinoise. Lancez un pilote de 30 jours et définissez votre feuille de route." />
   <link rel="canonical" href="https://www.zsj.fr/fr/" />
   <link rel="alternate" hreflang="zh-Hans" href="https://www.zsj.fr/" />
   <link rel="alternate" hreflang="fr" href="https://www.zsj.fr/fr/" />
@@ -16,11 +16,10 @@
   <meta property="og:site_name" content="ZSJ" />
   <meta property="og:url" content="https://www.zsj.fr/fr/" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Conseil IA pour entreprises chinoises en Europe | ZSJ" />
-  <meta property="og:description" content="ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/fr/#webpage","url":"https://www.zsj.fr/fr/","name":"Conseil IA pour entreprises chinoises en Europe | ZSJ","description":"ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus.","inLanguage":"fr","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/fr/#services","url":"https://www.zsj.fr/fr/#services","name":"Conseil IA et mise en œuvre","description":"ZSJ aide les entreprises chinoises en Europe et les équipes transfrontalières à mettre en place un service client multilingue. Votre équipe dispose d’une base de réponses, d’un circuit pour orienter les demandes et de rappels automatiques pour le suivi.","provider":{"@id":"https://www.zsj.fr/#organization"},"areaServed":{"@type":"Place","name":"Europe"}}]}</script>
-  <meta name="theme-color" content="#0b1220" />
-
+  <meta property="og:title" content="Transformation IA des entreprises de la diaspora chinoise | ZSJ" />
+  <meta property="og:description" content="ZSJ accompagne la transformation IA des entreprises de la diaspora chinoise. Lancez un pilote de 30 jours et définissez votre feuille de route." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/fr/#webpage","url":"https://www.zsj.fr/fr/","name":"Transformation IA des entreprises de la diaspora chinoise | ZSJ","description":"ZSJ accompagne la transformation IA des entreprises de la diaspora chinoise. Lancez un pilote de 30 jours et définissez votre feuille de route.","inLanguage":"fr","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/fr/#services","url":"https://www.zsj.fr/fr/#services","name":"Conseil en transformation IA","description":"ZSJ aide les entreprises de la diaspora chinoise et les équipes transfrontalières à partir de leurs objectifs, évaluer les risques et tester une approche avec un pilote de 30 jours.","provider":{"@id":"https://www.zsj.fr/#organization"}}]}</script>
+  <meta name="theme-color" content="#111a1e" />
   <script>
     if (location.hostname === 'saszsj.github.io') {
       const target = new URL(location.href);
@@ -30,599 +29,286 @@
       location.replace(target.href);
     }
   </script>
-  <link rel="stylesheet" href="/assets/chat.css" />
-  <script type="module" src="/assets/chat.js"></script>
-
-  <!-- Tailwind CDN（快速上线版） -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
-    .grid-bg {
-      background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 0);
-      background-size: 24px 24px;
-      background-position: -12px -12px;
-    }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .btn { transition: transform .06s ease; }
-    .btn:active { transform: translateY(1px); }
-    .lang-btn { border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 6px 8px; font-size: 12px; color: rgba(255,255,255,0.85); }
-    .lang-btn.active { background: #fff; color: #0b1220; border-color: #fff; }
-  </style>
+  <link rel="stylesheet" href="../assets/site.css" />
+  <link rel="stylesheet" href="../assets/chat.css" />
+  <script defer src="../assets/chat.js"></script>
 </head>
-
-<body class="bg-slate-950 text-slate-100">
-  <!-- Top bar -->
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/70 glass">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-xl bg-white/10 flex items-center justify-center font-bold">ZSJ</div>
-        <div class="leading-tight">
-          <div class="font-semibold">ZSJ</div>
-          <div class="text-xs text-slate-300">
-            <span data-lang-inline="fr">Conseiller IA pour entreprises chinoises d’Europe</span>
-          </div>
-        </div>
-      </div>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200">
-        <a href="#scenarios" class="hover:text-white">
-          <span data-lang-inline="fr">Scénarios</span>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="site-nav">
+        <a href="#scenarios">
+          <span>L’opportunité</span>
         </a>
-        <a href="#services" class="hover:text-white">
-          <span data-lang-inline="fr">Services</span>
+        <a href="#demo">
+          <span>Démonstration</span>
         </a>
-        <a href="#process" class="hover:text-white">
-          <span data-lang-inline="fr">Méthode</span>
-        </a>
-        <a href="#about" class="hover:text-white">
-          <span data-lang-inline="fr">À propos</span>
-        </a>
-        <a href="#faq" class="hover:text-white">
-          <span data-lang-inline="fr">FAQ</span>
+        <a href="#services">
+          <span>Pilote 30 jours</span>
         </a>
       </nav>
-
-      <div class="flex items-center gap-2">
-        <div class="flex items-center gap-2 flex-wrap">
-          <a class="lang-btn" href="/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
-          <a class="lang-btn active" href="/fr/" lang="fr" hreflang="fr" aria-current="page">Français</a>
-          <a class="lang-btn" href="/en/" lang="en" hreflang="en">English</a>
-          <a class="lang-btn" href="/it/" lang="it" hreflang="it">Italiano</a>
-        </div>
-        <a href="#chat" data-zsj-chat-open aria-controls="zsj-chat-panel" aria-haspopup="dialog" class="rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn">
-          <span data-lang-inline="fr">Discuter</span>
-        </a>
+      <div class="locale-switch">
+          <a href="../" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+          <a href="../fr/" lang="fr" hreflang="fr" aria-current="page">Français</a>
+          <a href="../en/" lang="en" hreflang="en">English</a>
+          <a href="../it/" lang="it" hreflang="it">Italiano</a>
       </div>
     </div>
   </header>
 
-  <main>
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 grid-bg opacity-60"></div>
-    <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-[900px] rounded-full bg-gradient-to-r from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20 blur-3xl"></div>
-
-    <div class="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="inline-flex items-center gap-2 text-xs text-slate-200 rounded-full border border-white/10 px-3 py-1 glass">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-            <span data-lang-inline="fr">Ère de l’IA : chaque entreprise doit se transformer｜Opérationnel en 30 jours</span>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span>Pour les entreprises de la diaspora chinoise</span>
           </p>
-
-          <h1 class="mt-4 text-3xl md:text-5xl font-bold leading-tight">Conseil en transformation IA pour les entreprises chinoises en Europe</h1>
-
-          <p class="mt-4 text-slate-300 leading-relaxed">ZSJ aide les entreprises chinoises en Europe et les équipes transfrontalières à mettre en place un service client multilingue. Votre équipe dispose d’une base de réponses, d’un circuit pour orienter les demandes et de rappels automatiques pour le suivi.</p>
-
-          <div class="mt-7 flex flex-col sm:flex-row gap-3">
-            <a href="#scenarios" class="rounded-xl bg-white text-slate-950 px-5 py-3 text-sm font-semibold hover:bg-slate-100 btn shadow-soft">
-              <span data-lang-inline="fr">Choisir un scénario (solution immédiate)</span>
+          <h1>
+            <span>C’est le moment d’engager votre transformation avec l’IA.</span>
+          </h1>
+          <p class="hero-intro">
+            <span>L’IA change la façon de travailler et de développer son entreprise. ZSJ part de vos objectifs, choisit avec vous une première priorité et aide votre équipe à la mettre en pratique.</span>
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">
+              <span>Parler de mon projet</span>
             </a>
-            <a href="#services" class="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white/90 hover:bg-white/5 btn">
-              <span data-lang-inline="fr">Voir services et tarifs</span>
+            <a class="button button-quiet" href="#demo">
+              <span>Voir un exemple</span>
             </a>
           </div>
+        </div>
+        <a class="pilot-preview" href="#services">
+          <span class="preview-label">
+            <span>Pilote de transformation IA</span>
+          </span>
+          <span class="preview-duration">30
+            <span class="preview-unit">
+              <span>jours</span>
+            </span>
+          </span>
+          <span class="preview-caption">
+            <span>Une priorité métier, un essai avec votre équipe et un bilan pour décider de la suite.</span>
+          </span>
+          <span class="preview-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="fr">Des réponses plus rapides</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="fr">Questions fréquentes, réponses claires et cohérentes</span>
-              </div>
+    <section class="section opportunity" id="scenarios">
+      <div class="wrap split">
+        <h2>
+          <span>Pourquoi agir maintenant&nbsp;?</span>
+        </h2>
+        <div class="section-copy">
+          <p>
+            <span>Les outils d’IA sont plus accessibles. Vous pouvez commencer sur une priorité métier, observer ce qui fonctionne pour votre équipe et décider où investir ensuite.</span>
+          </p>
+          <p>
+            <span>Travailler entre plusieurs langues, cultures et marchés vous donne déjà une expérience précieuse. L’IA offre l’occasion de mieux la partager au sein de votre équipe et de préparer votre prochaine étape de croissance.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo" id="demo">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">
+            <span>Démonstration · exemple fictif</span>
+          </p>
+          <h2>
+            <span>De l’envie d’utiliser l’IA à un plan d’action</span>
+          </h2>
+          <p>
+            <span>Une entreprise de la diaspora chinoise se développe sur plusieurs marchés. Sa direction veut s’appuyer sur l’IA pour accompagner cette croissance et cherche par où commencer.</span>
+          </p>
+        </div>
+        <ol class="demo-steps">
+          <li>
+            <h3>
+              <span>Choisir une priorité</span>
+            </h3>
+            <p>
+              <span>Les équipes choisissent un objectif : aider les collègues d’un nouveau marché à s’approprier plus vite les pratiques du groupe. Elles suivent le temps d’adaptation et les difficultés rencontrées.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span>Tester sur le terrain</span>
+            </h3>
+            <p>
+              <span>Sur le nouveau marché, un petit groupe teste si l’IA l’aide à adopter ces pratiques. Des collègues expérimentés valident celles qui peuvent être reprises localement.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span>Décider de la suite</span>
+            </h3>
+            <p>
+              <span>La direction s’appuie sur les résultats observés et les retours de l’équipe pour décider d’ajuster l’approche, de l’étendre ou de changer de priorité.</span>
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section pilot" id="services">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>
+            <span>Un pilote de transformation IA en 30 jours</span>
+          </h2>
+          <p>
+            <span>Testez une approche sur une priorité de votre entreprise. Avant de lancer le pilote, nous évaluons la faisabilité et les risques, puis validons ensemble son périmètre.</span>
+          </p>
+        </div>
+        <ol class="pilot-steps" id="process">
+          <li>
+            <h3>
+              <span>Établir le point de départ</span>
+            </h3>
+            <p>
+              <span>Nous examinons les pratiques actuelles avec votre équipe et précisons l’objectif et les critères de réussite.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span>Expérimenter avec l’équipe</span>
+            </h3>
+            <p>
+              <span>Nous essayons l’approche dans le cadre convenu, accompagnons sa prise en main et recueillons les retours.</span>
+            </p>
+          </li>
+          <li>
+            <h3>
+              <span>Faire le bilan et préparer la suite</span>
+            </h3>
+            <p>
+              <span>Nous évaluons les résultats au regard de l’objectif et vous remettons un bilan et une feuille de route pour la suite.</span>
+            </p>
+          </li>
+        </ol>
+        <a class="button button-primary" href="#contact">
+          <span>Parler de mon projet</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap split">
+        <h2>
+          <span>Comment ZSJ vous accompagne</span>
+        </h2>
+        <div class="section-copy">
+          <p>
+            <span>ZSJ accompagne les entreprises de la diaspora chinoise et les équipes qui travaillent entre plusieurs marchés. Nous partons de vos objectifs et de la réalité de votre équipe pour choisir comment l’IA peut vous aider.</span>
+          </p>
+          <dl class="support-options">
+            <div>
+              <dt>
+                <span>Diagnostic de 90 minutes</span>
+              </dt>
+              <dd>
+                <span>Identifier vos priorités et repartir avec une feuille de route d’une page.</span>
+              </dd>
             </div>
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="fr">Une équipe plus sereine</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="fr">Processus clairs, livraison stable, moins d’allers‑retours</span>
-              </div>
+            <div>
+              <dt>
+                <span>Accompagnement annuel</span>
+              </dt>
+              <dd>
+                <span>Faire régulièrement le point et faire évoluer la feuille de route avec votre entreprise.</span>
+              </dd>
             </div>
-            <div class="rounded-2xl border border-white/10 p-4 glass">
-              <div class="text-white font-semibold">
-                <span data-lang-inline="fr">Aucun prospect perdu</span>
-              </div>
-              <div class="text-slate-300 mt-1">
-                <span data-lang-inline="fr">Demandes tracées, suivi régulier, occasions de rachat</span>
-              </div>
-            </div>
-          </div>
+          </dl>
         </div>
+      </div>
+    </section>
 
-        <!-- Right card -->
-        <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-          <div class="text-sm text-slate-200">
-            <span data-lang-inline="fr">Situations que vous rencontrez souvent</span>
-          </div>
-          <ul class="mt-3 space-y-3 text-sm text-slate-300">
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="fr">Beaucoup de questions clients, réponses lentes et inégales</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="fr">Informations dispersées, rupture lors d’un changement de personne</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="fr">Suivi de mémoire, risques d’oubli</span>
-            </li>
-            <li class="flex gap-2"><span class="text-emerald-400">✓</span>
-              <span data-lang-inline="fr">Envie de se transformer, sans savoir par où commencer</span>
-            </li>
-          </ul>
-
-          <div class="mt-6 rounded-2xl border border-white/10 p-4 bg-white/5">
-            <div class="text-white font-semibold">
-              <span data-lang-inline="fr">Mon engagement</span>
+    <section class="section contact" id="contact">
+      <div class="wrap contact-layout" id="chat">
+        <div>
+          <h2>
+            <span>Parler de mon projet</span>
+          </h2>
+          <p class="contact-status">Décrivez votre activité, votre objectif et votre question. L’assistant IA vous répondra dans le chat.</p>
+        </div>
+        <form class="contact-prep" id="zsj-project-form" aria-labelledby="zsj-project-title">
+          <h3 id="zsj-project-title">Présentez votre projet</h3>
+          <div class="project-fields">
+            <div class="project-field">
+              <label for="zsj-project-business">Votre activité et vos marchés</label>
+              <input id="zsj-project-business" name="business" type="text" required maxlength="200" />
             </div>
-            <div class="text-slate-300 mt-1 text-sm leading-relaxed">
-              <span data-lang-inline="fr">Pas de jargon : un système utilisable, tout de suite. <br/>
-              <span class="text-white">Clients pris en charge, questions traitées, suivi organisé</span> — et votre équipe peut le gérer.</span>
+            <div class="project-field">
+              <label for="zsj-project-goal">Votre objectif actuel</label>
+              <input id="zsj-project-goal" name="goal" type="text" required maxlength="250" />
+            </div>
+            <div class="project-field">
+              <label for="zsj-project-question">Votre question sur la transformation IA</label>
+              <textarea id="zsj-project-question" name="question" rows="3" required maxlength="400"></textarea>
             </div>
           </div>
+          <p class="project-privacy" id="zsj-project-privacy">Évitez les informations personnelles, confidentielles ou relatives à vos clients. OpenAI traite ces informations pour générer une réponse.</p>
+          <button type="submit" class="button button-primary" aria-describedby="zsj-project-privacy" disabled>Envoyer dans le chat IA</button>
+          <p class="project-status" id="zsj-project-status" role="status"></p>
+        </form>
+      </div>
+    </section>
 
-          <div class="mt-6 text-xs text-slate-400">
-            <span data-lang-inline="fr">Choisissez un scénario pour ouvrir le chat avec un message à compléter.</span>
-          </div>
+    <section class="section faq" id="faq" tabindex="-1" aria-labelledby="faq-title">
+      <div class="wrap split">
+        <h2 id="faq-title">
+          <span>Questions fréquentes</span>
+        </h2>
+        <div>
+          <details>
+            <summary>
+              <span>Et si je ne sais pas encore par où commencer&nbsp;?</span>
+            </summary>
+            <p>
+              <span>Commençons par vos objectifs et la façon dont travaille votre équipe. Le diagnostic de 90 minutes débouche sur une feuille de route d’une page avec vos priorités.</span>
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span>Que reçoit-on à la fin du pilote&nbsp;?</span>
+            </summary>
+            <p>
+              <span>Vous recevez un bilan, des recommandations pour votre équipe et une feuille de route. Nous convenons des livrables précis au démarrage.</span>
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span>Comment évaluez-vous les risques liés au projet&nbsp;?</span>
+            </summary>
+            <p>
+              <span>Avant le pilote, nous examinons les données nécessaires, le rôle de l’équipe et les risques. Nous précisons les étapes qui demandent une validation humaine.</span>
+            </p>
+          </details>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Scenario Selector (核心销售模块) -->
-  <section id="scenarios" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">
-      <span data-lang-inline="fr">Choisissez votre objectif (un clic pour commencer)</span>
-    </h2>
-    <p class="mt-2 text-slate-300">
-      <span data-lang-inline="fr">Choisissez le scénario qui correspond à votre objectif, puis complétez le message avant de l’envoyer.</span>
-    </p>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-5">
-      <!-- Card -->
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Croissance et acquisition</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Transformer plus vite les demandes en ventes, sans perdre de prospects.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Accueil 7j/7 et premières réponses</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Qualification et répartition plus claires</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Discours cohérent, multilingue et pro</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="growth" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Efficacité et simplification</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Moins de réunions, plus d’exécution, livraison plus stable.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Savoir-faire centralisé, intégration rapide</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Rappels automatiques, moins d’oublis</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Standards unifiés, qualité stable</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="efficiency" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Service client renforcé</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Améliorer la satisfaction, réduire les coûts, multilingue.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Réponse 7j/7, moins d’attente</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Catégories claires, responsabilités nettes</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Escalade humaine pour cas complexes</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="service" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Informations claires et transmissibles</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Transformer les infos en une base de réponses utilisable, même pour les nouveaux.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Infos clés centralisées</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Messages internes/externes cohérents</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Mise à jour simple, amélioration continue</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="knowledge" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Opérations clients & projets</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Transformer le suivi, la livraison et le feedback en processus stables.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Rappels aux étapes clés, plus d’oublis</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Suivi client régulier</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Rachat et recommandation mieux pilotés</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="operations" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <div class="text-white font-semibold text-lg">
-          <span data-lang-inline="fr">Communication transfrontalière</span>
-        </div>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Une même information, un rendu multilingue professionnel.</span>
-        </p>
-        <ul class="mt-4 text-sm text-slate-300 space-y-2">
-          <li>
-            <span data-lang-inline="fr">• Présentations/propositions/emails plus rapides</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Message cohérent, image plus professionnelle</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Validation claire, moins de retours</span>
-          </li>
-        </ul>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="multilang" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Choisir ce scénario</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-6 text-xs text-slate-400">
-      <span data-lang-inline="fr">Astuce : si vous hésitez, choisissez « Croissance et acquisition ». Je vous orienterai.</span>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Conseil IA et mise en œuvre</h2>
-    <p class="mt-2 text-slate-300">
-      <span data-lang-inline="fr">Du diagnostic à un système opérationnel, puis à la croissance durable.</span>
-    </p>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-5">
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <h3 class="text-white font-semibold">Diagnostic IA de 90 minutes</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="fr">Idéal si vous hésitez ou craignez les erreurs</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="fr">• État des lieux : clients, processus, équipe</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Priorité d’action la plus rentable</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Plan opérationnel en 30 jours</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="fr">Livrable : une feuille de route d’une page</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="diagnosis" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Se renseigner sur le diagnostic</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft ring-1 ring-white/15">
-        <h3 class="text-white font-semibold">Déploiement d’un système de service client en 30 jours</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="fr">Pour une solution utilisable immédiatement</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="fr">• Réponses clients plus rapides</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Suivi et répartition plus clairs</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Rappels et suivi des étapes clés</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Votre équipe peut le gérer</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="fr">Livrable : un système de service client opérationnel</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="implementation" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Je veux déployer</span>
-        </button>
-      </div>
-
-      <div class="rounded-3xl border border-white/10 p-6 glass shadow-soft">
-        <h3 class="text-white font-semibold">Accompagnement annuel et amélioration des processus</h3>
-        <div class="mt-1 text-sm text-slate-300">
-          <span data-lang-inline="fr">Pour une croissance durable et des réachats</span>
-        </div>
-        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-          <li>
-            <span data-lang-inline="fr">• Itérations mensuelles : messages, process, expérience</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Analyse : sources, conversion, réachat</span>
-          </li>
-          <li>
-            <span data-lang-inline="fr">• Croissance : contenus et points de contact</span>
-          </li>
-        </ul>
-        <div class="mt-5 text-sm text-slate-200">
-          <span data-lang-inline="fr">Livrable : accompagnement long terme</span>
-        </div>
-        <button class="mt-6 w-full rounded-xl bg-white text-slate-950 px-4 py-2 text-sm font-semibold hover:bg-slate-100 btn"
-          type="button" data-zsj-chat-open="advisor" aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-          <span data-lang-inline="fr">Parler d’un accompagnement</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-6 text-xs text-slate-400">
-      <span data-lang-inline="fr">Note : le prix dépend de la taille de l’activité, de l’équipe et des langues.</span>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" class="mx-auto max-w-6xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">
-      <span data-lang-inline="fr">Processus en 4 étapes</span>
-    </h2>
-    <div class="mt-8 grid md:grid-cols-4 gap-4">
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="fr">1) État des lieux</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Questions clients, processus, rôles</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="fr">2) Clarifier</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Messages et processus unifiés</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="fr">3) Accueil client</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Demandes tracées et suivies</span>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-white/10 p-5 glass shadow-soft">
-        <div class="text-white font-semibold">
-          <span data-lang-inline="fr">4) Stabiliser</span>
-        </div>
-        <div class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Rappels et revues des étapes clés</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="mx-auto max-w-6xl px-4 py-14">
-    <div class="rounded-3xl border border-white/10 p-8 glass shadow-soft">
-      <h2 class="text-2xl md:text-3xl font-bold">
-        <span data-lang-inline="fr">À propos</span>
-      </h2>
-      <p class="mt-3 text-slate-300 leading-relaxed">
-        <span data-lang-inline="fr">Je transforme la complexité des entreprises chinoises en Europe en processus simples : relation client, conversion, et surtout mise en œuvre claire pour que l’équipe s’en serve vraiment.</span>
-      </p>
-      <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="fr">Style</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="fr">Pas de jargon, priorité aux résultats</span>
-          </div>
-        </div>
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="fr">Clients</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="fr">Entreprises chinoises en Europe</span>
-          </div>
-        </div>
-        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
-          <div class="text-white font-semibold">
-            <span data-lang-inline="fr">Atouts</span>
-          </div>
-          <div class="mt-1 text-slate-300">
-            <span data-lang-inline="fr">Expérience client + exécution + croissance</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chat anchor -->
-  <section id="chat" class="mx-auto max-w-6xl px-4 pb-14">
-    <div class="rounded-3xl border border-white/10 p-8 glass shadow-soft">
-      <h2 class="text-2xl md:text-3xl font-bold">
-        <span data-lang-inline="fr">Commencer maintenant (le plus simple)</span>
-      </h2>
-      <p class="mt-3 text-slate-300">
-        <span data-lang-inline="fr">Présentez votre activité et vos objectifs en trois phrases. L’assistant IA de ZSJ peut vous aider à déterminer <span class="text-white font-semibold">par où commencer et ce qui est réalisable en 30 jours</span>.</span>
-      </p>
-      <div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-slate-200">
-        <div class="font-semibold text-white">
-          <span data-lang-inline="fr">Modèle de message</span>
-        </div>
-        <div class="mt-2 text-slate-300 leading-relaxed" id="zsj-intake-template">
-          <span data-lang-inline="fr">1) Type d’entreprise / activité principale<br/>
-          2) Problème principal : acquisition / service / livraison / collaboration<br/>
-          3) Taille de l’équipe + résultat attendu en 30 jours :</span>
-        </div>
-        <button type="button" id="zsj-copy-template" class="mt-3 rounded-lg border border-white/20 px-3 py-1.5 hover:bg-white/10">
-          <span data-lang-inline="fr">Copier le modèle</span>
-        </button>
-        <span id="zsj-copy-status" class="ml-2 text-slate-300" role="status"></span>
-      </div>
-      <p class="mt-4 text-xs text-slate-400">
-        <span data-lang-inline="fr">Décrivez votre besoin en termes généraux ou avec des exemples anonymisés.</span>
-      </p>
-      <button class="mt-5 rounded-xl bg-white text-slate-950 px-5 py-3 text-sm font-semibold hover:bg-slate-100 btn"
-        type="button" data-zsj-chat-open aria-controls="zsj-chat-panel" aria-haspopup="dialog">
-        <span data-lang-inline="fr">Ouvrir le chat</span>
-      </button>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="mx-auto max-w-6xl px-4 pb-16">
-    <h2 class="text-2xl md:text-3xl font-bold" tabindex="-1">
-      <span data-lang-inline="fr">FAQ</span>
-    </h2>
-    <div class="mt-6 grid md:grid-cols-2 gap-4">
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="fr">Que livrez‑vous exactement ?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Un système opérationnel : accueil client, suivi, messages cohérents, documentation d’équipe.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="fr">Faut‑il une équipe technique ?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Non. Vous fournissez les infos métier, je rends l’usage simple et formé.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="fr">Et la confidentialité ?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Collecte minimale, accès par niveaux ; données sensibles via liste de champs.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">
-          <span data-lang-inline="fr">Pour qui est‑ce adapté ?</span>
-        </summary>
-        <p class="mt-2 text-sm text-slate-300">
-          <span data-lang-inline="fr">Adapté aux entreprises prêtes à améliorer l’expérience client et leurs processus. Pas pour un simple “showroom IA”.</span>
-        </p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">Combien de temps faut-il pour déployer le système de service client ?</summary>
-        <p class="mt-2 text-sm text-slate-300">L’offre de déploiement sur 30 jours porte sur un système de service client et de suivi que votre équipe peut gérer. Le périmètre et le calendrier dépendent de votre activité, de la taille de votre équipe et des langues à prendre en charge.</p>
-      </details>
-      <details class="rounded-2xl border border-white/10 p-5 glass shadow-soft">
-        <summary class="cursor-pointer text-white font-semibold">Combien coûte un accompagnement en transformation IA ?</summary>
-        <p class="mt-2 text-sm text-slate-300">Le prix dépend du périmètre, du volume d’activité, de la taille de votre équipe et des langues à prendre en charge. Le premier échange permet de préciser votre activité et le problème à résoudre en priorité.</p>
-      </details>
-    </div>
-  </section>
-
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer id="wechat" class="border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 pt-10 pb-24 md:pb-10 text-sm text-slate-400">
+  <footer class="site-footer" id="wechat">
+    <div class="wrap">
       <span class="zsj-wechat-contact">
-        <a class="zsj-wechat-image" href="/assets/wechat-qr.png" target="_blank" rel="noopener">
-          <img src="/assets/wechat-qr.png" width="740" height="740" loading="lazy" decoding="async" alt="Agrandir le code QR WeChat" />
+        <a class="zsj-wechat-image" href="../assets/wechat-qr.png" target="_blank" rel="noopener">
+          <img src="../assets/wechat-qr.png" width="740" height="740" loading="lazy" decoding="async" alt="Agrandir le code QR WeChat" />
         </a>
         <span class="zsj-wechat-copy">
           <strong>Contacter ZSJ sur WeChat</strong>
           <span>Scannez avec WeChat. Sur le même téléphone, enregistrez l’image puis ouvrez-la depuis l’album dans le scanner WeChat.</span>
         </span>
       </span>
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>© <span id="y"></span> ZSJ. All rights reserved.</div>
-        <div class="text-xs">
-          <span data-lang-inline="fr">OpenAI traite les messages du chat pour générer les réponses.</span>
-        </div>
+      <div class="footer-inner">
+        <span>© <span id="y"></span> ZSJ</span>
+        <span>
+          <span>OpenAI traite les messages du chat pour générer les réponses.</span>
+        </span>
       </div>
     </div>
   </footer>
@@ -660,6 +346,11 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    if (location.protocol === 'file:') {
+      for (const link of document.querySelectorAll('.locale-switch a')) {
+        link.setAttribute('href', link.getAttribute('href') + 'index.html');
+      }
+    }
   </script>
 </body>
 </html>
