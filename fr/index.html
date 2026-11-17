@@ -20,6 +20,7 @@
   <meta property="og:description" content="ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus." />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/fr/#webpage","url":"https://www.zsj.fr/fr/","name":"Conseil IA pour entreprises chinoises en Europe | ZSJ","description":"ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus.","inLanguage":"fr","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/fr/#services","url":"https://www.zsj.fr/fr/#services","name":"Conseil IA et mise en œuvre","description":"ZSJ aide les entreprises chinoises en Europe et les équipes transfrontalières à mettre en place un service client multilingue. Votre équipe dispose d’une base de réponses, d’un circuit pour orienter les demandes et de rappels automatiques pour le suivi.","provider":{"@id":"https://www.zsj.fr/#organization"},"areaServed":{"@type":"Place","name":"Europe"}}]}</script>
   <meta name="theme-color" content="#0b1220" />
+  <script defer src="/assets/analytics.js" data-measurement-id="G-Z30LFBCXDH"></script>
 
   <script>
     if (location.hostname === 'saszsj.github.io') {
@@ -624,8 +625,27 @@
           <span data-lang-inline="fr">OpenAI traite les messages du chat pour générer les réponses.</span>
         </div>
       </div>
+      <details class="mt-4 max-w-2xl text-sm">
+        <summary class="cursor-pointer underline underline-offset-4 hover:text-white">Mesure d’audience et cookies</summary>
+        <p class="mt-2">Avec votre accord, ZSJ utilise Google Analytics pour mesurer les visites, les pages consultées et l’origine du trafic. Google traite des informations sur le navigateur et l’appareil et utilise des identifiants de cookies pour distinguer les visites. Le choix et les cookies de mesure sont conservés sur cet appareil pendant 180 jours au maximum. Vous pouvez modifier ou retirer votre accord ici à tout moment.</p>
+        <a href="https://policies.google.com/technologies/partner-sites" class="mt-2 inline-block underline underline-offset-4">Utilisation des données par Google</a>
+      </details>
+      <button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"
+        class="mt-4 text-sm underline underline-offset-4 hover:text-white">Réglages de mesure d’audience</button>
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+    class="fixed bottom-20 left-4 right-4 z-50 max-w-md rounded-2xl border border-slate-600 bg-slate-900 p-5 text-slate-100 shadow-soft">
+    <h2 id="analytics-heading" class="text-lg font-semibold">Autoriser la mesure d’audience ?</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-200">Avec votre accord, Google Analytics mesure la fréquentation et les pages consultées. Vous pouvez modifier votre choix dans le pied de page.
+      <a href="https://policies.google.com/technologies/partner-sites" class="underline underline-offset-4">Utilisation des données par Google</a>
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <button id="analytics-accept" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">Accepter</button>
+      <button id="analytics-refuse" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">Refuser</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open

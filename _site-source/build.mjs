@@ -5,6 +5,7 @@ const root = new URL('../', import.meta.url);
 const template = await readFile(new URL('home.template', import.meta.url), 'utf8');
 const copy = JSON.parse(await readFile(new URL('locales.json', import.meta.url), 'utf8'));
 const check = process.argv.includes('--check');
+const analyticsMeasurementId = 'G-Z30LFBCXDH';
 
 const locales = [
   { id: 'zh-CN', hreflang: 'zh-Hans', path: '/', label: '中文', openGraphLocale: 'zh_CN' },
@@ -75,6 +76,18 @@ function page(locale) {
     metadata: metadata(locale, content),
     languageLinks,
     extraFaq,
+    analyticsScript: analyticsMeasurementId
+      ? `  <script defer src="/assets/analytics.js" data-measurement-id="${analyticsMeasurementId}"></script>`
+      : '',
+    analyticsPrivacy: analyticsMeasurementId ? [
+      '<details class="mt-4 max-w-2xl text-sm">',
+      `  <summary class="cursor-pointer underline underline-offset-4 hover:text-white">${escape(content.analyticsPrivacyHeading)}</summary>`,
+      `  <p class="mt-2">${escape(content.analyticsPrivacy)}</p>`,
+      `  <a href="https://policies.google.com/technologies/partner-sites" class="mt-2 inline-block underline underline-offset-4">${escape(content.analyticsPolicy)}</a>`,
+      '</details>',
+      '<button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"',
+      `  class="mt-4 text-sm underline underline-offset-4 hover:text-white">${escape(content.analyticsPreferences)}</button>`,
+    ].map((line) => `      ${line}`).join('\n') : '',
   };
 
   return template

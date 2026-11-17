@@ -14,7 +14,15 @@
     "faqTimelineQuestion": "客户服务系统多久可以上线？",
     "faqTimelineAnswer": "30天落地服务聚焦一套可交接的客户接待与跟进系统。具体交付范围和周期根据业务规模、团队人数和所需服务语言确定。",
     "faqPriceQuestion": "AI转型咨询如何报价？",
-    "faqPriceAnswer": "费用取决于服务范围、业务规模、团队人数及所需语言。初步沟通时，可以先说明企业的主要业务和希望优先解决的问题。"
+    "faqPriceAnswer": "费用取决于服务范围、业务规模、团队人数及所需语言。初步沟通时，可以先说明企业的主要业务和希望优先解决的问题。",
+    "analyticsPreferences": "访问统计设置",
+    "analyticsHeading": "允许访问统计？",
+    "analyticsNotice": "经你同意，我们使用 Google Analytics 了解网站访问量和浏览的页面。你可以随时在页脚修改选择。",
+    "analyticsPolicy": "了解 Google 如何处理数据",
+    "analyticsAccept": "接受",
+    "analyticsRefuse": "拒绝",
+    "analyticsPrivacyHeading": "网站访问统计与 Cookie",
+    "analyticsPrivacy": "ZSJ 在你同意后使用 Google Analytics 统计访问量、浏览页面和流量来源。Google 会处理浏览器和设备信息，并通过 Cookie 标识访问。我们在这台设备上保存你的选择和统计 Cookie，最长 180 天。你可随时在此更改或撤回选择。"
   },
   "fr": {
     "wechatLabel": "Contacter ZSJ sur WeChat",
@@ -31,7 +39,15 @@
     "faqTimelineQuestion": "Combien de temps faut-il pour déployer le système de service client ?",
     "faqTimelineAnswer": "L’offre de déploiement sur 30 jours porte sur un système de service client et de suivi que votre équipe peut gérer. Le périmètre et le calendrier dépendent de votre activité, de la taille de votre équipe et des langues à prendre en charge.",
     "faqPriceQuestion": "Combien coûte un accompagnement en transformation IA ?",
-    "faqPriceAnswer": "Le prix dépend du périmètre, du volume d’activité, de la taille de votre équipe et des langues à prendre en charge. Le premier échange permet de préciser votre activité et le problème à résoudre en priorité."
+    "faqPriceAnswer": "Le prix dépend du périmètre, du volume d’activité, de la taille de votre équipe et des langues à prendre en charge. Le premier échange permet de préciser votre activité et le problème à résoudre en priorité.",
+    "analyticsPreferences": "Réglages de mesure d’audience",
+    "analyticsHeading": "Autoriser la mesure d’audience ?",
+    "analyticsNotice": "Avec votre accord, Google Analytics mesure la fréquentation et les pages consultées. Vous pouvez modifier votre choix dans le pied de page.",
+    "analyticsPolicy": "Utilisation des données par Google",
+    "analyticsAccept": "Accepter",
+    "analyticsRefuse": "Refuser",
+    "analyticsPrivacyHeading": "Mesure d’audience et cookies",
+    "analyticsPrivacy": "Avec votre accord, ZSJ utilise Google Analytics pour mesurer les visites, les pages consultées et l’origine du trafic. Google traite des informations sur le navigateur et l’appareil et utilise des identifiants de cookies pour distinguer les visites. Le choix et les cookies de mesure sont conservés sur cet appareil pendant 180 jours au maximum. Vous pouvez modifier ou retirer votre accord ici à tout moment."
   },
   "en": {
     "wechatLabel": "Contact ZSJ on WeChat",
@@ -48,7 +64,15 @@
     "faqTimelineQuestion": "How long does it take to set up the customer service system?",
     "faqTimelineAnswer": "The 30-day implementation offer focuses on a customer service and follow-up system your team can take over. The scope and timeline depend on your business, team size, and language needs.",
     "faqPriceQuestion": "How much does AI consulting cost?",
-    "faqPriceAnswer": "Pricing depends on scope, business volume, team size, and the languages you need to support. The first conversation helps define what your business does and which problem to address first."
+    "faqPriceAnswer": "Pricing depends on scope, business volume, team size, and the languages you need to support. The first conversation helps define what your business does and which problem to address first.",
+    "analyticsPreferences": "Analytics preferences",
+    "analyticsHeading": "Allow audience measurement?",
+    "analyticsNotice": "With your permission, we use Google Analytics to measure visits and page views. You can change your choice in the footer.",
+    "analyticsPolicy": "How Google uses data",
+    "analyticsAccept": "Accept",
+    "analyticsRefuse": "Decline",
+    "analyticsPrivacyHeading": "Audience measurement and cookies",
+    "analyticsPrivacy": "With your permission, ZSJ uses Google Analytics to measure visits, page views, and traffic sources. Google processes browser and device information and uses cookie identifiers to distinguish visits. Your choice and analytics cookies are kept on this device for up to 180 days. You can change or withdraw your permission here at any time."
   },
   "it": {
     "wechatLabel": "Contatta ZSJ su WeChat",
@@ -65,6 +89,14 @@
     "faqTimelineQuestion": "Quanto tempo serve per avviare il sistema di assistenza clienti?",
     "faqTimelineAnswer": "L’intervento di 30 giorni riguarda un sistema di assistenza clienti e di gestione delle richieste che il team può prendere in carico. L’ambito e le tempistiche dipendono dall’attività, dalle dimensioni del team e dalle lingue da gestire.",
     "faqPriceQuestion": "Quanto costa la consulenza per la trasformazione IA?",
-    "faqPriceAnswer": "Il costo dipende dall’ambito del progetto, dal volume di attività, dalle dimensioni del team e dalle lingue da gestire. Il primo colloquio serve a inquadrare l’attività e a individuare il problema prioritario."
+    "faqPriceAnswer": "Il costo dipende dall’ambito del progetto, dal volume di attività, dalle dimensioni del team e dalle lingue da gestire. Il primo colloquio serve a inquadrare l’attività e a individuare il problema prioritario.",
+    "analyticsPreferences": "Preferenze di misurazione",
+    "analyticsHeading": "Consentire la misurazione del pubblico?",
+    "analyticsNotice": "Con il tuo consenso, usiamo Google Analytics per misurare le visite e le visualizzazioni delle pagine. Puoi modificare la scelta in fondo al sito.",
+    "analyticsPolicy": "Come Google utilizza i dati",
+    "analyticsAccept": "Accetta",
+    "analyticsRefuse": "Rifiuta",
+    "analyticsPrivacyHeading": "Misurazione del pubblico e cookie",
+    "analyticsPrivacy": "Con il tuo consenso, ZSJ usa Google Analytics per misurare le visite, le pagine visualizzate e le fonti di traffico. Google tratta informazioni sul browser e sul dispositivo e usa identificatori dei cookie per distinguere le visite. La scelta e i cookie di misurazione restano su questo dispositivo per un massimo di 180 giorni. Puoi modificare o revocare il consenso qui in qualsiasi momento."
   }
 }

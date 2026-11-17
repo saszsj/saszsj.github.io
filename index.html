@@ -21,6 +21,7 @@
   <meta property="og:description" content="ZSJ为欧洲华侨企业和跨境团队提供AI转型咨询，帮助梳理多语言客服、客户跟进和流程自动化。提供90分钟诊断、30天落地方案和年度陪跑。" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/#webpage","url":"https://www.zsj.fr/","name":"欧洲华侨企业AI转型顾问｜ZSJ","description":"ZSJ为欧洲华侨企业和跨境团队提供AI转型咨询，帮助梳理多语言客服、客户跟进和流程自动化。提供90分钟诊断、30天落地方案和年度陪跑。","inLanguage":"zh-Hans","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/#services","url":"https://www.zsj.fr/#services","name":"AI转型咨询与流程落地服务","description":"ZSJ帮助欧洲华侨企业和跨境团队搭建多语言客户服务系统，整理常见问题，分流客户咨询，并自动提醒团队跟进。团队可以接手维护这套流程。","provider":{"@id":"https://www.zsj.fr/#organization"},"areaServed":{"@type":"Place","name":"Europe"}}]}</script>
   <meta name="theme-color" content="#0b1220" />
+  <script defer src="/assets/analytics.js" data-measurement-id="G-Z30LFBCXDH"></script>
 
   <script>
     if (location.hostname === 'saszsj.github.io') {
@@ -626,8 +627,27 @@
           <span data-lang-inline="zh-CN">聊天消息由 OpenAI 处理以生成回复。</span>
         </div>
       </div>
+      <details class="mt-4 max-w-2xl text-sm">
+        <summary class="cursor-pointer underline underline-offset-4 hover:text-white">网站访问统计与 Cookie</summary>
+        <p class="mt-2">ZSJ 在你同意后使用 Google Analytics 统计访问量、浏览页面和流量来源。Google 会处理浏览器和设备信息，并通过 Cookie 标识访问。我们在这台设备上保存你的选择和统计 Cookie，最长 180 天。你可随时在此更改或撤回选择。</p>
+        <a href="https://policies.google.com/technologies/partner-sites" class="mt-2 inline-block underline underline-offset-4">了解 Google 如何处理数据</a>
+      </details>
+      <button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"
+        class="mt-4 text-sm underline underline-offset-4 hover:text-white">访问统计设置</button>
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+    class="fixed bottom-20 left-4 right-4 z-50 max-w-md rounded-2xl border border-slate-600 bg-slate-900 p-5 text-slate-100 shadow-soft">
+    <h2 id="analytics-heading" class="text-lg font-semibold">允许访问统计？</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-200">经你同意，我们使用 Google Analytics 了解网站访问量和浏览的页面。你可以随时在页脚修改选择。
+      <a href="https://policies.google.com/technologies/partner-sites" class="underline underline-offset-4">了解 Google 如何处理数据</a>
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <button id="analytics-accept" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">接受</button>
+      <button id="analytics-refuse" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">拒绝</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open

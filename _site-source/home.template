@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 {{metadata}}
   <meta name="theme-color" content="#0b1220" />
+{{analyticsScript}}
 
   <script>
     if (location.hostname === 'saszsj.github.io') {
@@ -963,8 +964,21 @@
           <span data-lang-inline="it">OpenAI elabora i messaggi della chat per generare le risposte.</span>
         </div>
       </div>
+{{analyticsPrivacy}}
     </div>
   </footer>
+
+  <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
+    class="fixed bottom-20 left-4 right-4 z-50 max-w-md rounded-2xl border border-slate-600 bg-slate-900 p-5 text-slate-100 shadow-soft">
+    <h2 id="analytics-heading" class="text-lg font-semibold">{{analyticsHeading}}</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-200">{{analyticsNotice}}
+      <a href="https://policies.google.com/technologies/partner-sites" class="underline underline-offset-4">{{analyticsPolicy}}</a>
+    </p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <button id="analytics-accept" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">{{analyticsAccept}}</button>
+      <button id="analytics-refuse" type="button" class="rounded-lg border border-slate-400 px-4 py-2 text-sm font-semibold hover:bg-slate-800">{{analyticsRefuse}}</button>
+    </div>
+  </aside>
 
   <div class="zsj-chat" hidden>
     <button type="button" class="zsj-chat-launcher" id="zsj-chat-launcher" data-zsj-chat-open
