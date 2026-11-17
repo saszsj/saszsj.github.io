@@ -156,6 +156,7 @@ const send = document.getElementById('zsj-chat-send');
 const copy = document.getElementById('zsj-copy-template');
 const copyStatus = document.getElementById('zsj-copy-status');
 const intakeTemplate = document.getElementById('zsj-intake-template');
+const wechatContact = document.querySelector('footer .zsj-wechat-contact');
 
 const recentMessages = [];
 const failureStates = new Set(['invalid_request', 'rate_limited', 'temporarily_unavailable']);
@@ -231,7 +232,7 @@ function closeChat(restoreFocus = true) {
   }
 }
 
-function appendMessage(role, content) {
+function appendMessage(role, content, wechatInvite = false) {
   const bubble = document.createElement('p');
   bubble.className = 'zsj-chat-message zsj-chat-message-' + role;
 
@@ -242,6 +243,9 @@ function appendMessage(role, content) {
   author.textContent = translations[locale()][authorKey] + ': ';
 
   bubble.append(author, document.createTextNode(content));
+  if (wechatInvite && wechatContact) {
+    bubble.append(wechatContact.cloneNode(true));
+  }
   log.append(bubble);
   log.scrollTop = log.scrollHeight;
   return bubble;
@@ -292,7 +296,7 @@ async function submitChat(event) {
       recentMessages.push(message, { role: 'assistant', content: boundedReply(reply) });
       recentMessages.splice(0, Math.max(0, recentMessages.length - maxContextMessages));
 
-      appendMessage('assistant', reply);
+      appendMessage('assistant', reply, result.wechatInvite === true);
       while (log.childElementCount > maxDisplayedMessages + 1) {
         welcome.nextElementSibling.remove();
       }

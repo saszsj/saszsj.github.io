@@ -1,5 +1,8 @@
 {
   "zh-CN": {
+    "wechatLabel": "微信联系",
+    "wechatEnlarge": "放大微信二维码",
+    "wechatHelp": "用微信扫一扫。用同一部手机时，可长按保存图片，再从微信扫一扫的相册中选取。",
     "title": "欧洲华侨企业AI转型顾问｜ZSJ",
     "description": "ZSJ为欧洲华侨企业和跨境团队提供AI转型咨询，帮助梳理多语言客服、客户跟进和流程自动化。提供90分钟诊断、30天落地方案和年度陪跑。",
     "h1": "面向欧洲华侨企业的AI转型咨询",
@@ -14,6 +17,9 @@
     "faqPriceAnswer": "费用取决于服务范围、业务规模、团队人数及所需语言。初步沟通时，可以先说明企业的主要业务和希望优先解决的问题。"
   },
   "fr": {
+    "wechatLabel": "Contacter ZSJ sur WeChat",
+    "wechatEnlarge": "Agrandir le code QR WeChat",
+    "wechatHelp": "Scannez avec WeChat. Sur le même téléphone, enregistrez l’image puis ouvrez-la depuis l’album dans le scanner WeChat.",
     "title": "Conseil IA pour entreprises chinoises en Europe | ZSJ",
     "description": "ZSJ accompagne les entreprises chinoises en Europe et les équipes transfrontalières. Diagnostic IA, service client multilingue et automatisation des processus.",
     "h1": "Conseil en transformation IA pour les entreprises chinoises en Europe",
@@ -28,6 +34,9 @@
     "faqPriceAnswer": "Le prix dépend du périmètre, du volume d’activité, de la taille de votre équipe et des langues à prendre en charge. Le premier échange permet de préciser votre activité et le problème à résoudre en priorité."
   },
   "en": {
+    "wechatLabel": "Contact ZSJ on WeChat",
+    "wechatEnlarge": "Enlarge the WeChat QR code",
+    "wechatHelp": "Scan with WeChat. On the same phone, save the image and select it from your album in the WeChat scanner.",
     "title": "AI Consulting for Chinese Businesses in Europe | ZSJ",
     "description": "ZSJ helps overseas Chinese businesses in Europe and cross-border teams with AI assessments, multilingual customer service, and workflow automation.",
     "h1": "AI consulting for overseas Chinese businesses in Europe",
@@ -42,6 +51,9 @@
     "faqPriceAnswer": "Pricing depends on scope, business volume, team size, and the languages you need to support. The first conversation helps define what your business does and which problem to address first."
   },
   "it": {
+    "wechatLabel": "Contatta ZSJ su WeChat",
+    "wechatEnlarge": "Ingrandisci il codice QR di WeChat",
+    "wechatHelp": "Scansiona con WeChat. Sullo stesso telefono, salva l’immagine e selezionala dall’album nello scanner di WeChat.",
     "title": "Consulenza IA per imprese cinesi in Europa | ZSJ",
     "description": "ZSJ affianca le imprese cinesi in Europa e i team transfrontalieri con diagnosi IA, assistenza clienti multilingue e automazione dei processi.",
     "h1": "Consulenza per la trasformazione IA delle imprese cinesi in Europa",
