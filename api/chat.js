@@ -215,17 +215,24 @@ module.exports = async function chat(request, response) {
   const model = process.env.OPENAI_MODEL?.trim() || DEFAULT_MODEL;
   const { locale, input } = conversation;
   const wechatId = process.env.ZSJ_WECHAT_ID?.trim();
-  const invitation = wechatId ? WECHAT_INVITATIONS.get(locale) + (locale === 'zh-CN' ? '：' : ': ') + wechatId : '';
+  const wechatContact = /^1[3-9]\d{9}$/.test(wechatId || '') ? '+86 ' + wechatId : wechatId;
+  const invitationPrefix = WECHAT_INVITATIONS.get(locale) + (locale === 'zh-CN' ? '：' : ': ');
+  const invitation = wechatContact ? invitationPrefix + wechatContact : '';
   const instructions = [
     ZSJ_INSTRUCTIONS,
     'Reply in ' + LANGUAGES.get(locale) + '.',
     ...(invitation ? [QUALIFICATION_INSTRUCTIONS] : []),
   ].join('\n');
-  const alreadyInvited = invitation && input.some(({ role, content }) => role === 'assistant' && content.includes(invitation));
+  const alreadyInvited = invitation && input.some(({ role, content }) =>
+    role === 'assistant' && (content.includes(invitation) || content.includes(invitationPrefix + wechatId))
+  );
+  const redactContact = (content, replacement) => content
+    .replaceAll(wechatContact, replacement)
+    .replaceAll(wechatId, replacement);
   // The client replays recent replies. Keep the contact out of every upstream turn.
   const modelInput = invitation ? input.map(({ role, content }) => ({
     role,
-    content: content.replaceAll(wechatId, '[contact withheld]'),
+    content: redactContact(content, '[contact withheld]'),
   })) : input;
 
   try {
@@ -264,11 +271,12 @@ module.exports = async function chat(request, response) {
     }
 
     const result = readReply(await upstream.json(), Boolean(invitation));
-    const reply = invitation ? result.reply.replaceAll(wechatId, '').trim() : result.reply;
+    const reply = invitation ? redactContact(result.reply, '').trim() : result.reply;
     if (reply) {
-      return response.status(200).json({
-        reply: invitation && result.qualified && !alreadyInvited ? reply + '\n\n' + invitation : reply,
-      });
+      const showInvitation = invitation && result.qualified && !alreadyInvited;
+      return response.status(200).json(showInvitation
+        ? { reply: reply + '\n\n' + invitation, wechatInvite: true }
+        : { reply });
     }
   } catch {
     // Request details and upstream error bodies can contain private information.

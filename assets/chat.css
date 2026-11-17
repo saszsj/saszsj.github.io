@@ -1,3 +1,52 @@
+.zsj-wechat-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+  white-space: normal;
+}
+
+.zsj-wechat-image {
+  display: block;
+  width: 11rem;
+  max-width: 100%;
+  border-radius: 0.625rem;
+  background: #fff;
+}
+
+.zsj-wechat-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+.zsj-wechat-image:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 3px;
+}
+
+.zsj-wechat-copy {
+  display: grid;
+  flex: 1 1 11rem;
+  gap: 0.25rem;
+  max-width: 25rem;
+}
+
+.zsj-wechat-copy strong {
+  color: #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.zsj-chat-message .zsj-wechat-contact {
+  margin: 0.75rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--chat-border);
+  color: var(--chat-muted);
+  font-size: 0.8125rem;
+}
+
 .zsj-chat {
   --chat-surface: #0f172a;
   --chat-border: #334155;
