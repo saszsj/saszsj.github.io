@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a1e">
+<title>成为推荐合作伙伴 | ZSJ</title>
+  <meta name="description" content="向有网站定制、AI 应用或业务自动化需求的企业推荐 ZSJ，在推荐人专区查看推荐成效。" />
+  <link rel="canonical" href="https://www.zsj.fr/partners/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.zsj.fr/partners/" />
+  <link rel="alternate" hreflang="fr" href="https://www.zsj.fr/fr/devenir-partenaire/" />
+  <link rel="alternate" hreflang="en" href="https://www.zsj.fr/en/become-a-partner/" />
+  <link rel="alternate" hreflang="it" href="https://www.zsj.fr/it/diventa-partner/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.zsj.fr/partners/" />
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/partner-program.css">
+  <script defer src="../assets/partner-application.js"></script>
+</head>
+<body class="partner-program">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../" aria-label="ZSJ · 首页">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="locale-switch" aria-label="选择语言">
+        <a href="../partners/" lang="zh-Hans" hreflang="zh-Hans" aria-current="page">中文</a>
+        <a href="../fr/devenir-partenaire/" lang="fr" hreflang="fr">Français</a>
+        <a href="../en/become-a-partner/" lang="en" hreflang="en">English</a>
+        <a href="../it/diventa-partner/" lang="it" hreflang="it">Italiano</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="program-title">
+      <div class="wrap program-hero">
+        <h1 id="program-title">成为推荐合作伙伴</h1>
+        <div class="program-lead">
+          <p class="hero-intro">你认识的企业是否需要定制网站、引入 AI 或把重复工作自动化？你可以向他们推荐 ZSJ，并在自己的专区查看有多少人希望与顾问联系。</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">申请成为合作伙伴</a>
+            <a class="button button-quiet" href="../apporteur/">我的推荐人专区</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap program-columns">
+        <h2 id="how-title">如何向企业推荐 ZSJ</h2>
+        <ol class="program-steps" role="list">
+          <li><h3>提交合作申请</h3><p>请在表单中填写姓名和邮箱。ZSJ 审核通过后，会通过邮件向你发送公开推荐链接和个人专区的私人访问码。</p></li>
+          <li><h3>分享你的推荐链接</h3><p>把公开链接发给想推荐的企业即可。访问码供你本人登录专区，请妥善保管。</p></li>
+          <li><h3>让企业介绍自己的需求</h3><p>企业在聊天中描述需求后，AI 助手会推荐项目方案并给出参考价格区间。如果感兴趣，企业可以留下邮箱，由 ZSJ 顾问联系。</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section program-stats" aria-labelledby="stats-title">
+      <div class="wrap program-columns">
+        <h2 id="stats-title">在专区可以看到什么</h2>
+        <dl class="program-metrics">
+          <div><dt>推荐访客数</dt><dd>访客同意统计后，ZSJ 会按浏览器去重。系统以该浏览器上最先识别的合作伙伴链接确定推荐人，归属期最长为 30 天。</dd></div>
+          <div><dt>联系请求数</dt><dd>通过你推荐的访客留下邮箱并申请顾问联系后，同一邮箱在你的专区只计一次。你可以查看汇总数字，邮箱地址保密。</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section program-contact" id="contact" aria-labelledby="help-title">
+      <div class="wrap program-columns">
+        <div>
+          <h2 id="help-title">合作伙伴申请</h2>
+          <p id="application-help" class="program-help">姓名和邮箱均为必填项。ZSJ 负责人将审核你的申请，通过后会将访问资料发送至你填写的邮箱。</p>
+        </div>
+        <div class="contact-prep">
+          <form id="partner-application" method="post" action="/api/referrals"
+            aria-labelledby="help-title" aria-describedby="application-help">
+            <fieldset disabled>
+              <div class="project-field">
+                <label for="partner-name">你的姓名</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="project-field">
+                <label for="partner-email">你的邮箱</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <button type="submit" class="button button-primary">提交申请</button>
+            </fieldset>
+          </form>
+          <p id="application-status" role="status" tabindex="-1"
+            data-invalid-name="请填写姓名，最多 120 个字符。" data-invalid-email="请检查邮箱地址。" data-sending="正在提交申请……"
+            data-success="谢谢，已收到你的申请。ZSJ 审核通过后，会将推荐链接和私人访问码发送至你的邮箱。" data-invalid="请检查姓名和邮箱后重新提交。" data-rate="请求过于频繁，请稍后重试。" data-error="暂时无法确认是否已提交。已填写的信息仍在表单中，请稍后重试。"></p>
+          <noscript><p>请启用 JavaScript 以提交申请。</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

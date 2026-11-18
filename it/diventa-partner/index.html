@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a1e">
+<title>Diventa partner | ZSJ</title>
+  <meta name="description" content="Presenta a ZSJ le imprese che hanno un progetto web, di IA o di automazione e segui le tue segnalazioni nell’area partner." />
+  <link rel="canonical" href="https://www.zsj.fr/it/diventa-partner/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.zsj.fr/partners/" />
+  <link rel="alternate" hreflang="fr" href="https://www.zsj.fr/fr/devenir-partenaire/" />
+  <link rel="alternate" hreflang="en" href="https://www.zsj.fr/en/become-a-partner/" />
+  <link rel="alternate" hreflang="it" href="https://www.zsj.fr/it/diventa-partner/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.zsj.fr/partners/" />
+  <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/partner-program.css">
+  <script defer src="../../assets/partner-application.js"></script>
+</head>
+<body class="partner-program">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../it/" aria-label="ZSJ · Home">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="locale-switch" aria-label="Scegli la lingua">
+        <a href="../../partners/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="../../fr/devenir-partenaire/" lang="fr" hreflang="fr">Français</a>
+        <a href="../../en/become-a-partner/" lang="en" hreflang="en">English</a>
+        <a href="../../it/diventa-partner/" lang="it" hreflang="it" aria-current="page">Italiano</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="program-title">
+      <div class="wrap program-hero">
+        <h1 id="program-title">Diventa partner</h1>
+        <div class="program-lead">
+          <p class="hero-intro">Conosci un’impresa che vuole realizzare un sito su misura, integrare l’IA o automatizzare un’attività? Presentala a ZSJ e scopri quante imprese segnalate chiedono di parlare con un consulente.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">Invia la tua candidatura</a>
+            <a class="button button-quiet" href="../../apporteur/">La mia area partner</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap program-columns">
+        <h2 id="how-title">Come segnalare un’impresa</h2>
+        <ol class="program-steps" role="list">
+          <li><h3>Richiedi l’accesso</h3><p>Inserisci il tuo nome e il tuo indirizzo e-mail nel modulo. Dopo l’approvazione di ZSJ, riceverai via e-mail il link pubblico e il codice privato per la tua area partner.</p></li>
+          <li><h3>Condividi il tuo link</h3><p>Invia alle imprese solo il link pubblico. Conserva il codice privato per accedere al tuo pannello.</p></li>
+          <li><h3>Lascia che l’impresa descriva il progetto</h3><p>In chat l’impresa spiega di cosa ha bisogno. L’assistente propone una soluzione con una fascia di prezzo indicativa. Se interessata, l’impresa può lasciare la propria e-mail per essere ricontattata da un consulente ZSJ.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section program-stats" aria-labelledby="stats-title">
+      <div class="wrap program-columns">
+        <h2 id="stats-title">Cosa trovi nella tua area</h2>
+        <dl class="program-metrics">
+          <div><dt>Visitatori segnalati</dt><dd>Con il consenso del visitatore, ZSJ conta il suo browser una sola volta. Il primo link partner riconosciuto su quel browser determina a chi attribuire la segnalazione per un massimo di 30 giorni.</dd></div>
+          <div><dt>Richieste di contatto</dt><dd>Quando un visitatore segnalato lascia la propria e-mail per essere ricontattato, l’indirizzo viene conteggiato una sola volta nel tuo totale. Nell’area partner vedi i dati aggregati. Gli indirizzi e-mail restano riservati.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section program-contact" id="contact" aria-labelledby="help-title">
+      <div class="wrap program-columns">
+        <div>
+          <h2 id="help-title">La tua candidatura</h2>
+          <p id="application-help" class="program-help">Entrambi i campi sono obbligatori. Il responsabile di ZSJ esaminerà la richiesta. Se verrà approvata, riceverai i dati di accesso all’indirizzo indicato.</p>
+        </div>
+        <div class="contact-prep">
+          <form id="partner-application" method="post" action="/api/referrals"
+            aria-labelledby="help-title" aria-describedby="application-help">
+            <fieldset disabled>
+              <div class="project-field">
+                <label for="partner-name">Il tuo nome</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="project-field">
+                <label for="partner-email">Il tuo indirizzo e-mail</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <button type="submit" class="button button-primary">Invia la candidatura</button>
+            </fieldset>
+          </form>
+          <p id="application-status" role="status" tabindex="-1"
+            data-invalid-name="Inserisci il tuo nome (massimo 120 caratteri)." data-invalid-email="Controlla l’indirizzo e-mail." data-sending="Invio della candidatura…"
+            data-success="Grazie, abbiamo ricevuto la tua candidatura. Dopo l’approvazione di ZSJ, riceverai via e-mail il tuo link di segnalazione e il codice privato." data-invalid="Controlla il nome e l’indirizzo e-mail, poi invia di nuovo la candidatura." data-rate="Sono state inviate troppe richieste. Attendi prima di riprovare." data-error="Impossibile confermare l’invio. I dati sono ancora nel modulo. Riprova tra poco."></p>
+          <noscript><p>Attiva JavaScript per inviare la candidatura.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

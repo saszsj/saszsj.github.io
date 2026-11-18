@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.zsj.fr/</loc></url>
+  <url><loc>https://www.zsj.fr/partners/</loc></url>
   <url><loc>https://www.zsj.fr/fr/</loc></url>
+  <url><loc>https://www.zsj.fr/fr/devenir-partenaire/</loc></url>
   <url><loc>https://www.zsj.fr/en/</loc></url>
+  <url><loc>https://www.zsj.fr/en/become-a-partner/</loc></url>
   <url><loc>https://www.zsj.fr/it/</loc></url>
+  <url><loc>https://www.zsj.fr/it/diventa-partner/</loc></url>
 </urlset>

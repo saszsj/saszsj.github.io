@@ -1,0 +1,170 @@
+{
+  "fr": {
+    "title": "Devenir partenaire",
+    "description": "Recommandez ZSJ aux entreprises qui ont un projet web, d’IA ou d’automatisation et suivez vos recommandations dans votre espace apporteur.",
+    "home": "Accueil",
+    "languageNav": "Choisir la langue",
+    "intro": "Vous connaissez une entreprise qui cherche à créer un site sur mesure, à intégrer l’IA ou à automatiser une tâche ? Présentez-lui ZSJ et suivez les demandes de contact issues de vos recommandations.",
+    "apply": "Présenter ma candidature",
+    "portal": "Mon espace apporteur",
+    "howTitle": "Comment recommander ZSJ",
+    "steps": [
+      {
+        "title": "Demandez votre accès",
+        "text": "Indiquez votre nom et votre e-mail dans le formulaire. Une fois votre candidature approuvée par ZSJ, vous recevrez par e-mail votre lien public et le code privé de votre espace apporteur."
+      },
+      {
+        "title": "Partagez votre lien",
+        "text": "Envoyez uniquement le lien public aux entreprises que vous souhaitez présenter. Gardez le code privé pour consulter votre tableau de bord."
+      },
+      {
+        "title": "Laissez l’entreprise présenter son besoin",
+        "text": "Dans le chat, l’entreprise décrit son projet. L’assistant lui propose une solution avec une fourchette de prix. Si elle est intéressée, elle peut laisser son e-mail pour être recontactée par un consultant ZSJ."
+      }
+    ],
+    "statsTitle": "Ce que vous voyez dans votre espace",
+    "visitorsTitle": "Visiteurs recommandés",
+    "visitorsText": "Avec l’accord du visiteur, ZSJ compte son navigateur une fois et retient le premier lien partenaire reconnu pendant 30 jours. L’attribution vaut pour ce navigateur.",
+    "leadsTitle": "Demandes de contact",
+    "leadsText": "Si un visiteur recommandé laisse son e-mail pour être recontacté, sa demande est comptée une fois par adresse dans votre espace. Vous voyez les totaux. Les adresses restent confidentielles.",
+    "helpTitle": "Votre candidature",
+    "helpText": "Les deux champs sont obligatoires. Le responsable de ZSJ examinera votre demande. Si elle est approuvée, vous recevrez vos accès à l’adresse indiquée.",
+    "nameLabel": "Votre nom",
+    "emailLabel": "Votre adresse e-mail",
+    "sendLabel": "Envoyer ma candidature",
+    "invalidName": "Indiquez votre nom (120 caractères maximum).",
+    "invalidEmail": "Vérifiez votre adresse e-mail.",
+    "sending": "Envoi de votre candidature…",
+    "success": "Merci, votre candidature a été reçue. Après approbation par ZSJ, vous recevrez votre lien de recommandation et votre code privé par e-mail.",
+    "invalid": "Vérifiez votre nom et votre e-mail, puis renvoyez votre candidature.",
+    "rate": "Trop de demandes ont été envoyées. Patientez avant de réessayer.",
+    "error": "Impossible de confirmer l’envoi. Votre saisie est conservée dans le formulaire. Réessayez dans un instant.",
+    "noScript": "Activez JavaScript pour envoyer votre candidature."
+  },
+  "en": {
+    "title": "Become a referral partner",
+    "description": "Introduce businesses to ZSJ for custom websites, AI and automation projects, and track your referrals in your partner portal.",
+    "home": "Home",
+    "languageNav": "Choose a language",
+    "intro": "Know a business that needs a custom website, wants to use AI or has a task to automate? Introduce them to ZSJ and see how many of your referrals ask to speak with a consultant.",
+    "apply": "Apply to become a partner",
+    "portal": "My partner portal",
+    "howTitle": "How to refer a business",
+    "steps": [
+      {
+        "title": "Apply for access",
+        "text": "Enter your name and email address in the application form. Once ZSJ approves your application, you’ll receive your public referral link and private dashboard code by email."
+      },
+      {
+        "title": "Share your link",
+        "text": "Send only the public link to businesses you’d like to introduce. Keep the access code private so you can sign in to your dashboard."
+      },
+      {
+        "title": "Let the business describe its project",
+        "text": "The business tells the chat assistant what it needs and receives a project proposal with an estimated price range. If interested, it can leave an email address for a ZSJ consultant to get in touch."
+      }
+    ],
+    "statsTitle": "What your dashboard shows",
+    "visitorsTitle": "Referred visitors",
+    "visitorsText": "When a visitor agrees to measurement, ZSJ counts their browser once. The first recognized partner link gets credit for up to 30 days on that browser.",
+    "leadsTitle": "Contact requests",
+    "leadsText": "When a referred visitor asks to be contacted, their email address counts once toward your total. Your dashboard shows aggregate figures and keeps email addresses private.",
+    "helpTitle": "Your application",
+    "helpText": "Both fields are required. ZSJ’s program owner will review your application. If approved, you’ll receive your access details at the address you provide.",
+    "nameLabel": "Your name",
+    "emailLabel": "Your email address",
+    "sendLabel": "Submit my application",
+    "invalidName": "Enter your name (up to 120 characters).",
+    "invalidEmail": "Check your email address.",
+    "sending": "Sending your application…",
+    "success": "Thank you. We’ve received your application. Once ZSJ approves it, you’ll receive your referral link and private access code by email.",
+    "invalid": "Check your name and email address, then submit your application again.",
+    "rate": "Too many requests have been sent. Please wait before trying again.",
+    "error": "We couldn’t confirm submission. Your details are still in the form. Please try again in a moment.",
+    "noScript": "Enable JavaScript to submit your application."
+  },
+  "it": {
+    "title": "Diventa partner",
+    "description": "Presenta a ZSJ le imprese che hanno un progetto web, di IA o di automazione e segui le tue segnalazioni nell’area partner.",
+    "home": "Home",
+    "languageNav": "Scegli la lingua",
+    "intro": "Conosci un’impresa che vuole realizzare un sito su misura, integrare l’IA o automatizzare un’attività? Presentala a ZSJ e scopri quante imprese segnalate chiedono di parlare con un consulente.",
+    "apply": "Invia la tua candidatura",
+    "portal": "La mia area partner",
+    "howTitle": "Come segnalare un’impresa",
+    "steps": [
+      {
+        "title": "Richiedi l’accesso",
+        "text": "Inserisci il tuo nome e il tuo indirizzo e-mail nel modulo. Dopo l’approvazione di ZSJ, riceverai via e-mail il link pubblico e il codice privato per la tua area partner."
+      },
+      {
+        "title": "Condividi il tuo link",
+        "text": "Invia alle imprese solo il link pubblico. Conserva il codice privato per accedere al tuo pannello."
+      },
+      {
+        "title": "Lascia che l’impresa descriva il progetto",
+        "text": "In chat l’impresa spiega di cosa ha bisogno. L’assistente propone una soluzione con una fascia di prezzo indicativa. Se interessata, l’impresa può lasciare la propria e-mail per essere ricontattata da un consulente ZSJ."
+      }
+    ],
+    "statsTitle": "Cosa trovi nella tua area",
+    "visitorsTitle": "Visitatori segnalati",
+    "visitorsText": "Con il consenso del visitatore, ZSJ conta il suo browser una sola volta. Il primo link partner riconosciuto su quel browser determina a chi attribuire la segnalazione per un massimo di 30 giorni.",
+    "leadsTitle": "Richieste di contatto",
+    "leadsText": "Quando un visitatore segnalato lascia la propria e-mail per essere ricontattato, l’indirizzo viene conteggiato una sola volta nel tuo totale. Nell’area partner vedi i dati aggregati. Gli indirizzi e-mail restano riservati.",
+    "helpTitle": "La tua candidatura",
+    "helpText": "Entrambi i campi sono obbligatori. Il responsabile di ZSJ esaminerà la richiesta. Se verrà approvata, riceverai i dati di accesso all’indirizzo indicato.",
+    "nameLabel": "Il tuo nome",
+    "emailLabel": "Il tuo indirizzo e-mail",
+    "sendLabel": "Invia la candidatura",
+    "invalidName": "Inserisci il tuo nome (massimo 120 caratteri).",
+    "invalidEmail": "Controlla l’indirizzo e-mail.",
+    "sending": "Invio della candidatura…",
+    "success": "Grazie, abbiamo ricevuto la tua candidatura. Dopo l’approvazione di ZSJ, riceverai via e-mail il tuo link di segnalazione e il codice privato.",
+    "invalid": "Controlla il nome e l’indirizzo e-mail, poi invia di nuovo la candidatura.",
+    "rate": "Sono state inviate troppe richieste. Attendi prima di riprovare.",
+    "error": "Impossibile confermare l’invio. I dati sono ancora nel modulo. Riprova tra poco.",
+    "noScript": "Attiva JavaScript per inviare la candidatura."
+  },
+  "zh-CN": {
+    "title": "成为推荐合作伙伴",
+    "description": "向有网站定制、AI 应用或业务自动化需求的企业推荐 ZSJ，在推荐人专区查看推荐成效。",
+    "home": "首页",
+    "languageNav": "选择语言",
+    "intro": "你认识的企业是否需要定制网站、引入 AI 或把重复工作自动化？你可以向他们推荐 ZSJ，并在自己的专区查看有多少人希望与顾问联系。",
+    "apply": "申请成为合作伙伴",
+    "portal": "我的推荐人专区",
+    "howTitle": "如何向企业推荐 ZSJ",
+    "steps": [
+      {
+        "title": "提交合作申请",
+        "text": "请在表单中填写姓名和邮箱。ZSJ 审核通过后，会通过邮件向你发送公开推荐链接和个人专区的私人访问码。"
+      },
+      {
+        "title": "分享你的推荐链接",
+        "text": "把公开链接发给想推荐的企业即可。访问码供你本人登录专区，请妥善保管。"
+      },
+      {
+        "title": "让企业介绍自己的需求",
+        "text": "企业在聊天中描述需求后，AI 助手会推荐项目方案并给出参考价格区间。如果感兴趣，企业可以留下邮箱，由 ZSJ 顾问联系。"
+      }
+    ],
+    "statsTitle": "在专区可以看到什么",
+    "visitorsTitle": "推荐访客数",
+    "visitorsText": "访客同意统计后，ZSJ 会按浏览器去重。系统以该浏览器上最先识别的合作伙伴链接确定推荐人，归属期最长为 30 天。",
+    "leadsTitle": "联系请求数",
+    "leadsText": "通过你推荐的访客留下邮箱并申请顾问联系后，同一邮箱在你的专区只计一次。你可以查看汇总数字，邮箱地址保密。",
+    "helpTitle": "合作伙伴申请",
+    "helpText": "姓名和邮箱均为必填项。ZSJ 负责人将审核你的申请，通过后会将访问资料发送至你填写的邮箱。",
+    "nameLabel": "你的姓名",
+    "emailLabel": "你的邮箱",
+    "sendLabel": "提交申请",
+    "invalidName": "请填写姓名，最多 120 个字符。",
+    "invalidEmail": "请检查邮箱地址。",
+    "sending": "正在提交申请……",
+    "success": "谢谢，已收到你的申请。ZSJ 审核通过后，会将推荐链接和私人访问码发送至你的邮箱。",
+    "invalid": "请检查姓名和邮箱后重新提交。",
+    "rate": "请求过于频繁，请稍后重试。",
+    "error": "暂时无法确认是否已提交。已填写的信息仍在表单中，请稍后重试。",
+    "noScript": "请启用 JavaScript 以提交申请。"
+  }
+}

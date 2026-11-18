@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#111a1e">
+  <title>Mon espace apporteur | ZSJ</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/apporteurs.css">
+  <script defer src="/assets/apporteurs.js"></script>
+</head>
+<body data-portal="partner">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/fr/" aria-label="ZSJ, accueil">ZSJ<span aria-hidden="true"></span></a>
+      <button id="logout" class="header-button" type="button" hidden>Se déconnecter</button>
+    </div>
+  </header>
+  <main class="wrap portal">
+    <h1>Mon espace apporteur</h1>
+    <p id="status" class="portal-status" role="status" aria-live="polite">Vérification de la session…</p>
+    <noscript>Activez JavaScript pour accéder à votre espace privé.</noscript>
+    <form id="login" class="portal-card login" hidden>
+      <label for="credential">Votre code d’accès privé</label>
+      <input id="credential" name="code" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none" required>
+      <button class="primary" type="submit">Accéder à mon espace</button>
+    </form>
+    <section id="dashboard" hidden aria-labelledby="partner-name">
+      <div class="section-heading">
+        <h2 id="partner-name" tabindex="-1"></h2>
+        <button id="refresh" class="secondary" type="button">Actualiser</button>
+      </div>
+      <div id="metrics"></div>
+      <p class="metric-note">Les visites comptent les navigateurs ayant accepté le suivi de votre lien. Le cookie d’attribution dure 30 jours. Chaque e-mail de demande de contact compte une fois dans vos prospects.</p>
+      <div id="share" class="portal-card"></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a1e">
+<title>Devenir partenaire | ZSJ</title>
+  <meta name="description" content="Recommandez ZSJ aux entreprises qui ont un projet web, d’IA ou d’automatisation et suivez vos recommandations dans votre espace apporteur." />
+  <link rel="canonical" href="https://www.zsj.fr/fr/devenir-partenaire/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.zsj.fr/partners/" />
+  <link rel="alternate" hreflang="fr" href="https://www.zsj.fr/fr/devenir-partenaire/" />
+  <link rel="alternate" hreflang="en" href="https://www.zsj.fr/en/become-a-partner/" />
+  <link rel="alternate" hreflang="it" href="https://www.zsj.fr/it/diventa-partner/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.zsj.fr/partners/" />
+  <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/partner-program.css">
+  <script defer src="../../assets/partner-application.js"></script>
+</head>
+<body class="partner-program">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../fr/" aria-label="ZSJ · Accueil">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="locale-switch" aria-label="Choisir la langue">
+        <a href="../../partners/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="../../fr/devenir-partenaire/" lang="fr" hreflang="fr" aria-current="page">Français</a>
+        <a href="../../en/become-a-partner/" lang="en" hreflang="en">English</a>
+        <a href="../../it/diventa-partner/" lang="it" hreflang="it">Italiano</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="program-title">
+      <div class="wrap program-hero">
+        <h1 id="program-title">Devenir partenaire</h1>
+        <div class="program-lead">
+          <p class="hero-intro">Vous connaissez une entreprise qui cherche à créer un site sur mesure, à intégrer l’IA ou à automatiser une tâche ? Présentez-lui ZSJ et suivez les demandes de contact issues de vos recommandations.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">Présenter ma candidature</a>
+            <a class="button button-quiet" href="../../apporteur/">Mon espace apporteur</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap program-columns">
+        <h2 id="how-title">Comment recommander ZSJ</h2>
+        <ol class="program-steps" role="list">
+          <li><h3>Demandez votre accès</h3><p>Indiquez votre nom et votre e-mail dans le formulaire. Une fois votre candidature approuvée par ZSJ, vous recevrez par e-mail votre lien public et le code privé de votre espace apporteur.</p></li>
+          <li><h3>Partagez votre lien</h3><p>Envoyez uniquement le lien public aux entreprises que vous souhaitez présenter. Gardez le code privé pour consulter votre tableau de bord.</p></li>
+          <li><h3>Laissez l’entreprise présenter son besoin</h3><p>Dans le chat, l’entreprise décrit son projet. L’assistant lui propose une solution avec une fourchette de prix. Si elle est intéressée, elle peut laisser son e-mail pour être recontactée par un consultant ZSJ.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section program-stats" aria-labelledby="stats-title">
+      <div class="wrap program-columns">
+        <h2 id="stats-title">Ce que vous voyez dans votre espace</h2>
+        <dl class="program-metrics">
+          <div><dt>Visiteurs recommandés</dt><dd>Avec l’accord du visiteur, ZSJ compte son navigateur une fois et retient le premier lien partenaire reconnu pendant 30 jours. L’attribution vaut pour ce navigateur.</dd></div>
+          <div><dt>Demandes de contact</dt><dd>Si un visiteur recommandé laisse son e-mail pour être recontacté, sa demande est comptée une fois par adresse dans votre espace. Vous voyez les totaux. Les adresses restent confidentielles.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section program-contact" id="contact" aria-labelledby="help-title">
+      <div class="wrap program-columns">
+        <div>
+          <h2 id="help-title">Votre candidature</h2>
+          <p id="application-help" class="program-help">Les deux champs sont obligatoires. Le responsable de ZSJ examinera votre demande. Si elle est approuvée, vous recevrez vos accès à l’adresse indiquée.</p>
+        </div>
+        <div class="contact-prep">
+          <form id="partner-application" method="post" action="/api/referrals"
+            aria-labelledby="help-title" aria-describedby="application-help">
+            <fieldset disabled>
+              <div class="project-field">
+                <label for="partner-name">Votre nom</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="project-field">
+                <label for="partner-email">Votre adresse e-mail</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <button type="submit" class="button button-primary">Envoyer ma candidature</button>
+            </fieldset>
+          </form>
+          <p id="application-status" role="status" tabindex="-1"
+            data-invalid-name="Indiquez votre nom (120 caractères maximum)." data-invalid-email="Vérifiez votre adresse e-mail." data-sending="Envoi de votre candidature…"
+            data-success="Merci, votre candidature a été reçue. Après approbation par ZSJ, vous recevrez votre lien de recommandation et votre code privé par e-mail." data-invalid="Vérifiez votre nom et votre e-mail, puis renvoyez votre candidature." data-rate="Trop de demandes ont été envoyées. Patientez avant de réessayer." data-error="Impossible de confirmer l’envoi. Votre saisie est conservée dans le formulaire. Réessayez dans un instant."></p>
+          <noscript><p>Activez JavaScript pour envoyer votre candidature.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

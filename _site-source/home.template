@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 {{metadata}}
   <meta name="theme-color" content="#111a1e" />
+  <script defer src="{{assetPrefix}}assets/referral-visit.js"></script>
 {{analyticsScript}}
   <script>
     if (location.hostname === 'saszsj.github.io') {
@@ -454,6 +455,8 @@
 {{analyticsPrivacy}}
       <div class="footer-inner">
         <span>© <span id="y"></span> ZSJ</span>
+        <a href="{{partnerProgramHref}}">{{partnerProgramTitle}}</a>
+        <a href="/apporteur/">{{partnerPortal}}</a>
         <span>
           <span data-lang-inline="zh-CN">聊天消息由 OpenAI 处理以生成回复。</span>
           <span data-lang-inline="fr">OpenAI traite les messages du chat pour générer les réponses.</span>

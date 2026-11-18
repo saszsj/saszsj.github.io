@@ -11,7 +11,7 @@
 
   const productionOrigin = 'https://www.zsj.fr';
   const isProduction = location.origin === productionOrigin;
-  const preferenceKey = 'zsj.analyticsConsent.v1';
+  const preferenceKey = 'zsj.analyticsConsent.v2';
   const cookiePrefix = 'zsj_analytics';
   const maxAgeSeconds = 180 * 24 * 60 * 60;
   const disabledFlag = `ga-disable-${measurementId}`;
@@ -25,7 +25,7 @@
   let choice;
   let tagRequested = false;
   let tagReady = false;
-  let configured = false;
+  let viewSent = false;
 
   function readChoice() {
     try {
@@ -33,6 +33,9 @@
       if (stored?.expiresAt > Date.now() && (stored.choice === 'accepted' || stored.choice === 'refused')) {
         return stored.choice;
       }
+      // A previous refusal still applies. The earlier opt-in did not cover referral measurement.
+      const old = JSON.parse(localStorage.getItem('zsj.analyticsConsent.v1'));
+      if (old?.expiresAt > Date.now() && old.choice === 'refused') return 'refused';
     } catch {
       // A blocked or invalid preference never enables tracking on a new page.
     }
@@ -68,14 +71,28 @@
     window.dataLayer.push(arguments);
   }
 
-  function configureAnalytics() {
-    if (!tagReady || configured || choice !== 'accepted') return;
-    configured = true;
+  function sendView() {
+    if (!tagReady || viewSent || choice !== 'accepted') return;
+    viewSent = true;
+    gtag('event', 'page_view', { send_to: measurementId });
+  }
+
+  function enableAnalytics() {
+    window[disabledFlag] = false;
+    if (tagRequested) {
+      sendView();
+      return;
+    }
+
+    tagRequested = true;
+    window.dataLayer = window.dataLayer || [];
+    gtag('consent', 'default', denied);
     gtag('consent', 'update', { ...denied, analytics_storage: 'granted' });
+    gtag('js', new Date());
     gtag('config', measurementId, {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      send_page_view: true,
+      send_page_view: false,
       cookie_domain: 'none',
       cookie_path: '/',
       cookie_prefix: cookiePrefix,
@@ -85,19 +102,6 @@
       page_location: `${productionOrigin}${location.pathname}`,
       page_referrer: cleanReferrer(),
     });
-  }
-
-  function enableAnalytics() {
-    window[disabledFlag] = false;
-    if (tagRequested) {
-      configureAnalytics();
-      return;
-    }
-
-    tagRequested = true;
-    window.dataLayer = window.dataLayer || [];
-    gtag('consent', 'default', denied);
-    gtag('js', new Date());
 
     const tag = document.createElement('script');
     tag.async = true;
@@ -105,7 +109,7 @@
     tag.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     tag.addEventListener('load', () => {
       tagReady = true;
-      configureAnalytics();
+      sendView();
     }, { once: true });
     document.head.append(tag);
   }
@@ -125,6 +129,7 @@
   function applyChoice(next, manageFocus = false) {
     choice = next;
     setPanel(!choice, manageFocus);
+    window.zsjReferral?.setConsent(choice);
     if (!isProduction) return;
     if (choice === 'accepted') enableAnalytics();
     else disableAnalytics();

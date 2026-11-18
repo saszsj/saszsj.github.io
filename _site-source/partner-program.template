@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{locale}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a1e">
+{{metadata}}
+  <link rel="stylesheet" href="{{assetPrefix}}assets/site.css">
+  <link rel="stylesheet" href="{{assetPrefix}}assets/partner-program.css">
+  <script defer src="{{assetPrefix}}assets/partner-application.js"></script>
+</head>
+<body class="partner-program">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{homeHref}}" aria-label="ZSJ · {{home}}">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="locale-switch" aria-label="{{languageNav}}">
+{{languageLinks}}
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="program-title">
+      <div class="wrap program-hero">
+        <h1 id="program-title">{{title}}</h1>
+        <div class="program-lead">
+          <p class="hero-intro">{{intro}}</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">{{apply}}</a>
+            <a class="button button-quiet" href="{{portalHref}}">{{portal}}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap program-columns">
+        <h2 id="how-title">{{howTitle}}</h2>
+        <ol class="program-steps" role="list">
+{{stepItems}}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section program-stats" aria-labelledby="stats-title">
+      <div class="wrap program-columns">
+        <h2 id="stats-title">{{statsTitle}}</h2>
+        <dl class="program-metrics">
+          <div><dt>{{visitorsTitle}}</dt><dd>{{visitorsText}}</dd></div>
+          <div><dt>{{leadsTitle}}</dt><dd>{{leadsText}}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section program-contact" id="contact" aria-labelledby="help-title">
+      <div class="wrap program-columns">
+        <div>
+          <h2 id="help-title">{{helpTitle}}</h2>
+          <p id="application-help" class="program-help">{{helpText}}</p>
+        </div>
+        <div class="contact-prep">
+          <form id="partner-application" method="post" action="/api/referrals"
+            aria-labelledby="help-title" aria-describedby="application-help">
+            <fieldset disabled>
+              <div class="project-field">
+                <label for="partner-name">{{nameLabel}}</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="project-field">
+                <label for="partner-email">{{emailLabel}}</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <button type="submit" class="button button-primary">{{sendLabel}}</button>
+            </fieldset>
+          </form>
+          <p id="application-status" role="status" tabindex="-1"
+            data-invalid-name="{{invalidName}}" data-invalid-email="{{invalidEmail}}" data-sending="{{sending}}"
+            data-success="{{success}}" data-invalid="{{invalid}}" data-rate="{{rate}}" data-error="{{error}}"></p>
+          <noscript><p>{{noScript}}</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

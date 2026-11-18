@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a1e">
+<title>Become a referral partner | ZSJ</title>
+  <meta name="description" content="Introduce businesses to ZSJ for custom websites, AI and automation projects, and track your referrals in your partner portal." />
+  <link rel="canonical" href="https://www.zsj.fr/en/become-a-partner/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.zsj.fr/partners/" />
+  <link rel="alternate" hreflang="fr" href="https://www.zsj.fr/fr/devenir-partenaire/" />
+  <link rel="alternate" hreflang="en" href="https://www.zsj.fr/en/become-a-partner/" />
+  <link rel="alternate" hreflang="it" href="https://www.zsj.fr/it/diventa-partner/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.zsj.fr/partners/" />
+  <link rel="stylesheet" href="../../assets/site.css">
+  <link rel="stylesheet" href="../../assets/partner-program.css">
+  <script defer src="../../assets/partner-application.js"></script>
+</head>
+<body class="partner-program">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../../en/" aria-label="ZSJ · Home">ZSJ<span aria-hidden="true"></span></a>
+      <nav class="locale-switch" aria-label="Choose a language">
+        <a href="../../partners/" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+        <a href="../../fr/devenir-partenaire/" lang="fr" hreflang="fr">Français</a>
+        <a href="../../en/become-a-partner/" lang="en" hreflang="en" aria-current="page">English</a>
+        <a href="../../it/diventa-partner/" lang="it" hreflang="it">Italiano</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="program-title">
+      <div class="wrap program-hero">
+        <h1 id="program-title">Become a referral partner</h1>
+        <div class="program-lead">
+          <p class="hero-intro">Know a business that needs a custom website, wants to use AI or has a task to automate? Introduce them to ZSJ and see how many of your referrals ask to speak with a consultant.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#contact">Apply to become a partner</a>
+            <a class="button button-quiet" href="../../apporteur/">My partner portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap program-columns">
+        <h2 id="how-title">How to refer a business</h2>
+        <ol class="program-steps" role="list">
+          <li><h3>Apply for access</h3><p>Enter your name and email address in the application form. Once ZSJ approves your application, you’ll receive your public referral link and private dashboard code by email.</p></li>
+          <li><h3>Share your link</h3><p>Send only the public link to businesses you’d like to introduce. Keep the access code private so you can sign in to your dashboard.</p></li>
+          <li><h3>Let the business describe its project</h3><p>The business tells the chat assistant what it needs and receives a project proposal with an estimated price range. If interested, it can leave an email address for a ZSJ consultant to get in touch.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section program-stats" aria-labelledby="stats-title">
+      <div class="wrap program-columns">
+        <h2 id="stats-title">What your dashboard shows</h2>
+        <dl class="program-metrics">
+          <div><dt>Referred visitors</dt><dd>When a visitor agrees to measurement, ZSJ counts their browser once. The first recognized partner link gets credit for up to 30 days on that browser.</dd></div>
+          <div><dt>Contact requests</dt><dd>When a referred visitor asks to be contacted, their email address counts once toward your total. Your dashboard shows aggregate figures and keeps email addresses private.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section program-contact" id="contact" aria-labelledby="help-title">
+      <div class="wrap program-columns">
+        <div>
+          <h2 id="help-title">Your application</h2>
+          <p id="application-help" class="program-help">Both fields are required. ZSJ’s program owner will review your application. If approved, you’ll receive your access details at the address you provide.</p>
+        </div>
+        <div class="contact-prep">
+          <form id="partner-application" method="post" action="/api/referrals"
+            aria-labelledby="help-title" aria-describedby="application-help">
+            <fieldset disabled>
+              <div class="project-field">
+                <label for="partner-name">Your name</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+              </div>
+              <div class="project-field">
+                <label for="partner-email">Your email address</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+              </div>
+              <button type="submit" class="button button-primary">Submit my application</button>
+            </fieldset>
+          </form>
+          <p id="application-status" role="status" tabindex="-1"
+            data-invalid-name="Enter your name (up to 120 characters)." data-invalid-email="Check your email address." data-sending="Sending your application…"
+            data-success="Thank you. We’ve received your application. Once ZSJ approves it, you’ll receive your referral link and private access code by email." data-invalid="Check your name and email address, then submit your application again." data-rate="Too many requests have been sent. Please wait before trying again." data-error="We couldn’t confirm submission. Your details are still in the form. Please try again in a moment."></p>
+          <noscript><p>Enable JavaScript to submit your application.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

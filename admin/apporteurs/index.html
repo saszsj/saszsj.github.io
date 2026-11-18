@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#111a1e">
+  <title>Gestion des apporteurs | ZSJ</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/apporteurs.css">
+  <script defer src="/assets/apporteurs.js"></script>
+</head>
+<body data-portal="admin">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/fr/" aria-label="ZSJ, accueil">ZSJ<span aria-hidden="true"></span></a>
+      <button id="logout" class="header-button" type="button" hidden>Se déconnecter</button>
+    </div>
+  </header>
+  <main class="wrap portal">
+    <h1>Gestion des apporteurs</h1>
+    <p id="status" class="portal-status" role="status" aria-live="polite">Vérification de la session…</p>
+    <noscript>Activez JavaScript pour accéder à votre espace privé.</noscript>
+    <form id="login" class="portal-card login" hidden>
+      <label for="credential">Mot de passe administrateur</label>
+      <input id="credential" name="password" type="password" autocomplete="current-password" required>
+      <button class="primary" type="submit">Se connecter</button>
+    </form>
+    <div id="dashboard" hidden>
+      <section class="applications" aria-labelledby="applications-heading">
+        <div class="section-heading">
+          <h2 id="applications-heading" tabindex="-1">Candidatures</h2>
+          <button id="refresh" class="secondary" type="button">Actualiser</button>
+        </div>
+        <div id="applications-list" class="partner-list"></div>
+      </section>
+      <details class="portal-card manual-access">
+        <summary>Créer un accès manuellement (administrateur)</summary>
+        <form id="create" class="create-form">
+          <div><label for="name">Nom de l’apporteur</label><input id="name" name="name" type="text" maxlength="120" autocomplete="off" required></div>
+          <button class="primary" type="submit">Créer son accès</button>
+        </form>
+      </details>
+      <section class="partners" aria-labelledby="list-heading">
+        <div class="section-heading">
+          <h2 id="list-heading" tabindex="-1">Vos apporteurs <span id="count"></span></h2>
+        </div>
+        <p class="metric-note">Les visites comptent les navigateurs ayant accepté le suivi de cet apporteur. Le cookie d’attribution dure 30 jours. Chaque e-mail de demande de contact compte une fois par apporteur.</p>
+        <div id="list" class="partner-list"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -5,14 +5,16 @@ const root = new URL('../', import.meta.url);
 const template = await readFile(new URL('home.template', import.meta.url), 'utf8');
 const copy = JSON.parse(await readFile(new URL('locales.json', import.meta.url), 'utf8'));
 const portfolio = JSON.parse(await readFile(new URL('portfolio.json', import.meta.url), 'utf8'));
+const partnerTemplate = await readFile(new URL('partner-program.template', import.meta.url), 'utf8');
+const partnerCopy = JSON.parse(await readFile(new URL('partner-program.json', import.meta.url), 'utf8'));
 const check = process.argv.includes('--check');
 const analyticsMeasurementId = 'G-Z30LFBCXDH';
 
 const locales = [
-  { id: 'zh-CN', hreflang: 'zh-Hans', path: '/', label: '中文', openGraphLocale: 'zh_CN' },
-  { id: 'fr', hreflang: 'fr', path: '/fr/', label: 'Français', openGraphLocale: 'fr_FR' },
-  { id: 'en', hreflang: 'en', path: '/en/', label: 'English', openGraphLocale: 'en_GB' },
-  { id: 'it', hreflang: 'it', path: '/it/', label: 'Italiano', openGraphLocale: 'it_IT' },
+  { id: 'zh-CN', hreflang: 'zh-Hans', path: '/', partnerPath: '/partners/', label: '中文', openGraphLocale: 'zh_CN' },
+  { id: 'fr', hreflang: 'fr', path: '/fr/', partnerPath: '/fr/devenir-partenaire/', label: 'Français', openGraphLocale: 'fr_FR' },
+  { id: 'en', hreflang: 'en', path: '/en/', partnerPath: '/en/become-a-partner/', label: 'English', openGraphLocale: 'en_GB' },
+  { id: 'it', hreflang: 'it', path: '/it/', partnerPath: '/it/diventa-partner/', label: 'Italiano', openGraphLocale: 'it_IT' },
 ];
 
 const alternates = [...locales, { hreflang: 'x-default', path: '/' }];
@@ -89,6 +91,8 @@ function page(locale) {
     metadata: metadata(locale, content),
     languageLinks,
     assetPrefix,
+    partnerProgramHref: assetPrefix + locale.partnerPath.slice(1),
+    partnerProgramTitle: escape(partnerCopy[locale.id].title),
     experiencesTitle: escape(experiences.title),
     experiencesIntro: escape(experiences.intro),
     experienceCards: portfolioCards(experiences.cards, experiences.sourceLabels),
@@ -121,15 +125,43 @@ function page(locale) {
     });
 }
 
+function partnerPage(locale) {
+  const content = partnerCopy[locale.id];
+  const assetPrefix = '../'.repeat(locale.partnerPath.split('/').filter(Boolean).length);
+  const canonical = origin + locale.partnerPath;
+  const fields = {
+    ...Object.fromEntries(Object.entries(content).filter(([key]) => key !== 'steps').map(([key, value]) => [key, escape(value)])),
+    locale: locale.id,
+    assetPrefix,
+    homeHref: assetPrefix + locale.path.slice(1),
+    portalHref: assetPrefix + 'apporteur/',
+    stepItems: content.steps.map(step => `          <li><h3>${escape(step.title)}</h3><p>${escape(step.text)}</p></li>`).join('\n'),
+    languageLinks: locales.map(({ id, hreflang, label, partnerPath }) =>
+      `        <a href="${assetPrefix}${partnerPath.slice(1)}" lang="${hreflang}" hreflang="${hreflang}"${id === locale.id ? ' aria-current="page"' : ''}>${label}</a>`).join('\n'),
+    metadata: [
+      `<title>${escape(content.title)} | ZSJ</title>`,
+      `<meta name="description" content="${escape(content.description)}" />`,
+      `<link rel="canonical" href="${canonical}" />`,
+      ...locales.map(({ hreflang, partnerPath }) => `<link rel="alternate" hreflang="${hreflang}" href="${origin}${partnerPath}" />`),
+      `<link rel="alternate" hreflang="x-default" href="${origin}${locales[0].partnerPath}" />`,
+    ].join('\n  '),
+  };
+  return partnerTemplate.replace(/{{(\w+)}}/g, (_, key) => {
+    if (!Object.hasOwn(fields, key)) throw new Error(`Unknown partner template field: ${key}`);
+    return fields[key];
+  });
+}
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${locales.map(({ path }) => `  <url><loc>${origin}${path}</loc></url>`).join('\n')}
+${locales.flatMap(locale => [locale.path, locale.partnerPath]).map(path => `  <url><loc>${origin}${path}</loc></url>`).join('\n')}
 </urlset>
 `;
 const robots = `User-agent: *\nDisallow:\n\nSitemap: ${origin}/sitemap.xml\n`;
 
 const files = [
   ...locales.map((locale) => [`${locale.path.slice(1)}index.html`, page(locale)]),
+  ...locales.map((locale) => [`${locale.partnerPath.slice(1)}index.html`, partnerPage(locale)]),
   ['sitemap.xml', sitemap],
   ['robots.txt', robots],
 ];

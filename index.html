@@ -21,6 +21,7 @@
   <meta property="og:description" content="ZSJ 陪伴海外华人企业抓住 AI 转型机会。从经营目标出发，通过 30 天试点验证方向，制定下一步路线图。" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.zsj.fr/#organization","name":"ZSJ","url":"https://www.zsj.fr/"},{"@type":"WebSite","@id":"https://www.zsj.fr/#website","name":"ZSJ","url":"https://www.zsj.fr/","publisher":{"@id":"https://www.zsj.fr/#organization"}},{"@type":"WebPage","@id":"https://www.zsj.fr/#webpage","url":"https://www.zsj.fr/","name":"海外华人企业 AI 转型顾问｜ZSJ","description":"ZSJ 陪伴海外华人企业抓住 AI 转型机会。从经营目标出发，通过 30 天试点验证方向，制定下一步路线图。","inLanguage":"zh-Hans","isPartOf":{"@id":"https://www.zsj.fr/#website"},"mainEntity":{"@id":"https://www.zsj.fr/#services"}},{"@type":"Service","@id":"https://www.zsj.fr/#services","url":"https://www.zsj.fr/#services","name":"海外华人企业 AI 转型咨询","description":"ZSJ 为海外华人企业与跨境团队提供 AI 转型咨询，从经营目标出发，评估可行性和风险，陪伴团队完成 30 天试点。","provider":{"@id":"https://www.zsj.fr/#organization"}}]}</script>
   <meta name="theme-color" content="#111a1e" />
+  <script defer src="./assets/referral-visit.js"></script>
   <script defer src="./assets/analytics.js" data-measurement-id="G-Z30LFBCXDH"></script>
   <script>
     if (location.hostname === 'saszsj.github.io') {
@@ -333,7 +334,7 @@
           <h2>
             <span>聊聊我的项目</span>
           </h2>
-          <p class="contact-status">描述你的业务、目标和想讨论的问题，AI 助手会在聊天中回复。</p>
+          <p class="contact-status">介绍你的业务和目标，AI 助手会推荐适合你的项目方案，并给出参考价格区间。</p>
         </div>
         <form class="contact-prep" id="zsj-project-form" aria-labelledby="zsj-project-title">
           <h3 id="zsj-project-title">开始聊聊你的 AI 转型</h3>
@@ -351,7 +352,7 @@
               <textarea id="zsj-project-question" name="question" rows="3" required maxlength="400"></textarea>
             </div>
           </div>
-          <p class="project-privacy" id="zsj-project-privacy">不要填写个人、客户或其他敏感信息。OpenAI 会处理这些内容以生成回复。</p>
+          <p class="project-privacy" id="zsj-project-privacy">OpenAI 会处理项目描述以生成回复。请勿在此表单填写联系方式或机密信息。如果你对方案感兴趣，可以随后在聊天中留下邮箱，由 ZSJ 顾问与你联系。</p>
           <button type="submit" class="button button-primary" aria-describedby="zsj-project-privacy" disabled>发送到 AI 聊天</button>
           <p class="project-status" id="zsj-project-status" role="status"></p>
         </form>
@@ -406,13 +407,15 @@
       </span>
       <details class="analytics-privacy">
         <summary>网站访问统计与 Cookie</summary>
-        <p>ZSJ 在你同意后使用 Google Analytics 统计访问量、浏览页面和流量来源。Google 会处理浏览器和设备信息，并通过 Cookie 标识访问。我们在这台设备上保存你的选择和统计 Cookie，最长 180 天。你可随时在此更改或撤回选择。</p>
+        <p>经你同意，Google Analytics 会处理浏览器和设备信息，统计访问量、浏览的页面和流量来源。你的选择和 Google 统计 Cookie 最多保留 180 天。通过合作伙伴链接访问时，ZSJ 会在此设备上保存标识符，最长 30 天，用于避免重复统计，并在你申请联系时将这次请求计入推荐人的记录。推荐人只能看到汇总数字，无法看到你的邮箱。你可以随时在此撤回同意。</p>
         <a href="https://policies.google.com/technologies/partner-sites">了解 Google 如何处理数据</a>
       </details>
       <button id="analytics-preferences" type="button" hidden aria-controls="analytics-consent" aria-expanded="false"
         class="analytics-preferences">访问统计设置</button>
       <div class="footer-inner">
         <span>© <span id="y"></span> ZSJ</span>
+        <a href="./partners/">成为推荐合作伙伴</a>
+        <a href="/apporteur/">推荐人专区</a>
         <span>
           <span>聊天消息由 OpenAI 处理以生成回复。</span>
         </span>
@@ -422,8 +425,8 @@
 
   <aside id="analytics-consent" hidden tabindex="-1" aria-labelledby="analytics-heading"
    >
-    <h2 id="analytics-heading">允许访问统计？</h2>
-    <p>经你同意，我们使用 Google Analytics 了解网站访问量和浏览的页面。你可以随时在页脚修改选择。
+    <h2 id="analytics-heading">允许访问统计和推荐效果统计吗？</h2>
+    <p>经你同意，Google Analytics 会统计访问量和浏览的页面。ZSJ 还会统计通过合作伙伴推荐链接到访的人数和提交的联系请求。你可以随时在页脚修改选择。
       <a href="https://policies.google.com/technologies/partner-sites">了解 Google 如何处理数据</a>
     </p>
     <div class="analytics-actions">
