@@ -1,0 +1,106 @@
+{
+  "zh-CN": {
+    "experiences": {
+      "title": "专业经历",
+      "intro": "从协助企业进入中国市场到组织跨文化项目，这里介绍 Shengjie Zhan 的部分经历。",
+      "maltLabel": "查看 Malt 个人资料",
+      "cards": [
+        { "title": "H2D Hub", "detail": "创始人兼负责人 · 2017 年至今", "description": "协助欧洲科技和 AI 企业拓展中国市场，包括市场调研、业务本地化、寻找合作伙伴和组织实地考察。" },
+        { "title": "法国华二代协会（AEEJC）", "detail": "会长 · 2015 年至今", "description": "支持青年创业者，促进中法交流，并开发基于微信的会员管理工具。" },
+        { "title": "CHINEXP’O", "detail": "策划与组织 · 2024 年 12 月", "description": "在巴黎卢浮宫卡鲁塞尔策划并组织中国文化与生活方式展览。" }
+      ]
+    },
+    "realizations": {
+      "title": "项目案例",
+      "intro": "围绕实际业务需求设计的工具与原型。",
+      "cards": [
+        { "title": "AAA — AI 动画工作室", "detail": "动画制作", "description": "将双语对话制作成分镜和动画场景的创作工具。" },
+        { "title": "PhotoLab", "detail": "电商商品视觉 · 试用版", "description": "为客户打造的商品摄影工作台，支持商品抠图、生成多版广告图片并优化选中的版本。" },
+        { "title": "ChinaFood GO", "detail": "旅游餐饮 · 原型", "description": "帮助来华游客阅读翻译后的菜单，并用中文准备点餐单。" },
+        { "title": "宠联 PetBridge", "detail": "宠物零售", "description": "面向宠物行业商家的 AI 助手，帮助回答常见问题并创作内容。" },
+        { "title": "TK 数据大师", "detail": "电商数据", "description": "在 WorkBuddy 中查询 TikTok 电商数据，分析商品和店铺表现。" },
+        { "title": "哈兔", "detail": "语言学习 · 原型", "description": "通过互动故事练习中文口语。" },
+        { "title": "家庭学习助手", "detail": "小学教育", "description": "帮助家长为小学高年级孩子准备课程并跟进学习进度。" },
+        { "title": "数字钢琴样课", "detail": "音乐教育 · 原型", "description": "为音乐教育领域的客户设计数字钢琴样课，用来演示教学方式。" }
+      ]
+    }
+  },
+  "fr": {
+    "experiences": {
+      "title": "Expériences",
+      "intro": "Quelques étapes du parcours de Shengjie Zhan entre la France et la Chine.",
+      "maltLabel": "Voir le profil sur Malt",
+      "cards": [
+        { "title": "H2D Hub", "detail": "Fondateur et directeur · Depuis 2017", "description": "Accompagnement d’entreprises européennes de la tech et de l’IA qui se développent en Chine, de l’étude du marché à la recherche de partenaires et à l’organisation de missions sur place." },
+        { "title": "France-Huaerdai (AEEJC)", "detail": "Président · Depuis 2015", "description": "Soutien aux jeunes entrepreneurs, mise en relation entre la France et la Chine et développement d’un outil de gestion des membres sur WeChat." },
+        { "title": "CHINEXP’O", "detail": "Organisateur · Décembre 2024", "description": "Conception et organisation d’une exposition sur la culture chinoise et l’art de vivre au Carrousel du Louvre, à Paris." }
+      ]
+    },
+    "realizations": {
+      "title": "Réalisations",
+      "intro": "Des outils et des prototypes conçus autour de besoins concrets.",
+      "cards": [
+        { "title": "AAA — Atelier AI Anime", "detail": "Production d’animation", "description": "Un atelier pour transformer des dialogues bilingues en storyboards et en scènes animées." },
+        { "title": "PhotoLab", "detail": "Visuels produits · Version pilote", "description": "Un studio conçu pour un client pour détourer ses photos de produits, générer plusieurs visuels publicitaires et affiner la version retenue." },
+        { "title": "ChinaFood GO", "detail": "Tourisme et restauration · Prototype", "description": "Un parcours qui aide les voyageurs à lire un menu traduit et à préparer leur commande en chinois." },
+        { "title": "PetBridge", "detail": "Commerces animaliers", "description": "Un assistant IA pour aider les commerçants à répondre aux questions courantes et à créer des contenus." },
+        { "title": "TikDataMaster", "detail": "Analyse e-commerce", "description": "Un outil pour consulter les données du commerce sur TikTok et analyser les performances des produits et des boutiques dans WorkBuddy." },
+        { "title": "HaToo", "detail": "Apprentissage des langues · Prototype", "description": "Des histoires interactives pour pratiquer le chinois à l’oral." },
+        { "title": "Apprentissage à la maison", "detail": "Éducation primaire", "description": "Une application qui aide les parents à préparer des leçons de primaire et à suivre les progrès de leurs enfants." },
+        { "title": "Leçon de piano numérique", "detail": "Éducation musicale · Prototype", "description": "Une leçon conçue pour un client du secteur musical afin d’illustrer son approche pédagogique au format numérique." }
+      ]
+    }
+  },
+  "en": {
+    "experiences": {
+      "title": "Experience",
+      "intro": "Highlights from Shengjie Zhan’s work across France and China.",
+      "maltLabel": "View profile on Malt",
+      "cards": [
+        { "title": "H2D Hub", "detail": "Founder and director · Since 2017", "description": "Helping European technology and AI businesses expand into China through market research, localisation, introductions to partners and business missions." },
+        { "title": "France-Huaerdai (AEEJC)", "detail": "President · Since 2015", "description": "Supporting young entrepreneurs, connecting people and businesses across France and China, and developing a membership tool in WeChat." },
+        { "title": "CHINEXP’O", "detail": "Organiser · December 2024", "description": "Designed and organised an exhibition on Chinese culture and lifestyle at the Carrousel du Louvre in Paris." }
+      ]
+    },
+    "realizations": {
+      "title": "Selected projects",
+      "intro": "Tools and prototypes built around practical needs.",
+      "cards": [
+        { "title": "AAA — Atelier AI Anime", "detail": "Animation production", "description": "A studio for turning bilingual dialogues into storyboards and animated scenes." },
+        { "title": "PhotoLab", "detail": "Product imagery · Pilot", "description": "A studio built for a client to remove backgrounds from product photos, generate several ad images and refine the chosen version." },
+        { "title": "ChinaFood GO", "detail": "Travel and dining · Prototype", "description": "A flow that helps travellers read a translated menu and prepare an order in Chinese." },
+        { "title": "PetBridge", "detail": "Pet retail", "description": "An AI assistant that helps pet retailers answer common questions and create content." },
+        { "title": "TikDataMaster", "detail": "E-commerce analytics", "description": "A tool for exploring TikTok commerce data and analysing product and shop performance in WorkBuddy." },
+        { "title": "HaToo", "detail": "Language learning · Prototype", "description": "Interactive stories for practising spoken Chinese." },
+        { "title": "Home learning assistant", "detail": "Primary education", "description": "An app that helps parents prepare primary school lessons and follow their children’s progress." },
+        { "title": "Digital piano lesson", "detail": "Music education · Prototype", "description": "A sample piano lesson designed for a music education client to illustrate their teaching approach in a digital format." }
+      ]
+    }
+  },
+  "it": {
+    "experiences": {
+      "title": "Esperienze",
+      "intro": "Alcune tappe del percorso di Shengjie Zhan tra Francia e Cina.",
+      "maltLabel": "Vedi il profilo su Malt",
+      "cards": [
+        { "title": "H2D Hub", "detail": "Fondatore e direttore · Dal 2017", "description": "Supporto alle imprese europee della tecnologia e dell’IA che si sviluppano in Cina, dallo studio del mercato alla ricerca di partner e all’organizzazione di missioni sul posto." },
+        { "title": "France-Huaerdai (AEEJC)", "detail": "Presidente · Dal 2015", "description": "Sostegno ai giovani imprenditori, creazione di contatti tra Francia e Cina e sviluppo di uno strumento per la gestione dei soci su WeChat." },
+        { "title": "CHINEXP’O", "detail": "Organizzatore · Dicembre 2024", "description": "Ideazione e organizzazione di una mostra sulla cultura e lo stile di vita cinesi al Carrousel du Louvre, a Parigi." }
+      ]
+    },
+    "realizations": {
+      "title": "Progetti realizzati",
+      "intro": "Strumenti e prototipi progettati per esigenze concrete.",
+      "cards": [
+        { "title": "AAA — Atelier AI Anime", "detail": "Produzione di animazione", "description": "Uno studio per trasformare dialoghi bilingui in storyboard e scene animate." },
+        { "title": "PhotoLab", "detail": "Immagini di prodotto · Versione pilota", "description": "Uno studio progettato per un cliente per scontornare le foto dei prodotti, generare varianti pubblicitarie e perfezionare quella scelta." },
+        { "title": "ChinaFood GO", "detail": "Turismo e ristorazione · Prototipo", "description": "Un percorso per aiutare chi viaggia a leggere un menu tradotto e preparare un ordine in cinese." },
+        { "title": "PetBridge", "detail": "Negozi di animali", "description": "Un assistente IA che aiuta i negozianti a rispondere alle domande frequenti e a creare contenuti." },
+        { "title": "TikDataMaster", "detail": "Analisi e-commerce", "description": "Uno strumento per consultare i dati del commercio su TikTok e analizzare le prestazioni di prodotti e negozi in WorkBuddy." },
+        { "title": "HaToo", "detail": "Apprendimento linguistico · Prototipo", "description": "Storie interattive per esercitarsi a parlare cinese." },
+        { "title": "Assistente per lo studio a casa", "detail": "Scuola primaria", "description": "Un’app che aiuta i genitori a preparare lezioni per la scuola primaria e a seguire i progressi dei figli." },
+        { "title": "Lezione digitale di pianoforte", "detail": "Educazione musicale · Prototipo", "description": "Una lezione dimostrativa progettata per un cliente del settore musicale per illustrare il suo metodo di insegnamento in formato digitale." }
+      ]
+    }
+  }
+}
