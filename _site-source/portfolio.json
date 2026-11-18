@@ -2,12 +2,15 @@
   "zh-CN": {
     "experiences": {
       "title": "专业经历",
-      "intro": "从协助企业进入中国市场到组织跨文化项目，这里介绍 Shengjie Zhan 的部分经历。",
+      "intro": "Shengjie Zhan 詹胜洁曾在法国从事信息技术工作，随后在中国创业，现专注于企业 AI 转型、跨境创业和文化交流。",
       "maltLabel": "查看 Malt 个人资料",
       "cards": [
-        { "title": "H2D Hub", "detail": "创始人兼负责人 · 2017 年至今", "description": "协助欧洲科技和 AI 企业拓展中国市场，包括市场调研、业务本地化、寻找合作伙伴和组织实地考察。" },
-        { "title": "法国华二代协会（AEEJC）", "detail": "会长 · 2015 年至今", "description": "支持青年创业者，促进中法交流，并开发基于微信的会员管理工具。" },
-        { "title": "CHINEXP’O", "detail": "策划与组织 · 2024 年 12 月", "description": "在巴黎卢浮宫卡鲁塞尔策划并组织中国文化与生活方式展览。" }
+        { "title": "ZSJ", "detail": "法国 · 总裁 · 2016 年起", "description": "带领 ZSJ 为企业提供数字化咨询和软件开发，现聚焦 AI 转型、全栈应用开发和大模型集成。" },
+        { "title": "H2D Hub · 华二代中心", "detail": "创始人兼负责人 · 杭州", "description": "作为华二代联合会的创业服务平台，华二代中心帮助海外华侨华人和外籍创业者在杭州落地 AI 项目，提供公司设立协助、日常运营支持和本地资源对接。" },
+        { "title": "华二代联合会", "detail": "会长 · 青年创业与文化交流", "description": "支持华裔青年创业并推动中欧交流。华二代团队与意大利创新中心共同承办了 2025 年在上海举办的中意时尚文化嘉年华。" },
+        { "title": "CHINEXP’O 2024 巴黎中国文化与生活方式博览会", "detail": "策划与组织 · 2024 年 12 月 20–22 日", "description": "在巴黎卢浮宫卡鲁塞尔厅策划并组织首届博览会，联合多国华裔青年，通过汉服、茶艺和传统手工艺等互动活动介绍中国文化。" },
+        { "title": "华二代（海南）孵化器", "detail": "创办人 · 2021 年创办", "description": "为有意在海南创业的海外青年提供项目孵化，并组织海南自贸港考察和交流，帮助创业者了解当地机会、对接合作资源。" },
+        { "title": "从法国 IT 到中国创业", "detail": "早期职业经历", "description": "硕士毕业后在法国企业从事信息技术工作，随后回到中国，在重庆、北京和杭州参与创业项目。" }
       ]
     },
     "realizations": {
@@ -28,12 +31,15 @@
   "fr": {
     "experiences": {
       "title": "Expériences",
-      "intro": "Quelques étapes du parcours de Shengjie Zhan entre la France et la Chine.",
+      "intro": "Shengjie Zhan 詹胜洁 a travaillé dans l’informatique en France avant d’entreprendre en Chine. Il se consacre aujourd’hui à la transformation par l’IA, à l’entrepreneuriat entre les deux pays et aux échanges culturels.",
       "maltLabel": "Voir le profil sur Malt",
       "cards": [
-        { "title": "H2D Hub", "detail": "Fondateur et directeur · Depuis 2017", "description": "Accompagnement d’entreprises européennes de la tech et de l’IA qui se développent en Chine, de l’étude du marché à la recherche de partenaires et à l’organisation de missions sur place." },
-        { "title": "France-Huaerdai (AEEJC)", "detail": "Président · Depuis 2015", "description": "Soutien aux jeunes entrepreneurs, mise en relation entre la France et la Chine et développement d’un outil de gestion des membres sur WeChat." },
-        { "title": "CHINEXP’O", "detail": "Organisateur · Décembre 2024", "description": "Conception et organisation d’une exposition sur la culture chinoise et l’art de vivre au Carrousel du Louvre, à Paris." }
+        { "title": "ZSJ", "detail": "Président · France · Depuis 2016", "description": "Dirige ZSJ, qui conseille les entreprises sur leurs projets numériques et développe leurs logiciels. Ses missions actuelles portent sur la transformation par l’IA, les applications full stack et l’intégration de modèles de langage." },
+        { "title": "H2D Hub · 华二代中心", "detail": "Fondateur et directeur · Hangzhou", "description": "Plateforme de la Fédération Huaerdai qui aide les entrepreneurs étrangers et de la diaspora chinoise à lancer des projets d’IA à Hangzhou. Elle les accompagne dans la création de leur entreprise, ses opérations et la recherche de partenaires locaux." },
+        { "title": "Fédération Huaerdai · 华二代联合会", "detail": "Président · Entrepreneuriat et échanges culturels", "description": "Soutient les jeunes entrepreneurs de la diaspora chinoise et les échanges entre la Chine et l’Europe. L’équipe Huaerdai et le Centre d’innovation italien ont conjointement organisé le carnaval sino-italien de la mode et de la culture à Shanghai en 2025." },
+        { "title": "CHINEXP’O 2024 · Salon de la culture et de l’art de vivre chinois à Paris", "detail": "Organisateur · Du 20 au 22 décembre 2024", "description": "A conçu et organisé la première édition au Carrousel du Louvre. Des jeunes bénévoles de la diaspora chinoise venus de plusieurs pays y ont animé des activités autour du hanfu, du thé et de l’artisanat traditionnel." },
+        { "title": "Incubateur Huaerdai de Hainan", "detail": "Fondateur · Créé en 2021", "description": "A créé un incubateur pour les jeunes entrepreneurs de la diaspora chinoise. Il organise des visites et des échanges pour leur faire découvrir le port franc de Hainan et rencontrer des partenaires locaux." },
+        { "title": "De l’informatique en France à l’entrepreneuriat en Chine", "detail": "Début de carrière", "description": "Après son master, a travaillé dans l’informatique en France avant de participer à des projets entrepreneuriaux à Chongqing, Pékin et Hangzhou." }
       ]
     },
     "realizations": {
@@ -54,12 +60,15 @@
   "en": {
     "experiences": {
       "title": "Experience",
-      "intro": "Highlights from Shengjie Zhan’s work across France and China.",
+      "intro": "Shengjie Zhan 詹胜洁 worked in information technology in France before becoming an entrepreneur in China. His work now spans AI transformation, cross-border entrepreneurship and cultural exchange.",
       "maltLabel": "View profile on Malt",
       "cards": [
-        { "title": "H2D Hub", "detail": "Founder and director · Since 2017", "description": "Helping European technology and AI businesses expand into China through market research, localisation, introductions to partners and business missions." },
-        { "title": "France-Huaerdai (AEEJC)", "detail": "President · Since 2015", "description": "Supporting young entrepreneurs, connecting people and businesses across France and China, and developing a membership tool in WeChat." },
-        { "title": "CHINEXP’O", "detail": "Organiser · December 2024", "description": "Designed and organised an exhibition on Chinese culture and lifestyle at the Carrousel du Louvre in Paris." }
+        { "title": "ZSJ", "detail": "President · France · Since 2016", "description": "Leads ZSJ, which advises businesses on digital projects and builds software. His current work focuses on AI transformation, full-stack development and integration of language models." },
+        { "title": "H2D Hub · 华二代中心", "detail": "Founder and director · Hangzhou", "description": "A Huaerdai Federation platform that helps overseas Chinese and international entrepreneurs launch AI projects in Hangzhou, from company setup and operational support to introductions to local partners." },
+        { "title": "Huaerdai Federation · 华二代联合会", "detail": "President · Entrepreneurship and cultural exchange", "description": "Supports young entrepreneurs of Chinese heritage and exchanges between China and Europe. The Huaerdai team and the Italian Innovation Centre jointly organised the 2025 China–Italy Fashion and Culture Carnival in Shanghai." },
+        { "title": "CHINEXP’O 2024 · Paris Chinese Culture and Lifestyle Expo", "detail": "Organiser · 20–22 December 2024", "description": "Designed and organised the inaugural expo at the Carrousel du Louvre. Young volunteers of Chinese heritage from several countries led activities featuring hanfu, tea and traditional crafts." },
+        { "title": "Huaerdai Incubator in Hainan", "detail": "Founder · Established in 2021", "description": "Founded an incubator for young overseas Chinese entrepreneurs and organised study visits to the Hainan Free Trade Port to help them explore opportunities and meet local partners." },
+        { "title": "From IT in France to entrepreneurship in China", "detail": "Early career", "description": "After completing a master’s degree, worked in IT in France before pursuing entrepreneurial projects in Chongqing, Beijing and Hangzhou." }
       ]
     },
     "realizations": {
@@ -80,12 +89,15 @@
   "it": {
     "experiences": {
       "title": "Esperienze",
-      "intro": "Alcune tappe del percorso di Shengjie Zhan tra Francia e Cina.",
+      "intro": "Shengjie Zhan 詹胜洁 ha lavorato nell’informatica in Francia prima di avviare attività imprenditoriali in Cina. Oggi si occupa di trasformazione con l’IA, imprenditoria tra i due paesi e scambi culturali.",
       "maltLabel": "Vedi il profilo su Malt",
       "cards": [
-        { "title": "H2D Hub", "detail": "Fondatore e direttore · Dal 2017", "description": "Supporto alle imprese europee della tecnologia e dell’IA che si sviluppano in Cina, dallo studio del mercato alla ricerca di partner e all’organizzazione di missioni sul posto." },
-        { "title": "France-Huaerdai (AEEJC)", "detail": "Presidente · Dal 2015", "description": "Sostegno ai giovani imprenditori, creazione di contatti tra Francia e Cina e sviluppo di uno strumento per la gestione dei soci su WeChat." },
-        { "title": "CHINEXP’O", "detail": "Organizzatore · Dicembre 2024", "description": "Ideazione e organizzazione di una mostra sulla cultura e lo stile di vita cinesi al Carrousel du Louvre, a Parigi." }
+        { "title": "ZSJ", "detail": "Presidente · Francia · Dal 2016", "description": "Dirige ZSJ, che offre consulenza sui progetti digitali e sviluppa software per le imprese. Oggi si occupa di trasformazione con l’IA, sviluppo full stack e integrazione di modelli linguistici." },
+        { "title": "H2D Hub · 华二代中心", "detail": "Fondatore e direttore · Hangzhou", "description": "Piattaforma della Federazione Huaerdai che aiuta gli imprenditori stranieri e della diaspora cinese ad avviare progetti di IA a Hangzhou, dalla costituzione dell’impresa alla gestione operativa e ai contatti con partner locali." },
+        { "title": "Federazione Huaerdai · 华二代联合会", "detail": "Presidente · Imprenditoria e scambi culturali", "description": "Sostiene i giovani imprenditori della diaspora cinese e gli scambi tra Cina ed Europa. Il gruppo Huaerdai e il Centro italiano per l’innovazione hanno organizzato insieme il carnevale sino-italiano della moda e della cultura a Shanghai nel 2025." },
+        { "title": "CHINEXP’O 2024 · Salone della cultura e dello stile di vita cinese a Parigi", "detail": "Organizzatore · Dal 20 al 22 dicembre 2024", "description": "Ha ideato e organizzato la prima edizione al Carrousel du Louvre. Giovani volontari di origine cinese provenienti da più paesi hanno animato attività dedicate all’hanfu, al tè e all’artigianato tradizionale." },
+        { "title": "Incubatore Huaerdai di Hainan", "detail": "Fondatore · Creato nel 2021", "description": "Ha creato un incubatore per giovani imprenditori della diaspora cinese e organizzato visite al porto franco di Hainan per far conoscere le opportunità del territorio e incontrare partner locali." },
+        { "title": "Dall’informatica in Francia all’imprenditoria in Cina", "detail": "Inizio della carriera", "description": "Dopo gli studi di secondo ciclo ha lavorato nell’informatica in Francia, prima di partecipare a progetti imprenditoriali a Chongqing, Pechino e Hangzhou." }
       ]
     },
     "realizations": {
