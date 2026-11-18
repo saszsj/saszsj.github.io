@@ -437,6 +437,11 @@ html[lang="zh-CN"] h2, html[lang="zh-CN"] h3 { letter-spacing: -0.02em; }
   text-underline-offset: 0.2em;
 }
 
+.portfolio-grid .portfolio-source {
+  align-self: flex-start;
+  margin-top: 0.75rem;
+}
+
 .contact {
   padding-block: clamp(2.5rem, 5.5vw, 4.5rem);
   background: #deecd9;

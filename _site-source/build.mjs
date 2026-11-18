@@ -21,14 +21,21 @@ const websiteId = `${origin}/#website`;
 const escape = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
-function portfolioCards(cards) {
-  return cards.map(({ title, detail, description }) => [
-    '          <li>',
-    `            <h3>${escape(title)}</h3>`,
-    `            <p class="portfolio-detail">${escape(detail)}</p>`,
-    `            <p class="portfolio-description">${escape(description)}</p>`,
-    '          </li>',
-  ].join('\n')).join('\n');
+function portfolioCards(cards, sourceLabels) {
+  return cards.map(({ title, detail, description, source }) => {
+    const reference = sourceLabels && source ? portfolio.sources[source] : null;
+    const label = reference ? sourceLabels[reference.label] : '';
+    return [
+      '          <li>',
+      `            <h3>${escape(title)}</h3>`,
+      `            <p class="portfolio-detail">${escape(detail)}</p>`,
+      `            <p class="portfolio-description">${escape(description)}</p>`,
+      ...(reference ? [
+        `            <a class="portfolio-source" href="${escape(reference.url)}" aria-label="${escape(`${label} · ${title}`)}">${escape(label)}</a>`,
+      ] : []),
+      '          </li>',
+    ].join('\n');
+  }).join('\n');
 }
 
 function metadata(locale, content) {
@@ -84,7 +91,7 @@ function page(locale) {
     assetPrefix,
     experiencesTitle: escape(experiences.title),
     experiencesIntro: escape(experiences.intro),
-    experienceCards: portfolioCards(experiences.cards),
+    experienceCards: portfolioCards(experiences.cards, experiences.sourceLabels),
     maltLabel: escape(experiences.maltLabel),
     realizationsTitle: escape(realizations.title),
     realizationsIntro: escape(realizations.intro),
