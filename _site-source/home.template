@@ -42,6 +42,7 @@
           <span data-lang-inline="en">30-day pilot</span>
           <span data-lang-inline="it">Pilota di 30 giorni</span>
         </a>
+        <a href="#realizations">{{realizationsTitle}}</a>
       </nav>
       <div class="locale-switch">
 {{languageLinks}}
@@ -321,6 +322,31 @@
             </div>
           </dl>
         </div>
+      </div>
+    </section>
+
+    <section class="section experiences" id="experiences" aria-labelledby="experiences-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="experiences-title">{{experiencesTitle}}</h2>
+          <p>{{experiencesIntro}}</p>
+        </div>
+        <ul class="portfolio-grid" role="list">
+{{experienceCards}}
+        </ul>
+        <a class="portfolio-source" href="https://www.malt.fr/profile/shengjiezhan">{{maltLabel}}</a>
+      </div>
+    </section>
+
+    <section class="section realizations" id="realizations" aria-labelledby="realizations-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="realizations-title">{{realizationsTitle}}</h2>
+          <p>{{realizationsIntro}}</p>
+        </div>
+        <ul class="portfolio-grid realization-grid" role="list">
+{{realizationCards}}
+        </ul>
       </div>
     </section>
 
